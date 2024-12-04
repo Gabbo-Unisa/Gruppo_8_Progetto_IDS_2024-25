@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0"
+           xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.rubricatelefonicaids_gruppo8.Controllers.ElencoContattiController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="TastoPiù" layoutX="540.0" layoutY="286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="22.0" />
+               </font></Button>
+            <TextField fx:id="barraDiRicerca" layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="502.0" promptText="Inserisci per cercare" />
+            <TableView fx:id="tabella" layoutX="17.0" layoutY="67.0" prefHeight="270.0" prefWidth="513.0">
+              <columns>
+                <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />
+                <TableColumn fx:id="numeo" minWidth="3.0" prefWidth="377.0" text="Numero" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="Preferiti" layoutX="299.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
+            <Button fx:id="Contatti" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
