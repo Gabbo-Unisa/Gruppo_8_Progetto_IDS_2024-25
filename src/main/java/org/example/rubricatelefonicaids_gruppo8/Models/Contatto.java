@@ -27,7 +27,45 @@ public class Contatto implements Comparable{
         this.isPreferito = isPreferito;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
+    public String getCognome() {
+        return cognome;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Photo getImmagine() {
+        return immagine;
+    }
+
+    public LocalDate getDataCreazione() {
+        return dataCreazione;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public boolean isPreferito() {
+        return isPreferito;
+    }
+
+    public VCard importaContatto(){
+        return null;
+    }
+
+    public VCard esportaContatto(){
+        return null;
+    }
 
     @Override
     public int compareTo(Object o /*Contatto c*/) {
