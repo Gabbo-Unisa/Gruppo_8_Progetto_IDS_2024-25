@@ -6,6 +6,7 @@ import ezvcard.property.Photo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,12 +17,12 @@ public class Contatto implements Comparable<Contatto>{
     private List<String> telefono;
     private List<String> email;
     private Photo immagine;
-    private LocalDate dataCreazione;
+    private Date dataCreazione;
     private String note;
     private boolean isPreferito;
 
     public Contatto(String nome, String cognome, List<String> telefono,
-                    List<String> email, Photo immagine, LocalDate dataCreazione,
+                    List<String> email, Photo immagine, Date dataCreazione,
                     String note, boolean isPreferito) {
         this.nome = nome;
         this.cognome = cognome;
@@ -54,7 +55,7 @@ public class Contatto implements Comparable<Contatto>{
         return immagine;
     }
 
-    public LocalDate getDataCreazione() {
+    public Date getDataCreazione() {
         return dataCreazione;
     }
 
@@ -62,8 +63,8 @@ public class Contatto implements Comparable<Contatto>{
         return note;
     }
 
-    public boolean isPreferito() {
-        return isPreferito;
+    public boolean getIsPreferito() {
+        return false;
     }
 
     public VCard importaContatto(){

@@ -1,16 +1,17 @@
 package org.example.rubricatelefonicaids_gruppo8.Models;
 
-import java.util.LinkedList;
-import java.util.List;
+
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Rubrica {
-    List<Contatto> contatti = new LinkedList<>();
+    Set<Contatto> contatti = new TreeSet<>();
 
-    public void aggiungiContatto(){
+    public void aggiungiContatto(Contatto c){
 
     }
 
-    public void modificaContatto(Contatto daSostituire,Contatto aggiornato){
+    public void modificaContatto(Contatto c){
 
     }
 
@@ -18,11 +19,11 @@ public class Rubrica {
 
     }
 
-    public List<Contatto> ricercaContatti(){
+    public Set<Contatto> ricercaContatti(String query){
         return null;
     }
 
-    public List<Contatto> getContattiPreferiti(){
+    public Set<Contatto> getContattiPreferiti(){
         return null;
     }
 
