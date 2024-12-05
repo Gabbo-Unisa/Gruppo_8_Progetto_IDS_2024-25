@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Contatto implements Comparable{
+public class Contatto implements Comparable<Contatto>{
 
     private String nome;
     private String cognome;
@@ -75,9 +75,7 @@ public class Contatto implements Comparable{
     }
 
     @Override
-    public int compareTo(Object o /*Contatto c*/) {
-        /*String questa = this.getNome() + this.getCognome();
-        String daConfrontare = o.getNome() + o.getCognome();*/
-        return this.nome.compareTo((String) o/*.getNome()*/);
+    public int compareTo(Contatto c) {
+        return 0;
     }
 }

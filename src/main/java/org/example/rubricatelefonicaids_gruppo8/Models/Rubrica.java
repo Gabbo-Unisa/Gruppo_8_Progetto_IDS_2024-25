@@ -23,20 +23,7 @@ public class Rubrica {
     }
 
     public List<Contatto> getContattiPreferiti(){
-        List<Contatto> preferiti= new LinkedList<>();
-        preferiti=null;
-
-        for(Contatto c: contatti){
-            if(c.isPreferito() == true){
-                preferiti.add(c);
-            }
-        }
-
-        /*if(preferiti.size() > 0) {
-            return preferiti;
-        }else{
-            return null;
-        }*/
-        return preferiti;
+        return null;
     }
+
 }
