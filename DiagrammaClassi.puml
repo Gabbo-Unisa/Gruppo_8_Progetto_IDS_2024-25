@@ -1,0 +1,44 @@
+@startuml
+class Rubrica {
+    + aggiungiContatto(c: Contatto): void
+    + modificaContatto(c: Contatto): void
+    + eliminaContatto(c: Contatto): void
+    + ricercaContatti(query: String): Set<Contatto>
+    + getContattiPreferiti(): Set<Contatto>
+}
+
+class Contatto implements Comparable {
+    - nome: String
+    - cognome: String
+    - numeriTelefono: List<Telephone>
+    - email: List<Email>
+    - immagine: Photo
+    - dataCreazione: Date
+    - nota: String
+    - isPreferito: bool
+
+    + compareTo(c: Contatto) : int
+    + esportaContatto(): VCard
+    + importaVCard(vCard: VCard): Contatto
+}
+
+class Checker {
+    + validaContatto(c: Contatto): bool
+}
+
+class FileManager {
+    + importaRubrica(path: String): void
+    + esportaRubrica(path: String): void
+}
+
+class VCard {
+  <<library>>
+  ...
+}
+
+
+Rubrica "1" *-- "*" Contatto
+FileManager --> Rubrica
+Rubrica --> Checker
+Contatto "1" ..> "1" VCard
+@enduml

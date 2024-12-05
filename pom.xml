@@ -76,7 +76,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.rubricatelefonicaids_gruppo8/org.example.rubricatelefonicaids_gruppo8.Models.ApplicazioneProgetto
+                                org.example.rubricatelefonicaids_gruppo8/rubrica.Models.ApplicazioneProgetto
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

@@ -1,4 +1,4 @@
-package org.example.rubricatelefonicaids_gruppo8.Controllers;
+package rubrica.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

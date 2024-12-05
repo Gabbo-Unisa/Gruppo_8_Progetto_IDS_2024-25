@@ -1,4 +1,4 @@
-module org.example.rubricatelefonicaids_gruppo8 {
+module org.example.rubrica {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -7,7 +7,7 @@ module org.example.rubricatelefonicaids_gruppo8 {
     requires ez.vcard;
     requires jdk.compiler;
 
-    opens org.example.rubricatelefonicaids_gruppo8 to javafx.fxml;
-    exports org.example.rubricatelefonicaids_gruppo8.Models;
-    opens org.example.rubricatelefonicaids_gruppo8.Models to javafx.fxml;
+    exports rubrica.Models;
+    opens rubrica.Models to javafx.fxml;
+    opens rubrica.Controllers to javafx.fxml;
 }

@@ -1,13 +1,9 @@
-package org.example.rubricatelefonicaids_gruppo8.Models;
+package rubrica.Models;
 
-import com.sun.source.tree.Tree;
 import ezvcard.VCard;
 import ezvcard.property.Photo;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Contatto implements Comparable<Contatto>{

@@ -1,4 +1,4 @@
-package org.example.rubricatelefonicaids_gruppo8.Models;
+package rubrica.Models;
 
 public class Checker {
 
