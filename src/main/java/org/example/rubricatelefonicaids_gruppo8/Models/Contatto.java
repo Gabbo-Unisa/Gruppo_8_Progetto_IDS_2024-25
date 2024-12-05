@@ -1,23 +1,28 @@
 package org.example.rubricatelefonicaids_gruppo8.Models;
 
+import com.sun.source.tree.Tree;
 import ezvcard.VCard;
 import ezvcard.property.Photo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Contatto implements Comparable{
 
     private String nome;
     private String cognome;
-    private List<String> telefono;/*array di String[] o lista?*/
-    private List<String> email;/*array di String[] o lista?*/
+    private List<String> telefono;
+    private List<String> email;
     private Photo immagine;
     private LocalDate dataCreazione;
     private String note;
     private boolean isPreferito;
 
-    public Contatto(String nome, String cognome, List<String> telefono, List<String> email, Photo immagine, LocalDate dataCreazione, String note, boolean isPreferito) {
+    public Contatto(String nome, String cognome, List<String> telefono,
+                    List<String> email, Photo immagine, LocalDate dataCreazione,
+                    String note, boolean isPreferito) {
         this.nome = nome;
         this.cognome = cognome;
         this.telefono = telefono;
@@ -26,6 +31,7 @@ public class Contatto implements Comparable{
         this.dataCreazione = dataCreazione;
         this.note = note;
         this.isPreferito = isPreferito;
+
     }
 
     public String getNome() {
