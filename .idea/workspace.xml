@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Fine creazione ossatura classe">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Contatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Rubrica.java" afterDir="false" />
-    </list>
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Fine creazione ossatura classe" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +17,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/Sviluppo-ossatura-classi" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -37,12 +35,12 @@
     &quot;assignee&quot;: &quot;Gabbo-Unisa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25&quot;,
-    &quot;accountId&quot;: &quot;81452710-8e13-4a2a-a66d-d5c32541e812&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25",
+    "accountId": "0052fda6-4d4f-40ca-b2e9-f5217f990821"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -61,26 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Sviluppo-ossatura-classi&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gabbi/Desktop/Programmazione ad oggetti/ProjettiJava/Gruppo_8_Progetto_IDS_2024-25/src/main/resources/org/example/rubricatelefonicaids_gruppo8/viewElencoContatti&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApplicazioneProgetto.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainModel.executor": "Run",
+    "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/gabbi/Desktop/Programmazione ad oggetti/ProjettiJava/Gruppo_8_Progetto_IDS_2024-25/src/main/resources/org/example/rubricatelefonicaids_gruppo8/viewElencoContatti",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example" />
