@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Fine creazione ossatura classe">
-      <change afterPath="$PROJECT_DIR$/DiagrammaClassi.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Risolto errore di compilazione javafx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Controllers/ElencoContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/ApplicazioneProgetto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rubricatelefonicaids_gruppo8/Models/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/rubricatelefonicaids_gruppo8/views/elencoContatti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/elencoContatti.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +146,7 @@
       <workItem from="1733388589338" duration="2319000" />
       <workItem from="1733390926697" duration="4681000" />
       <workItem from="1733395635086" duration="1013000" />
-      <workItem from="1733425521246" duration="1967000" />
+      <workItem from="1733425521246" duration="2816000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -223,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733407245962</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Risolto errore di compilazione javafx">
+      <option name="closed" value="true" />
+      <created>1733432247815</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733432247815</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,17 +234,17 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="fix_javafx_error" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="HEAD" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/master" />
                 </option>
               </RecentGroup>
               <RecentGroup>
@@ -275,7 +272,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="fix_javafx_error" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -292,7 +289,8 @@
     <MESSAGE value="Creazione classi e organizzazione in package" />
     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
     <MESSAGE value="Fine creazione ossatura classe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fine creazione ossatura classe" />
+    <MESSAGE value="Risolto errore di compilazione javafx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Risolto errore di compilazione javafx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
