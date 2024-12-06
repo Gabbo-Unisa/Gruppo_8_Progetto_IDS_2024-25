@@ -7,9 +7,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-public class ElencoContattiController /*implements initializable*/ {
+public class ElencoContattiController {
     @FXML
     public Button tastoPiù;
 
@@ -66,4 +67,20 @@ public class ElencoContattiController /*implements initializable*/ {
         }
     }
 
+
+    public void onVisualizzaTyped(KeyEvent getKeyEvent) {
+        if(barraDiRicerca.getText().contains("Visualizza")){
+            try {
+                // Carica il file FXML della nuova scena
+                Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/VisualizzazioneContattoView.fxml"));
+                Scene nuovaScena = new Scene(nuovaScenaRoot);
+
+                // Ottieni lo Stage corrente e cambia la scena
+                Stage stage = (Stage) barraDiRicerca.getScene().getWindow();
+                stage.setScene(nuovaScena);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

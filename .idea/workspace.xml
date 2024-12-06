@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Risolto errore di compilazione javafx">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Modifiche_non_salvate_prima_di_Checkout_alle_06_12_24,_20_50_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Modifiche_non_salvate_prima_di_Checkout_alle_06_12_24,_20_53_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Modifiche_non_salvate_prima_di_Checkout_alle_06_12_24__20_50__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Modifiche_non_salvate_prima_di_Checkout_alle_06_12_24__20_53__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2024_21_02_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2024_21_02__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2024_21_04_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2024_21_04__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2024_21_18_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2024_21_18__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/RicercaContattiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/RicercaContattiView.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,13 +36,10 @@
       </list>
     </option>
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/Sviluppo-GUI" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="commenti-per-Doxygen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,8 +52,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25&quot;,
-    &quot;accountId&quot;: &quot;81452710-8e13-4a2a-a66d-d5c32541e812&quot;
+    &quot;url&quot;: &quot;https://github.com/Gabbo-collab/Gruppo_8_Progetto_IDS_2024-25&quot;,
+    &quot;accountId&quot;: &quot;16ef31f6-a5a1-4f0c-a49a-cac0f56f77ca&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -81,9 +83,9 @@
     "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "prova",
+    "git-widget-placeholder": "Sviluppo__GUI",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/carmine/Desktop/PROGRAMMAZIONE AD OGGETTI/JAVAFX/Es_3-MyStudentListFXML",
+    "last_opened_file_path": "C:/Users/ferdy/OneDrive/Desktop/IDS/Gruppo_8_Progetto_IDS_2024-25",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,11 +98,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\gabbi\Desktop\Ingegneria del software\1Progetto\Projetto\Rubrica_telefonica_Gruppo_8\src\main\resources\rubrica\Views" />
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\rubrica\Views" />
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example" />
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
+      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8\viewElencoContatti" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.rubricatelefonicaids_gruppo8.Models" />
@@ -132,16 +134,14 @@
         <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
-        <item itemvalue="Application.ApplicazioneProgetto" />
-        <item itemvalue="Application.ApplicazioneProgetto" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
       </set>
     </attachedChunks>
   </component>
@@ -163,11 +163,8 @@
       <workItem from="1733390926697" duration="4681000" />
       <workItem from="1733395635086" duration="1013000" />
       <workItem from="1733425521246" duration="2816000" />
-      <workItem from="1733476361932" duration="3545000" />
-      <workItem from="1733482773754" duration="5222000" />
-      <workItem from="1733493549650" duration="3234000" />
-      <workItem from="1733496797521" duration="6282000" />
-      <workItem from="1733510794243" duration="2868000" />
+      <workItem from="1733489587031" duration="4619000" />
+      <workItem from="1733494346280" duration="942000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />

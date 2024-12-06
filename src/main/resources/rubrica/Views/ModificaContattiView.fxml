@@ -15,7 +15,7 @@
             <Label fx:id="lblTelefono" layoutX="31.0" layoutY="193.0" text="Telefono" />
             <Label fx:id="lblEmail" layoutX="34.0" layoutY="270.0" text="E-mail" />
             <ImageView fx:id="immagine" fitHeight="64.0" fitWidth="90.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="buttonAnnulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" onAction="#onClickAnnulla" text="Annulla" textAlignment="CENTER" textFill="RED" />
+            <Button fx:id="annulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" onAction="#onClickAnnulla" text="Annulla" textAlignment="CENTER" textFill="RED" />
             <Button fx:id="caricaFoto" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" text="Carica foto" />
             <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
             <TextField fx:id="txfNome" layoutX="89.0" layoutY="131.0" prefHeight="17.0" prefWidth="149.0" />

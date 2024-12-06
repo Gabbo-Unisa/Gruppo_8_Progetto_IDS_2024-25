@@ -8,13 +8,11 @@
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-                <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" />
                 <CheckBox fx:id="ckbPreferiti" disable="true" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" selected="true" text="Preferiti" />
                 <Label layoutX="39.0" layoutY="135.0" text="Nome" />
                 <Label layoutX="29.0" layoutY="163.0" text="Cognome" />
                 <Label layoutX="31.0" layoutY="193.0" text="Telefono" />
                 <Label layoutX="34.0" layoutY="270.0" text="E-mail" />
-                <Button fx:id="buttonAnnulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" text="Annulla" textFill="RED" />
                 <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
                 <Label layoutX="454.0" layoutY="107.0" text="Note" />
                 <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
