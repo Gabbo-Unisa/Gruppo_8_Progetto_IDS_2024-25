@@ -4,16 +4,16 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ModificaContattiController">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.CreaContattoController">
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
                 <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" />
                 <CheckBox fx:id="ckbPreferiti" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" text="Preferiti" />
-                <Label fx:id="lblNome" layoutX="39.0" layoutY="135.0" text="Nome" />
-                <Label fx:id="lblCognome" layoutX="29.0" layoutY="163.0" text="Cognome" />
-                <Label fx:id="lblTelefono" layoutX="31.0" layoutY="193.0" text="Telefono" />
-                <Label fx:id="lblEmail" layoutX="34.0" layoutY="270.0" text="E-mail" />
+                <Label layoutX="39.0" layoutY="135.0" text="Nome" />
+                <Label layoutX="29.0" layoutY="163.0" text="Cognome" />
+                <Label layoutX="31.0" layoutY="193.0" text="Telefono" />
+                <Label layoutX="34.0" layoutY="270.0" text="E-mail" />
                 <ImageView fx:id="immagine" fitHeight="64.0" fitWidth="90.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                 <Button fx:id="buttonAnnulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" text="Annulla" textFill="RED" />
                 <Button fx:id="caricaFoto" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" text="Carica foto" />
@@ -26,9 +26,6 @@
                 <TextField fx:id="txfEmail1" layoutX="86.0" layoutY="266.0" />
                 <TextField fx:id="txfEmail2" layoutX="86.0" layoutY="291.0" />
                 <TextField fx:id="txfEmail3" layoutX="86.0" layoutY="313.0" />
-                <Label layoutX="454.0" layoutY="107.0" text="Note" />
-                <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
-                <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
             </children></AnchorPane>
         <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
             <children>
