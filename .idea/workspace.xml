@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Fine creazione ossatura classe">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" afterDir="false" />
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Risolto errore di compilazione javafx">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/RicercaContattiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +32,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/Sviluppo-ossatura-classi" />
+    <option name="BRANCH" value="origin/Sviluppo-GUI" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Sviluppo-gui" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25&quot;,
-    &quot;accountId&quot;: &quot;0052fda6-4d4f-40ca-b2e9-f5217f990821&quot;
+    &quot;accountId&quot;: &quot;81452710-8e13-4a2a-a66d-d5c32541e812&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -65,32 +72,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gabbi/Desktop/Programmazione ad oggetti/ProjettiJava/Gruppo_8_Progetto_IDS_2024-25/src/main/resources/org/example/rubricatelefonicaids_gruppo8/viewElencoContatti&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApplicazioneProgetto.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainModel.executor": "Run",
+    "Application.org.example.rubrica.Models.ApplicazioneProgetto.executor": "Run",
+    "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "prova",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/carmine/Desktop/PROGRAMMAZIONE AD OGGETTI/JAVAFX/Es_3-MyStudentListFXML",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gabbi\Desktop\Ingegneria del software\1Progetto\Projetto\Rubrica_telefonica_Gruppo_8\src\main\resources\rubrica\Views" />
+      <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\rubrica\Views" />
+      <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example" />
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
-      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8\viewElencoContatti" />
-      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\java\org\example\rubricatelefonicaids_gruppo8\SchermataAggiungiContatto" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.rubricatelefonicaids_gruppo8.Models" />
@@ -103,26 +113,13 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ApplicazioneProgetto">
+  <component name="RunManager">
     <configuration name="ApplicazioneProgetto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.rubricatelefonicaids_gruppo_otto.Models.ApplicazioneProgetto" />
+      <option name="MAIN_CLASS_NAME" value="rubrica.Models.ApplicazioneProgetto" />
       <module name="RubricaTelefonicaIDS_Gruppo8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.rubricatelefonicaids_gruppo_otto.Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.rubricatelefonicaids_gruppo_otto.MainModel" />
-      <module name="RubricaTelefonicaIDS_Gruppo8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.rubricatelefonicaids_gruppo_otto.*" />
+          <option name="PATTERN" value="rubrica.Models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,8 +130,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicazioneProgetto" />
-        <item itemvalue="Application.MainModel" />
-        <item itemvalue="Application.MainModel" />
+        <item itemvalue="Application.ApplicazioneProgetto" />
+        <item itemvalue="Application.ApplicazioneProgetto" />
+        <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
       </list>
     </recent_temporary>
@@ -164,6 +162,12 @@
       <workItem from="1733388589338" duration="2319000" />
       <workItem from="1733390926697" duration="4681000" />
       <workItem from="1733395635086" duration="1013000" />
+      <workItem from="1733425521246" duration="2816000" />
+      <workItem from="1733476361932" duration="3545000" />
+      <workItem from="1733482773754" duration="5222000" />
+      <workItem from="1733493549650" duration="3234000" />
+      <workItem from="1733496797521" duration="6282000" />
+      <workItem from="1733510794243" duration="2868000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -229,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733407245962</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Risolto errore di compilazione javafx">
+      <option name="closed" value="true" />
+      <created>1733432247815</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733432247815</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +253,26 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="fix_javafx_error" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="Sviluppo-ossatura-classi" />
@@ -261,7 +293,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Sviluppo-ossatura-classi" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -278,7 +310,8 @@
     <MESSAGE value="Creazione classi e organizzazione in package" />
     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
     <MESSAGE value="Fine creazione ossatura classe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fine creazione ossatura classe" />
+    <MESSAGE value="Risolto errore di compilazione javafx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Risolto errore di compilazione javafx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

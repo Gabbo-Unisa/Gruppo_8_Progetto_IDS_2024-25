@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="rubrica.Controllers.ElencoPreferitiController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoPreferitiController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <Button fx:id="TastoPiù" layoutX="540.0" layoutY="286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="JUSTIFY" wrapText="true">
+                    <font>
+                        <Font size="22.0" />
+                    </font></Button>
+                <TextField fx:id="barraDiRicerca" layoutX="14.0" layoutY="30.0" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
+                <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" prefHeight="248.0" prefWidth="513.0">
+                    <columns>
+                        <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />
+                    </columns>
+                </TableView>
+                <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
+                    <items>
+                        <MenuItem fx:id="importaRubrica" mnemonicParsing="false" text="Importa rubrica" />
+                        <MenuItem fx:id="esportaRubrica" mnemonicParsing="false" text="Esporta rubrica" />
+                        <Menu mnemonicParsing="false" text="Display mode">
+                            <items>
+                                <MenuItem fx:id="lightMode" mnemonicParsing="false" text="Light mode" />
+                                <MenuItem fx:id="darkMode" mnemonicParsing="false" text="Dark mode" />
+                            </items>
+                        </Menu>
+                    </items>
+                </MenuButton>
+            <Label layoutX="231.0" prefHeight="25.0" prefWidth="80.0" text="Elenco preferiti" />
+            </children></AnchorPane>
+        <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton"
+                        prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
+                <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0"
+                        prefWidth="300.0" text="Contatti" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>

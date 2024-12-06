@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="rubrica.Controllers.ModificaContattiController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ModificaContattiController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" textAlignment="CENTER" />
+            <CheckBox fx:id="ckbPreferiti" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" text="Preferiti" />
+            <Label fx:id="lblNome" layoutX="39.0" layoutY="135.0" text="Nome" />
+            <Label fx:id="lblCognome" layoutX="29.0" layoutY="163.0" text="Cognome" />
+            <Label fx:id="lblTelefono" layoutX="31.0" layoutY="193.0" text="Telefono" />
+            <Label fx:id="lblEmail" layoutX="34.0" layoutY="270.0" text="E-mail" />
+            <ImageView fx:id="immagine" fitHeight="64.0" fitWidth="90.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="buttonAnnulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" onAction="#onClickAnnulla" text="Annulla" textAlignment="CENTER" textFill="RED" />
+            <Button fx:id="caricaFoto" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" text="Carica foto" />
+            <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextField fx:id="txfNome" layoutX="89.0" layoutY="131.0" prefHeight="17.0" prefWidth="149.0" />
+            <TextField fx:id="txfCognome" layoutX="89.0" layoutY="159.0" />
+            <TextField fx:id="txfTelefono1" layoutX="102.0" layoutY="189.0" />
+            <TextField fx:id="txfTelefono2" layoutX="102.0" layoutY="214.0" />
+            <TextField fx:id="txfTelefono3" layoutX="102.0" layoutY="236.0" />
+            <TextField fx:id="txfEmail1" layoutX="86.0" layoutY="266.0" />
+            <TextField fx:id="txfEmail2" layoutX="86.0" layoutY="291.0" />
+            <TextField fx:id="txfEmail3" layoutX="86.0" layoutY="313.0" />
+            <Label layoutX="454.0" layoutY="107.0" text="Note" />
+            <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
+            <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
+         </children></AnchorPane>
+        <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
+                <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>

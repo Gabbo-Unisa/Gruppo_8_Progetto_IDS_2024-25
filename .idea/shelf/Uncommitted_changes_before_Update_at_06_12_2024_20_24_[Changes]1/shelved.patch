@@ -1,0 +1,887 @@
+Index: src/main/resources/rubrica/Views/ModificaContattiView.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.lang.*?>\r\n<?import java.util.*?>\r\n<?import javafx.scene.*?>\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n\r\n<AnchorPane xmlns=\"http://javafx.com/javafx\"\r\n            xmlns:fx=\"http://javafx.com/fxml\"\r\n            fx:controller=\"rubrica.Controllers.ModificaContattiController\"\r\n            prefHeight=\"400.0\" prefWidth=\"600.0\">\r\n\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/rubrica/Views/ModificaContattiView.fxml b/src/main/resources/rubrica/Views/ModificaContattiView.fxml
+--- a/src/main/resources/rubrica/Views/ModificaContattiView.fxml	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/resources/rubrica/Views/ModificaContattiView.fxml	(date 1733505848539)
+@@ -1,14 +1,39 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import java.lang.*?>
+-<?import java.util.*?>
+-<?import javafx.scene.*?>
+ <?import javafx.scene.control.*?>
++<?import javafx.scene.image.*?>
+ <?import javafx.scene.layout.*?>
+ 
+-<AnchorPane xmlns="http://javafx.com/javafx"
+-            xmlns:fx="http://javafx.com/fxml"
+-            fx:controller="rubrica.Controllers.ModificaContattiController"
+-            prefHeight="400.0" prefWidth="600.0">
+-
+-</AnchorPane>
++<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ModificaContattiController">
++    <items>
++        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
++         <children>
++            <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" textAlignment="CENTER" />
++            <CheckBox fx:id="ckbPreferiti" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" text="Preferiti" />
++            <Label fx:id="lblNome" layoutX="39.0" layoutY="135.0" text="Nome" />
++            <Label fx:id="lblCognome" layoutX="29.0" layoutY="163.0" text="Cognome" />
++            <Label fx:id="lblTelefono" layoutX="31.0" layoutY="193.0" text="Telefono" />
++            <Label fx:id="lblEmail" layoutX="34.0" layoutY="270.0" text="E-mail" />
++            <ImageView fx:id="immagine" fitHeight="64.0" fitWidth="90.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
++            <Button fx:id="buttonAnnulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" onAction="#onClickAnnulla" text="Annulla" textAlignment="CENTER" textFill="RED" />
++            <Button fx:id="caricaFoto" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" text="Carica foto" />
++            <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
++            <TextField fx:id="txfNome" layoutX="89.0" layoutY="131.0" prefHeight="17.0" prefWidth="149.0" />
++            <TextField fx:id="txfCognome" layoutX="89.0" layoutY="159.0" />
++            <TextField fx:id="txfTelefono1" layoutX="102.0" layoutY="189.0" />
++            <TextField fx:id="txfTelefono2" layoutX="102.0" layoutY="214.0" />
++            <TextField fx:id="txfTelefono3" layoutX="102.0" layoutY="236.0" />
++            <TextField fx:id="txfEmail1" layoutX="86.0" layoutY="266.0" />
++            <TextField fx:id="txfEmail2" layoutX="86.0" layoutY="291.0" />
++            <TextField fx:id="txfEmail3" layoutX="86.0" layoutY="313.0" />
++            <Label layoutX="454.0" layoutY="107.0" text="Note" />
++            <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
++            <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
++         </children></AnchorPane>
++        <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
++            <children>
++                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
++                <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
++            </children></AnchorPane>
++    </items>
++</SplitPane>
+Index: src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.lang.*?>\r\n<?import java.util.*?>\r\n<?import javafx.scene.*?>\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n\r\n<AnchorPane xmlns=\"http://javafx.com/javafx\"\r\n            xmlns:fx=\"http://javafx.com/fxml\"\r\n            fx:controller=\"rubrica.Controllers.VisualizzazioneContattoController\"\r\n            prefHeight=\"400.0\" prefWidth=\"600.0\">\r\n\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml b/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml
+--- a/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml	(date 1733512229942)
+@@ -1,14 +1,38 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import java.lang.*?>
+-<?import java.util.*?>
+-<?import javafx.scene.*?>
+ <?import javafx.scene.control.*?>
++<?import javafx.scene.image.*?>
+ <?import javafx.scene.layout.*?>
+ 
+-<AnchorPane xmlns="http://javafx.com/javafx"
+-            xmlns:fx="http://javafx.com/fxml"
+-            fx:controller="rubrica.Controllers.VisualizzazioneContattoController"
+-            prefHeight="400.0" prefWidth="600.0">
+-
+-</AnchorPane>
++<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.VisualizzazioneContattoController">
++    <items>
++        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
++            <children>
++                <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" />
++                <CheckBox fx:id="ckbPreferiti" disable="true" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" selected="true" text="Preferiti" />
++                <Label layoutX="39.0" layoutY="135.0" text="Nome" />
++                <Label layoutX="29.0" layoutY="163.0" text="Cognome" />
++                <Label layoutX="31.0" layoutY="193.0" text="Telefono" />
++                <Label layoutX="34.0" layoutY="270.0" text="E-mail" />
++                <Button fx:id="buttonAnnulla" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" text="Annulla" textFill="RED" />
++                <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
++                <Label layoutX="454.0" layoutY="107.0" text="Note" />
++                <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
++                <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
++            <Label fx:id="lblNome" layoutX="97.0" layoutY="135.0" text="Label" />
++            <Label fx:id="lblCognome" layoutX="111.0" layoutY="164.0" text="Label" />
++            <Label fx:id="lblTelefono1" layoutX="111.0" layoutY="193.0" text="Label" />
++            <Label fx:id="lblTelefono2" layoutX="111.0" layoutY="210.0" text="Label" />
++            <Label fx:id="lblTelefono3" layoutX="111.0" layoutY="227.0" text="Label" />
++            <Label fx:id="lblEmail1" layoutX="111.0" layoutY="270.0" text="Label" />
++            <Label fx:id="lblEmail2" layoutX="111.0" layoutY="287.0" text="Label" />
++            <Label fx:id="lblEmail3" layoutX="111.0" layoutY="304.0" text="Label" />
++            <ImageView fx:id="immagine" fitHeight="73.0" fitWidth="97.0" layoutX="63.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
++            </children></AnchorPane>
++        <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
++            <children>
++                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
++                <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
++            </children></AnchorPane>
++    </items>
++</SplitPane>
+Index: src/main/java/rubrica/Models/ApplicazioneProgetto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rubrica.Models;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.IOException;\r\n\r\npublic class ApplicazioneProgetto extends Application {\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(ApplicazioneProgetto.class.getResource(\"/rubrica/Views/ElencoContattiView.fxml\"));\r\n        Scene scene = new Scene(fxmlLoader.load());\r\n        stage.setTitle(\"Rubrica Telefonica\");\r\n        stage.setScene(scene);\r\n        stage.show();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Models/ApplicazioneProgetto.java b/src/main/java/rubrica/Models/ApplicazioneProgetto.java
+--- a/src/main/java/rubrica/Models/ApplicazioneProgetto.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/java/rubrica/Models/ApplicazioneProgetto.java	(date 1733511971369)
+@@ -10,7 +10,7 @@
+ public class ApplicazioneProgetto extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+-        FXMLLoader fxmlLoader = new FXMLLoader(ApplicazioneProgetto.class.getResource("/rubrica/Views/ElencoContattiView.fxml"));
++        FXMLLoader fxmlLoader = new FXMLLoader(ApplicazioneProgetto.class.getResource("/rubrica/Views/VisualizzazioneContattoView.fxml"));
+         Scene scene = new Scene(fxmlLoader.load());
+         stage.setTitle("Rubrica Telefonica");
+         stage.setScene(scene);
+Index: src/main/resources/rubrica/Views/ElencoContattiView.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n<?import javafx.scene.text.*?>\r\n\r\n<SplitPane dividerPositions=\"0.5\" maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\"\r\n           minWidth=\"-Infinity\" orientation=\"VERTICAL\" prefHeight=\"400.0\" prefWidth=\"600.0\"\r\n           xmlns=\"http://javafx.com/javafx/17.0.12\" xmlns:fx=\"http://javafx.com/fxml/1\"\r\n           fx:controller=\"rubrica.Controllers.ElencoContattiController\">\r\n  <items>\r\n    <AnchorPane minHeight=\"0.0\" minWidth=\"0.0\" prefHeight=\"100.0\" prefWidth=\"160.0\">\r\n         <children>\r\n            <Button fx:id=\"TastoPiù\" layoutX=\"540.0\" layoutY=\"286.0\" mnemonicParsing=\"false\" prefHeight=\"30.0\" prefWidth=\"44.0\" text=\"+\" textAlignment=\"JUSTIFY\" wrapText=\"true\">\r\n               <font>\r\n                  <Font size=\"22.0\" />\r\n               </font></Button>\r\n            <TextField fx:id=\"barraDiRicerca\" layoutX=\"14.0\" layoutY=\"14.0\" prefHeight=\"38.0\" prefWidth=\"502.0\" promptText=\"Inserisci per cercare\" />\r\n            <TableView fx:id=\"tabella\" layoutX=\"17.0\" layoutY=\"67.0\" prefHeight=\"270.0\" prefWidth=\"513.0\">\r\n              <columns>\r\n                <TableColumn fx:id=\"nome\" prefWidth=\"135.0\" text=\"Nome\" />\r\n                <TableColumn fx:id=\"numeo\" minWidth=\"3.0\" prefWidth=\"377.0\" text=\"Numero\" />\r\n              </columns>\r\n            </TableView>\r\n         </children></AnchorPane>\r\n    <AnchorPane maxHeight=\"45.0\" minHeight=\"0.0\" minWidth=\"0.0\" prefHeight=\"45.0\" prefWidth=\"600.0\">\r\n         <children>\r\n            <Button fx:id=\"Preferiti\" layoutX=\"299.0\" mnemonicParsing=\"false\" prefHeight=\"45.0\" prefWidth=\"300.0\" text=\"Preferiti\" />\r\n            <Button fx:id=\"Contatti\" mnemonicParsing=\"false\" prefHeight=\"45.0\" prefWidth=\"300.0\" text=\"Contatti\" />\r\n         </children></AnchorPane>\r\n  </items>\r\n</SplitPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/rubrica/Views/ElencoContattiView.fxml b/src/main/resources/rubrica/Views/ElencoContattiView.fxml
+--- a/src/main/resources/rubrica/Views/ElencoContattiView.fxml	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/resources/rubrica/Views/ElencoContattiView.fxml	(date 1733512704364)
+@@ -4,29 +4,38 @@
+ <?import javafx.scene.layout.*?>
+ <?import javafx.scene.text.*?>
+ 
+-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+-           minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0"
+-           xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+-           fx:controller="rubrica.Controllers.ElencoContattiController">
++<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoContattiController">
+   <items>
+     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+-            <Button fx:id="TastoPiù" layoutX="540.0" layoutY="286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="JUSTIFY" wrapText="true">
++            <Button fx:id="tastoPiù" layoutX="539.0" layoutY="287.0" mnemonicParsing="false" onAction="#onPlusClickButton" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="CENTER" wrapText="true">
+                <font>
+                   <Font size="22.0" />
+                </font></Button>
+-            <TextField fx:id="barraDiRicerca" layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="502.0" promptText="Inserisci per cercare" />
+-            <TableView fx:id="tabella" layoutX="17.0" layoutY="67.0" prefHeight="270.0" prefWidth="513.0">
++            <TextField fx:id="barraDiRicerca" layoutX="14.0" layoutY="30.0" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
++            <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" prefHeight="248.0" prefWidth="513.0">
+               <columns>
+                 <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />
+-                <TableColumn fx:id="numeo" minWidth="3.0" prefWidth="377.0" text="Numero" />
+               </columns>
+             </TableView>
++            <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
++              <items>
++                <MenuItem fx:id="importaRubrica" mnemonicParsing="false" text="Importa rubrica" />
++                <MenuItem fx:id="esportaRubrica" mnemonicParsing="false" text="Esporta rubrica" />
++                  <Menu mnemonicParsing="false" text="Display mode">
++                    <items>
++                      <MenuItem fx:id="lightMode" mnemonicParsing="false" text="Light mode" />
++                        <MenuItem fx:id="darkMode" mnemonicParsing="false" text="Dark mode" />
++                    </items>
++                  </Menu>
++              </items>
++            </MenuButton>
++             <Label layoutX="231.0" prefHeight="25.0" prefWidth="80.0" text="Elenco contatti" />
+          </children></AnchorPane>
+     <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
+          <children>
+-            <Button fx:id="Preferiti" layoutX="299.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
+-            <Button fx:id="Contatti" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
++            <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
++            <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
+          </children></AnchorPane>
+   </items>
+ </SplitPane>
+Index: src/main/resources/rubrica/Views/ElencoPreferitiView.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.lang.*?>\r\n<?import java.util.*?>\r\n<?import javafx.scene.*?>\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n\r\n<AnchorPane xmlns=\"http://javafx.com/javafx\"\r\n            xmlns:fx=\"http://javafx.com/fxml\"\r\n            fx:controller=\"rubrica.Controllers.ElencoPreferitiController\"\r\n            prefHeight=\"400.0\" prefWidth=\"600.0\">\r\n\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml b/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml
+--- a/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml	(date 1733512659942)
+@@ -1,14 +1,45 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import java.lang.*?>
+-<?import java.util.*?>
+-<?import javafx.scene.*?>
+ <?import javafx.scene.control.*?>
+ <?import javafx.scene.layout.*?>
++<?import javafx.scene.text.*?>
+ 
+-<AnchorPane xmlns="http://javafx.com/javafx"
+-            xmlns:fx="http://javafx.com/fxml"
+-            fx:controller="rubrica.Controllers.ElencoPreferitiController"
+-            prefHeight="400.0" prefWidth="600.0">
+-
+-</AnchorPane>
++<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
++           orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12"
++           xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoPreferitiController">
++    <items>
++        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
++            <children>
++                <Button fx:id="TastoPiù" layoutX="540.0" layoutY="286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="JUSTIFY" wrapText="true">
++                    <font>
++                        <Font size="22.0" />
++                    </font></Button>
++                <TextField fx:id="barraDiRicerca" layoutX="14.0" layoutY="30.0" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
++                <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" prefHeight="248.0" prefWidth="513.0">
++                    <columns>
++                        <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />
++                    </columns>
++                </TableView>
++                <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
++                    <items>
++                        <MenuItem fx:id="importaRubrica" mnemonicParsing="false" text="Importa rubrica" />
++                        <MenuItem fx:id="esportaRubrica" mnemonicParsing="false" text="Esporta rubrica" />
++                        <Menu mnemonicParsing="false" text="Display mode">
++                            <items>
++                                <MenuItem fx:id="lightMode" mnemonicParsing="false" text="Light mode" />
++                                <MenuItem fx:id="darkMode" mnemonicParsing="false" text="Dark mode" />
++                            </items>
++                        </Menu>
++                    </items>
++                </MenuButton>
++            <Label layoutX="231.0" prefHeight="25.0" prefWidth="80.0" text="Elenco preferiti" />
++            </children></AnchorPane>
++        <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
++            <children>
++                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton"
++                        prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
++                <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0"
++                        prefWidth="300.0" text="Contatti" />
++            </children></AnchorPane>
++    </items>
++</SplitPane>
+Index: src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rubrica.Controllers;\r\n\r\npublic class VisualizzazioneContattoController {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java b/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java
+--- a/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java	(date 1733505848526)
+@@ -1,4 +1,45 @@
+ package rubrica.Controllers;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Button;
++import javafx.stage.Stage;
++
+ public class VisualizzazioneContattoController {
++    @FXML
++    public Button contatti;
++
++    @FXML
++    public Button preferiti;
++
++    public void onContattiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) contatti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++    public void onPreferitiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) preferiti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
+ }
+Index: src/main/java/rubrica/Controllers/RicercaContattiController.java
+===================================================================
+diff --git a/src/main/java/rubrica/Controllers/RicercaContattiController.java b/src/main/java/rubrica/Controllers/RicercaContattiController.java
+deleted file mode 100644
+--- a/src/main/java/rubrica/Controllers/RicercaContattiController.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ /dev/null	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
+@@ -1,4 +0,0 @@
+-package rubrica.Controllers;
+-
+-public class RicercaContattiController {
+-}
+Index: src/main/java/rubrica/Models/Rubrica.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rubrica.Models;\r\n\r\n\r\nimport java.util.Set;\r\nimport java.util.TreeSet;\r\n\r\npublic class Rubrica {\r\n    Set<Contatto> contatti = new TreeSet<>();\r\n\r\n    public void aggiungiContatto(Contatto c){\r\n\r\n    }\r\n\r\n    public void modificaContatto(Contatto c){\r\n\r\n    }\r\n\r\n    public void eliminaContatto(Contatto c){\r\n\r\n    }\r\n\r\n    public Set<Contatto> ricercaContatti(String query){\r\n        return null;\r\n    }\r\n\r\n    public Set<Contatto> getContattiPreferiti(){\r\n        return null;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Models/Rubrica.java b/src/main/java/rubrica/Models/Rubrica.java
+--- a/src/main/java/rubrica/Models/Rubrica.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/java/rubrica/Models/Rubrica.java	(date 1733511598631)
+@@ -1,10 +1,11 @@
+ package rubrica.Models;
+ 
+ 
++import java.io.Serializable;
+ import java.util.Set;
+ import java.util.TreeSet;
+ 
+-public class Rubrica {
++public class Rubrica implements Serializable {
+     Set<Contatto> contatti = new TreeSet<>();
+ 
+     public void aggiungiContatto(Contatto c){
+Index: src/main/java/rubrica/Controllers/CreaContattoController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Controllers/CreaContattoController.java b/src/main/java/rubrica/Controllers/CreaContattoController.java
+new file mode 100644
+--- /dev/null	(date 1733511124646)
++++ b/src/main/java/rubrica/Controllers/CreaContattoController.java	(date 1733511124646)
+@@ -0,0 +1,74 @@
++package rubrica.Controllers;
++
++import ezvcard.VCard;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Button;
++import javafx.stage.Stage;
++import rubrica.Models.Contatto;
++
++import java.io.File;
++
++public class CreaContattoController {
++    @FXML
++    public Button contatti;
++
++    @FXML
++    public Button preferiti;
++
++    @FXML
++    public Button annulla;
++
++    public void onContattiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) contatti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++    public void onPreferitiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) preferiti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++    public void onAnnullaClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) annulla.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++    /*public void addImageButton(ActionEvent getActionEvent) {
++        VCard v = new VCard();
++
++        File photoFile = new File("C:/Users/gabbi/Desktop/Ingegneria del software/1Progetto/Projetto/Rubrica_telefonica_Gruppo_8/Immagine 2024-12-05 233219.jpg");
++        v.addPhoto(photoFile);
++
++    }*/
++}
+Index: src/main/java/rubrica/Controllers/ElencoPreferitiController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rubrica.Controllers;\r\n\r\npublic class ElencoPreferitiController {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Controllers/ElencoPreferitiController.java b/src/main/java/rubrica/Controllers/ElencoPreferitiController.java
+--- a/src/main/java/rubrica/Controllers/ElencoPreferitiController.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/java/rubrica/Controllers/ElencoPreferitiController.java	(date 1733505848521)
+@@ -1,4 +1,45 @@
+ package rubrica.Controllers;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Button;
++import javafx.stage.Stage;
++
+ public class ElencoPreferitiController {
++    @FXML
++    public Button contatti;
++
++    @FXML
++    public Button preferiti;
++
++    public void onContattiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) contatti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++    public void onPreferitiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) preferiti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
+ }
+Index: src/main/java/rubrica/Controllers/ElencoContattiController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rubrica.Controllers;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.TextField;\r\n\r\npublic class ElencoContattiController /*implements initializable*/ {\r\n    @FXML\r\n    public Button TastoPiù;\r\n\r\n    @FXML\r\n    public TextField barraDiRicerca;\r\n\r\n    @FXML\r\n    public void onPlusClick(javafx.event.ActionEvent event) {\r\n        barraDiRicerca.setText(\"Persona aggiunta\");\r\n    }\r\n\r\n    /*@FXML\r\n    public void onContatti*/\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Controllers/ElencoContattiController.java b/src/main/java/rubrica/Controllers/ElencoContattiController.java
+--- a/src/main/java/rubrica/Controllers/ElencoContattiController.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/java/rubrica/Controllers/ElencoContattiController.java	(date 1733505848548)
+@@ -1,24 +1,69 @@
+ package rubrica.Controllers;
+ 
++import javafx.event.ActionEvent;
+ import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
+ import javafx.scene.control.Button;
+ import javafx.scene.control.TextField;
++import javafx.stage.Stage;
+ 
+ public class ElencoContattiController /*implements initializable*/ {
+     @FXML
+-    public Button TastoPiù;
++    public Button tastoPiù;
+ 
+     @FXML
+     public TextField barraDiRicerca;
+ 
+     @FXML
+-    public void onPlusClick(javafx.event.ActionEvent event) {
+-        barraDiRicerca.setText("Persona aggiunta");
++    public Button contatti;
++
++    @FXML
++    public Button preferiti;
++
++    public void onContattiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) contatti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
+     }
+ 
+-    /*@FXML
+-    public void onContatti*/
++    public void onPreferitiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
+ 
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) preferiti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
+ 
++
++
++    public void onPlusClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/CreaContattoView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) tastoPiù.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
+ 
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"ALL\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e6383222-83a3-4d80-a153-6cd64fb0455f\" name=\"Changes\" comment=\"Fine creazione ossatura classe\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/Sviluppo-ossatura-classi\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Sviluppo-gui\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Gabbo-Unisa&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25&quot;,\r\n    &quot;accountId&quot;: &quot;0052fda6-4d4f-40ca-b2e9-f5217f990821&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2piSeqLrquax4OnNiTXmR8b3U5c\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/gabbi/Desktop/Programmazione ad oggetti/ProjettiJava/Gruppo_8_Progetto_IDS_2024-25/src/main/resources/org/example/rubricatelefonicaids_gruppo8/viewElencoContatti&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\gabbi\\Desktop\\Programmazione ad oggetti\\ProjettiJava\\Gruppo_8_Progetto_IDS_2024-25\\src\\main\\resources\\org\\example\" />\r\n      <recent name=\"C:\\Users\\gabbi\\Desktop\\Programmazione ad oggetti\\ProjettiJava\\Gruppo_8_Progetto_IDS_2024-25\\src\\main\\resources\\org\\example\\rubricatelefonicaids_gruppo8\" />\r\n      <recent name=\"C:\\Users\\gabbi\\Desktop\\Programmazione ad oggetti\\ProjettiJava\\Gruppo_8_Progetto_IDS_2024-25\\src\\main\\resources\\org\\example\\rubricatelefonicaids_gruppo8\\viewElencoContatti\" />\r\n      <recent name=\"C:\\Users\\gabbi\\Desktop\\Programmazione ad oggetti\\ProjettiJava\\Gruppo_8_Progetto_IDS_2024-25\\src\\main\\java\\org\\example\\rubricatelefonicaids_gruppo8\\SchermataAggiungiContatto\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"org.example.rubricatelefonicaids_gruppo8.Models\" />\r\n      <recent name=\"org.example.rubricatelefonicaids_gruppo8.SchermataAggiungiContatto\" />\r\n      <recent name=\"org.example.rubricatelefonicaids_gruppo8\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunAnythingCache\">\r\n    <option name=\"myCommands\">\r\n      <command value=\"mvn clean install\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.ApplicazioneProgetto\">\r\n    <configuration name=\"ApplicazioneProgetto\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.rubricatelefonicaids_gruppo_otto.Models.ApplicazioneProgetto\" />\r\n      <module name=\"RubricaTelefonicaIDS_Gruppo8\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.rubricatelefonicaids_gruppo_otto.Models.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainModel\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.rubricatelefonicaids_gruppo_otto.MainModel\" />\r\n      <module name=\"RubricaTelefonicaIDS_Gruppo8\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.rubricatelefonicaids_gruppo_otto.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.ApplicazioneProgetto\" />\r\n        <item itemvalue=\"Application.MainModel\" />\r\n        <item itemvalue=\"Application.MainModel\" />\r\n        <item itemvalue=\"Application.ApplicazioneProgetto\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e6383222-83a3-4d80-a153-6cd64fb0455f\" name=\"Changes\" comment=\"JavaFx\" />\r\n      <created>1733247500934</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733247500934</updated>\r\n      <workItem from=\"1733247502076\" duration=\"9741000\" />\r\n      <workItem from=\"1733268612424\" duration=\"22606000\" />\r\n      <workItem from=\"1733358630481\" duration=\"318000\" />\r\n      <workItem from=\"1733359153978\" duration=\"90000\" />\r\n      <workItem from=\"1733385266077\" duration=\"3209000\" />\r\n      <workItem from=\"1733388490729\" duration=\"87000\" />\r\n      <workItem from=\"1733388589338\" duration=\"2319000\" />\r\n      <workItem from=\"1733390926697\" duration=\"4681000\" />\r\n      <workItem from=\"1733395635086\" duration=\"1013000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Passaggio a JavaFx\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733251993403</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733251993403</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Creazione classi e organizzazione in package\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733347415801</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733347415801</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Fine creazione ossatura classe + alcuni metodi\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733355241490</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733355241490</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Fine creazione ossatura classe + alcuni metodi\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733358025458</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733358025458</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Fine creazione ossatura classe + alcuni metodi\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733358038937</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733358038937</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Fine creazione ossatura classe + alcuni metodi\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733386419185</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733386419185</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Fine creazione ossatura classe + alcuni metodi\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733388125143</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733388125143</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Fine creazione ossatura classe\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733407245962</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733407245962</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"Sviluppo-ossatura-classi\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Sviluppo-ossatura-classi\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Passaggio a JavaFx\" />\r\n    <MESSAGE value=\"Creazione classi e organizzazione in package\" />\r\n    <MESSAGE value=\"Fine creazione ossatura classe + alcuni metodi\" />\r\n    <MESSAGE value=\"Fine creazione ossatura classe\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Fine creazione ossatura classe\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/.idea/workspace.xml	(date 1733512962196)
+@@ -4,12 +4,21 @@
+     <option name="autoReloadType" value="ALL" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Fine creazione ossatura classe">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" afterDir="false" />
++    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Risolto errore di compilazione javafx">
++      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/RicercaContattiController.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/RicercaContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -23,14 +32,11 @@
+         <option value="Class" />
+       </list>
+     </option>
+-  </component>
+-  <component name="Git.Merge.Settings">
+-    <option name="BRANCH" value="origin/Sviluppo-ossatura-classi" />
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Sviluppo-gui" />
++        <entry key="$PROJECT_DIR$" value="prova" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -44,7 +50,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25&quot;,
+-    &quot;accountId&quot;: &quot;0052fda6-4d4f-40ca-b2e9-f5217f990821&quot;
++    &quot;accountId&quot;: &quot;81452710-8e13-4a2a-a66d-d5c32541e812&quot;
+   }
+ }</component>
+   <component name="MavenImportPreferences">
+@@ -65,32 +71,35 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gabbi/Desktop/Programmazione ad oggetti/ProjettiJava/Gruppo_8_Progetto_IDS_2024-25/src/main/resources/org/example/rubricatelefonicaids_gruppo8/viewElencoContatti&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.ApplicazioneProgetto.executor": "Run",
++    "Application.HelloApplication.executor": "Run",
++    "Application.MainModel.executor": "Run",
++    "Application.org.example.rubrica.Models.ApplicazioneProgetto.executor": "Run",
++    "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "git-widget-placeholder": "master",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/carmine/Desktop/PROGRAMMAZIONE AD OGGETTI/JAVAFX/Es_3-MyStudentListFXML",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.build.tools.auto.reload": "ALL",
++    "settings.editor.selected.configurable": "preferences.lookFeel",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\gabbi\Desktop\Ingegneria del software\1Progetto\Projetto\Rubrica_telefonica_Gruppo_8\src\main\resources\rubrica\Views" />
++      <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\rubrica\Views" />
++      <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
+       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example" />
+       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
+-      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8\viewElencoContatti" />
+-      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\java\org\example\rubricatelefonicaids_gruppo8\SchermataAggiungiContatto" />
+     </key>
+     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+       <recent name="org.example.rubricatelefonicaids_gruppo8.Models" />
+@@ -103,26 +112,13 @@
+       <command value="mvn clean install" />
+     </option>
+   </component>
+-  <component name="RunManager" selected="Application.ApplicazioneProgetto">
++  <component name="RunManager">
+     <configuration name="ApplicazioneProgetto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="org.example.rubricatelefonicaids_gruppo_otto.Models.ApplicazioneProgetto" />
+-      <module name="RubricaTelefonicaIDS_Gruppo8" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="org.example.rubricatelefonicaids_gruppo_otto.Models.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="MainModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="org.example.rubricatelefonicaids_gruppo_otto.MainModel" />
++      <option name="MAIN_CLASS_NAME" value="rubrica.Models.ApplicazioneProgetto" />
+       <module name="RubricaTelefonicaIDS_Gruppo8" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="org.example.rubricatelefonicaids_gruppo_otto.*" />
++          <option name="PATTERN" value="rubrica.Models.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -133,8 +129,9 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.ApplicazioneProgetto" />
+-        <item itemvalue="Application.MainModel" />
+-        <item itemvalue="Application.MainModel" />
++        <item itemvalue="Application.ApplicazioneProgetto" />
++        <item itemvalue="Application.ApplicazioneProgetto" />
++        <item itemvalue="Application.ApplicazioneProgetto" />
+         <item itemvalue="Application.ApplicazioneProgetto" />
+       </list>
+     </recent_temporary>
+@@ -164,6 +161,12 @@
+       <workItem from="1733388589338" duration="2319000" />
+       <workItem from="1733390926697" duration="4681000" />
+       <workItem from="1733395635086" duration="1013000" />
++      <workItem from="1733425521246" duration="2816000" />
++      <workItem from="1733476361932" duration="3545000" />
++      <workItem from="1733482773754" duration="5222000" />
++      <workItem from="1733493549650" duration="3234000" />
++      <workItem from="1733496797521" duration="6282000" />
++      <workItem from="1733510794243" duration="2167000" />
+     </task>
+     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
+       <option name="closed" value="true" />
+@@ -229,7 +232,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1733407245962</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="Risolto errore di compilazione javafx">
++      <option name="closed" value="true" />
++      <created>1733432247815</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1733432247815</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -243,6 +254,26 @@
+             <list>
+               <RecentGroup>
+                 <option name="FILTER_VALUES">
++                  <option value="origin/master" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="fix_javafx_error" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="HEAD" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="master" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
+                   <option value="Sviluppo-ossatura-classi" />
+                 </option>
+               </RecentGroup>
+@@ -261,7 +292,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="Sviluppo-ossatura-classi" />
++                        <option value="HEAD" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -278,7 +309,8 @@
+     <MESSAGE value="Creazione classi e organizzazione in package" />
+     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
+     <MESSAGE value="Fine creazione ossatura classe" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Fine creazione ossatura classe" />
++    <MESSAGE value="Risolto errore di compilazione javafx" />
++    <option name="LAST_COMMIT_MESSAGE" value="Risolto errore di compilazione javafx" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/main/java/rubrica/Controllers/ModificaContattiController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rubrica.Controllers;\r\n\r\npublic class ModificaContattiController {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rubrica/Controllers/ModificaContattiController.java b/src/main/java/rubrica/Controllers/ModificaContattiController.java
+--- a/src/main/java/rubrica/Controllers/ModificaContattiController.java	(revision ff9018937bf7138527c14830de7fcd21417c6b63)
++++ b/src/main/java/rubrica/Controllers/ModificaContattiController.java	(date 1733505848517)
+@@ -1,4 +1,64 @@
+ package rubrica.Controllers;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Button;
++import javafx.stage.Stage;
++
+ public class ModificaContattiController {
++    @FXML
++    public Button buttonAnnulla;
++
++    @FXML
++    public Button contatti;
++
++    @FXML
++    public Button preferiti;
++
++    public void onContattiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) contatti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++    public void onPreferitiClickButton(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) preferiti.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
++
++
++
++    public void onClickAnnulla(ActionEvent getActionEvent) {
++        try {
++            // Carica il file FXML della nuova scena
++            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
++            Scene nuovaScena = new Scene(nuovaScenaRoot);
++
++            // Ottieni lo Stage corrente e cambia la scena
++            Stage stage = (Stage) buttonAnnulla.getScene().getWindow();
++            stage.setScene(nuovaScena);
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++    }
+ }
