@@ -28,42 +28,41 @@ public class Contatto implements Comparable<Contatto>{
         this.dataCreazione = dataCreazione;
         this.note = note;
         this.isPreferito = isPreferito;
-
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public String getCognome() {
-        return cognome;
+        return this.cognome;
     }
 
     public List<String> getTelefono() {
-        return telefono;
+        return this.telefono;
     }
 
     public List<String> getEmail() {
-        return email;
+        return this.email;
     }
 
     public Photo getImmagine() {
-        return immagine;
+        return this.immagine;
     }
 
     public Date getDataCreazione() {
-        return dataCreazione;
+        return this.dataCreazione;
     }
 
     public String getNote() {
-        return note;
+        return this.note;
     }
 
     public boolean getIsPreferito() {
-        return false;
+        return this.isPreferito;
     }
 
-    public VCard importaContatto(){
+    public Contatto importaVCard(VCard vCard){
         return null;
     }
 

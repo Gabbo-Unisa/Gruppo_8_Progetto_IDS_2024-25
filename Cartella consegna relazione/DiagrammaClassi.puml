@@ -1,7 +1,7 @@
 @startuml
-class Rubrica {
+class Rubrica implements Serializable {
     + aggiungiContatto(c: Contatto): void
-    + modificaContatto(c: Contatto): void
+    + modificaContatto(old: Contatto, update: Contatto): void
     + eliminaContatto(c: Contatto): void
     + ricercaContatti(query: String): Set<Contatto>
     + getContattiPreferiti(): Set<Contatto>
