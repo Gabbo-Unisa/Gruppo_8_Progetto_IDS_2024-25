@@ -17,11 +17,25 @@
 package rubrica.Models;
 
 
+import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Rubrica {
-    Set<Contatto> contatti = new TreeSet<>();
+public class Rubrica implements Serializable {
+    private Set<Contatto> contatti;
+    private Checker checker;
+
+    /**
+     * @brief Costruttore della classe Rubrica.
+     *
+     * @param[in] checker Un oggetto Checker utilizzato per validare i dati dei contatti.
+     *
+     * @post Crea un nuovo oggetto Rubrica con un insieme vuoto di contatti.
+     */
+    public Rubrica(Checker checker) {
+        this.contatti = new TreeSet<>();
+        this.checker = checker;
+    }
 
     /**
      * @brief Aggiunge un nuovo contatto alla rubrica.
