@@ -1,3 +1,15 @@
+/**
+ * @file Checker.java
+ *
+ * @brief Classe per la validazione dei campi di un contatto.
+ *
+ * Questa classe fornisce funzionalità per validare i campi "telefono" ed "email" di un contatto.
+ *
+ * @author Gabriele Pannuto
+ * @date December 07, 2024
+ * @version 2.0
+ */
+
 package rubrica.Models;
 
 public class Checker {

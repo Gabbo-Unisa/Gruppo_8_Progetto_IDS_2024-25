@@ -1,3 +1,16 @@
+/**
+ * @file FileManager.java
+ *
+ * @brief Classe per la gestione dell'importazione ed esportazione della rubrica.
+ *
+ * Questa classe fornisce funzionalità per importare ed esportare la rubrica da e verso file .vcf.
+ *
+ * @author Gabriele Pannuto
+ * @date December 07, 2024
+ * @version 2.0
+ */
+
+
 package rubrica.Models;
 
 public class FileManager {
