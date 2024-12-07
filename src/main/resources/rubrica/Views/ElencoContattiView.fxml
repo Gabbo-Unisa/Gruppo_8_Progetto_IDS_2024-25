@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoContattiController">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../CSS/DarkMode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoContattiController">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@../../CSS/DarkMode.css">
          <children>
             <Button fx:id="tastoPiù" layoutX="539.0" layoutY="287.0" mnemonicParsing="false" onAction="#onPlusClickButton" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="CENTER" wrapText="true">
                <font>
@@ -15,7 +15,7 @@
             <TextField fx:id="barraDiRicercaContatti" layoutX="14.0" layoutY="30.0" onKeyReleased="#onVisualizzaTyped" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
             <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" prefHeight="248.0" prefWidth="513.0">
               <columns>
-                <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />
+                <TableColumn fx:id="nome" prefWidth="512.4444516499838" text="Nome" />
               </columns>
             </TableView>
             <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">

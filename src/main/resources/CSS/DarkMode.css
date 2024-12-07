@@ -1,0 +1,146 @@
+/* Sfondo generale del layout */
+.root {
+    -fx-background-color: #2b2b2b; /* Sfondo scuro generale */
+    -fx-text-fill: #ffffff; /* Testo chiaro */
+}
+
+/* Sfondo e colori dei pulsanti */
+.button, .menu-button {
+    -fx-background-color: #444444; /* Colore di sfondo scuro */
+    -fx-text-fill: #ffffff; /* Testo bianco */
+    -fx-border-radius: 5;
+}
+
+.button:hover, .menu-button:hover {
+    -fx-background-color: #555555; /* Colore di hover più chiaro */
+}
+
+/* Colore dei pulsanti nel Menu */
+.menu-item {
+    -fx-background-color: #333333; /* Sfondo scuro per i MenuItem */
+    -fx-text-fill: #ffffff; /* Colore del testo bianco */
+}
+
+.menu-item:hover {
+    -fx-background-color: #444444; /* Colore di hover più chiaro */
+}
+
+/* Testo e sfondo del TextField */
+.text-field {
+    -fx-background-color: #333333; /* Sfondo scuro del campo di testo */
+    -fx-text-fill: #ffffff; /* Testo chiaro */
+    -fx-prompt-text-fill: #888888; /* Testo del placeholder più chiaro */
+    -fx-border-radius: 5;
+    -fx-border-color: #555555; /* Colore del bordo */
+}
+
+.text-field:focused {
+    -fx-border-color: #3a8dff; /* Colore del bordo quando è selezionato */
+}
+
+/* Tabelle */
+.table-view {
+    -fx-background-color: #333333; /* Sfondo scuro della TableView */
+    -fx-text-fill: #ffffff; /* Testo bianco nelle celle */
+    -fx-border-color: #444444;
+}
+
+/* Colonna di intestazione della tabella (barra dei nomi delle colonne) */
+.table-view .column-header-background {
+    -fx-background-color: #444444; /* Sfondo scuro per l'intestazione */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff; /* Colore del testo delle intestazioni */
+}
+
+/* Divider dello SplitPane */
+.split-pane {
+    -fx-background-color: #2b2b2b; /* Sfondo scuro per lo SplitPane */
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #444444; /* Colore scuro per il divider */
+    -fx-background-radius: 5px; /* Angoli arrotondati per divider */
+}
+
+/* Righe della tabella */
+.table-view .row-cell:odd {
+    -fx-background-color: #2f2f2f; /* Colore delle righe dispari */
+}
+
+.table-view .row-cell:even {
+    -fx-background-color: #252525; /* Colore delle righe pari */
+}
+
+.table-view .row-cell:selected {
+    -fx-background-color: #444444; /* Colore della riga selezionata */
+    -fx-text-fill: #ffffff;
+}
+
+/* Menu */
+.menu-bar {
+    -fx-background-color: #333333; /* Sfondo della barra del menu */
+}
+
+.menu {
+    -fx-text-fill: #ffffff; /* Colore del testo nel menu */
+}
+
+/* Label */
+.label {
+    -fx-text-fill: #ffffff; /* Colore del testo delle label */
+}
+
+/* Barra di scorrimento */
+.scroll-bar {
+    -fx-background-color: #2b2b2b; /* Sfondo della barra di scorrimento */
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #555555; /* Colore del "thumb" della barra di scorrimento */
+    -fx-background-radius: 5; /* Angoli arrotondati della barra di scorrimento */
+}
+
+/* Placeholder quando la tabella è vuota */
+.table-view .placeholder {
+    -fx-text-fill: #888888; /* Colore del testo del placeholder */
+    -fx-background-color: transparent;
+}
+
+/* Tabelle */
+.table-view {
+    -fx-background-color: #333333; /* Sfondo scuro per la TableView */
+    -fx-text-fill: #ffffff; /* Testo bianco nelle celle */
+    -fx-border-color: #444444; /* Bordo della tabella */
+    -fx-border-width: 1px; /* Bordo della tabella */
+}
+
+/* Intestazione delle colonne */
+.table-view .column-header {
+    -fx-background-color: #444444; /* Sfondo scuro per l'intestazione */
+    -fx-border-color: #444444; /* Colore del bordo superiore della tabella */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff; /* Colore del testo delle intestazioni delle colonne */
+}
+
+/* Righe della tabella */
+.table-view .row-cell:odd {
+    -fx-background-color: #2f2f2f; /* Colore delle righe dispari */
+}
+
+.table-view .row-cell:even {
+    -fx-background-color: #252525; /* Colore delle righe pari */
+}
+
+.table-view .row-cell:selected {
+    -fx-background-color: #444444; /* Colore della riga selezionata */
+    -fx-text-fill: #ffffff; /* Testo bianco quando la riga è selezionata */
+}
+
+/* Divider della tabella */
+.table-view .table-row-cell .divider {
+    -fx-background-color: #444444; /* Divider scuro tra le righe */
+}

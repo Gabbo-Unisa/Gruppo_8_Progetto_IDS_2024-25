@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java">
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Affinamento Views e Controllers">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CSS/DarkMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +26,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix_javafx_error" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -36,12 +37,12 @@
     &quot;assignee&quot;: &quot;Gabbo-Unisa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25",
-    "accountId": "0052fda6-4d4f-40ca-b2e9-f5217f990821"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25&quot;,
+    &quot;accountId&quot;: &quot;81452710-8e13-4a2a-a66d-d5c32541e812&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -60,28 +61,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,
-    &quot;Application.org.example.rubrica.Models.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/carmine/Desktop/PROGRAMMAZIONE AD OGGETTI/JAVAFX/Es_3-MyStudentListFXML&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApplicazioneProgetto.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainModel.executor": "Run",
+    "Application.org.example.rubrica.Models.ApplicazioneProgetto.executor": "Run",
+    "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Sviluppo__GUI__Dark__Mode",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ferdy/OneDrive/Desktop/IDS/Gruppo_8_Progetto_IDS_2024-25",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\rubrica\Views" />
@@ -126,8 +127,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4" />
       </set>
     </attachedChunks>
   </component>
@@ -149,8 +150,12 @@
       <workItem from="1733390926697" duration="4681000" />
       <workItem from="1733395635086" duration="1013000" />
       <workItem from="1733425521246" duration="2816000" />
-      <workItem from="1733495981971" duration="373000" />
-      <workItem from="1733567762664" duration="413000" />
+      <workItem from="1733489587031" duration="4619000" />
+      <workItem from="1733494346280" duration="942000" />
+      <workItem from="1733524221389" duration="472000" />
+      <workItem from="1733561647173" duration="97000" />
+      <workItem from="1733561841910" duration="166000" />
+      <workItem from="1733578662589" duration="9533000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -224,13 +229,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733432247815</updated>
     </task>
-    <task id="LOCAL-00010" summary="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java">
+    <task id="LOCAL-00010" summary="Affinamento Views e Controllers">
       <option name="closed" value="true" />
-      <created>1733567655742</created>
+      <created>1733524065527</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1733567655742</updated>
+      <updated>1733524065527</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
@@ -279,6 +284,13 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="54" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="66" />
+                  <entry key="Table.GitHub.CommitStatus.ColumnIdWidth" value="66" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -302,8 +314,9 @@
     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
     <MESSAGE value="Fine creazione ossatura classe" />
     <MESSAGE value="Risolto errore di compilazione javafx" />
-    <MESSAGE value="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Sviluppo-GUI' into prova&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/resources/rubrica/Views/ElencoContattiView.fxml&#10;#&#9;src/main/resources/rubrica/Views/ElencoPreferitiView.fxml&#10;#&#9;src/main/resources/rubrica/Views/ModificaContattiView.fxml&#10;#&#9;src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" />
+    <MESSAGE value="Affinamento Views e Controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Affinamento Views e Controllers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
