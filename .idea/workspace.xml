@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Risolto errore di compilazione javafx">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiagrammaClassi.puml" beforeDir="false" afterPath="$PROJECT_DIR$/DiagrammaClassi.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +21,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="commenti-per-Doxygen" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix_javafx_error" />
+        <entry key="$PROJECT_DIR$" value="commenti-per-Doxygen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -119,6 +120,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
@@ -239,6 +241,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="origin/master" />
                 </option>
               </RecentGroup>
@@ -250,11 +257,6 @@
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="HEAD" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
                 </option>
               </RecentGroup>
               <RecentGroup>
@@ -295,7 +297,8 @@
     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
     <MESSAGE value="Fine creazione ossatura classe" />
     <MESSAGE value="Risolto errore di compilazione javafx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Risolto errore di compilazione javafx" />
+    <MESSAGE value="Aggiunta documentazione doxygen per la classe Contatto.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta documentazione doxygen per la classe Contatto.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
