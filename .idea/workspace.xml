@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Risolto errore di compilazione javafx">
-      <change beforePath="$PROJECT_DIR$/Cartella consegna relazione/DiagrammaClassi.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Cartella consegna relazione/DiagrammaClassi.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/RicercaContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/RicercaContattiView.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -147,6 +150,7 @@
       <workItem from="1733390926697" duration="4681000" />
       <workItem from="1733395635086" duration="1013000" />
       <workItem from="1733425521246" duration="2816000" />
+      <workItem from="1733495981971" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -272,7 +276,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
