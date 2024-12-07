@@ -7,7 +7,7 @@ class Rubrica implements Serializable {
     + getContattiPreferiti(): Set<Contatto>
 }
 
-class Contatto implements Comparable {
+class Contatto implements Serializable, Comparable {
     - nome: String
     - cognome: String
     - numeriTelefono: List<Telephone>
@@ -17,6 +17,8 @@ class Contatto implements Comparable {
     - nota: String
     - isPreferito: bool
 
+    + getters()
+    + setters()
     + compareTo(c: Contatto) : int
     + esportaContatto(): VCard
     + importaVCard(vCard: VCard): Contatto
