@@ -13,7 +13,7 @@
                 <Label layoutX="29.0" layoutY="163.0" text="Cognome" />
                 <Label layoutX="31.0" layoutY="193.0" text="Telefono" />
                 <Label layoutX="34.0" layoutY="270.0" text="E-mail" />
-                <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
+                <TextArea fx:id="txaNote" disable="true" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" />
                 <Label layoutX="454.0" layoutY="107.0" text="Note" />
                 <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
                 <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
@@ -26,6 +26,7 @@
             <Label fx:id="lblEmail2" layoutX="111.0" layoutY="287.0" text="Label" />
             <Label fx:id="lblEmail3" layoutX="111.0" layoutY="304.0" text="Label" />
             <ImageView fx:id="immagine" fitHeight="73.0" fitWidth="97.0" layoutX="63.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="modificaButton" layoutX="393.0" layoutY="34.0" mnemonicParsing="false" onAction="#onModificaClickButton" text="Modifica" />
             </children></AnchorPane>
         <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
             <children>

@@ -15,7 +15,7 @@ public class ElencoContattiController {
     public Button tastoPiù;
 
     @FXML
-    public TextField barraDiRicerca;
+    public TextField barraDiRicercaContatti;
 
     @FXML
     public Button contatti;
@@ -69,14 +69,14 @@ public class ElencoContattiController {
 
 
     public void onVisualizzaTyped(KeyEvent getKeyEvent) {
-        if(barraDiRicerca.getText().contains("Visualizza")){
+        if(barraDiRicercaContatti.getText().contains("Visualizza")){
             try {
                 // Carica il file FXML della nuova scena
                 Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/VisualizzazioneContattoView.fxml"));
                 Scene nuovaScena = new Scene(nuovaScenaRoot);
 
                 // Ottieni lo Stage corrente e cambia la scena
-                Stage stage = (Stage) barraDiRicerca.getScene().getWindow();
+                Stage stage = (Stage) barraDiRicercaContatti.getScene().getWindow();
                 stage.setScene(nuovaScena);
             } catch (Exception e) {
                 e.printStackTrace();

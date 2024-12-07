@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class ModificaContattiController {
     @FXML
-    public Button buttonAnnulla;
+    public Button annullaButton;
 
     @FXML
     public Button contatti;
@@ -55,7 +55,7 @@ public class ModificaContattiController {
             Scene nuovaScena = new Scene(nuovaScenaRoot);
 
             // Ottieni lo Stage corrente e cambia la scena
-            Stage stage = (Stage) buttonAnnulla.getScene().getWindow();
+            Stage stage = (Stage) annullaButton.getScene().getWindow();
             stage.setScene(nuovaScena);
         } catch (Exception e) {
             e.printStackTrace();

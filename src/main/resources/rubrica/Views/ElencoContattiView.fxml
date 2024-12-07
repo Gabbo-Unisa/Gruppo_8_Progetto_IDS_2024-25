@@ -12,7 +12,7 @@
                <font>
                   <Font size="22.0" />
                </font></Button>
-            <TextField fx:id="barraDiRicerca" layoutX="14.0" layoutY="30.0" onKeyReleased="#onVisualizzaTyped" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
+            <TextField fx:id="barraDiRicercaContatti" layoutX="14.0" layoutY="30.0" onKeyReleased="#onVisualizzaTyped" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
             <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" prefHeight="248.0" prefWidth="513.0">
               <columns>
                 <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />

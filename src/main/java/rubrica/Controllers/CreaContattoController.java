@@ -14,13 +14,14 @@ import java.io.File;
 
 public class CreaContattoController {
     @FXML
+    public Button annulla;
+
+    @FXML
     public Button contatti;
 
     @FXML
     public Button preferiti;
 
-    @FXML
-    public Button annulla;
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
         try {
