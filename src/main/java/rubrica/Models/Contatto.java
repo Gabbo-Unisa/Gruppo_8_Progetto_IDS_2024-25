@@ -25,7 +25,7 @@ public class Contatto implements Serializable, Comparable<Contatto>{
 
     private String nome;
     private String cognome;
-    private List<String> telefono;
+    private List<String> numeriTelefono;
     private List<String> email;
     private Photo immagine;
     private final Date dataCreazione;
@@ -37,18 +37,18 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      *
      * @param[in] nome Il nome del contatto.
      * @param[in] cognome Il cognome del contatto.
-     * @param[in] telefono La lista dei numeri di telefono del contatto.
+     * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
      * @param[in] email La lista degli indirizzi email del contatto.
      * @param[in] immagine La foto del contatto.
      * @param[in] nota La nota associate al contatto.
      * @param[in] isPreferito Indica se il contatto è contrassegnato come preferito.
      */
-    public Contatto(String nome, String cognome, List<String> telefono,
+    public Contatto(String nome, String cognome, List<String> numeriTelefono,
                     List<String> email, Photo immagine,
                     String nota, boolean isPreferito) {
         this.nome = nome;
         this.cognome = cognome;
-        this.telefono = telefono;
+        this.numeriTelefono = numeriTelefono;
         this.email = email;
         this.immagine = immagine;
         this.dataCreazione = new Date();
@@ -78,10 +78,10 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     /**
      * @brief Imposta la lista dei numeri di telefono del contatto.
      *
-     * @param[in] telefono La lista dei numeri di telefono del contatto.
+     * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
      */
-    public void setTelefono(List<String> telefono) {
-        this.telefono = telefono;
+    public void setNumeriTelefono(List<String> numeriTelefono) {
+        this.numeriTelefono = numeriTelefono;
     }
 
     /**
@@ -145,8 +145,8 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      *
      * @return La lista dei numeri di telefono del contatto.
      */
-    public List<String> getTelefono() {
-        return this.telefono;
+    public List<String> getNumeriTelefono() {
+        return this.numeriTelefono;
     }
 
     /**
