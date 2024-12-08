@@ -15,9 +15,11 @@
 package rubrica.Models;
 
 import ezvcard.VCard;
-import ezvcard.property.Photo;
+import ezvcard.property.*;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -28,12 +30,12 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     private List<String> numeriTelefono;
     private List<String> email;
     private Photo immagine;
-    private final Date dataCreazione;
+    private final String dataCreazione;
     private String nota;
     private boolean isPreferito;
 
     /**
-     * @brief Costruttore della classe Contatto.
+     * @brief Costruttore della classe Contatto - genera la data di creazione automaticamente.
      *
      * @param[in] nome Il nome del contatto.
      * @param[in] cognome Il cognome del contatto.
@@ -46,12 +48,49 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
                     List<String> email, Photo immagine,
                     String nota, boolean isPreferito) {
+        nome = nome.trim();
         this.nome = nome;
+
+        cognome = cognome.trim();
         this.cognome = cognome;
+
         this.numeriTelefono = numeriTelefono;
         this.email = email;
         this.immagine = immagine;
-        this.dataCreazione = new Date();
+
+        Date data = new Date();
+        SimpleDateFormat formatoData = new SimpleDateFormat("dd MMMM yyyy");
+        this.dataCreazione = formatoData.format(data);
+
+        this.nota = nota;
+        this.isPreferito = isPreferito;
+    }
+
+    /**
+     * @brief Costruttore della classe Contatto - la data di creazione è passata come parametro.
+     *
+     * @param[in] nome Il nome del contatto.
+     * @param[in] cognome Il cognome del contatto.
+     * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
+     * @param[in] email La lista degli indirizzi email del contatto.
+     * @param[in] immagine La foto del contatto.
+     * @param[in] dataCreazione La data di creazione del contatto.
+     * @param[in] nota La nota associate al contatto.
+     * @param[in] isPreferito Indica se il contatto è contrassegnato come preferito.
+     */
+    public Contatto(String nome, String cognome, List<String> numeriTelefono,
+                    List<String> email, Photo immagine, String dataCreazione,
+                    String nota, boolean isPreferito) {
+        nome = nome.trim();
+        this.nome = nome;
+
+        cognome = cognome.trim();
+        this.cognome = cognome;
+
+        this.numeriTelefono = numeriTelefono;
+        this.email = email;
+        this.immagine = immagine;
+        this.dataCreazione = dataCreazione;
         this.nota = nota;
         this.isPreferito = isPreferito;
     }
@@ -172,7 +211,7 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      *
      * @return La data di creazione del contatto.
      */
-    public Date getDataCreazione() {
+    public String getDataCreazione() {
         return this.dataCreazione;
     }
 
@@ -206,8 +245,34 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      * @pre L'oggetto VCard deve contenere dati validi per un contatto.
      * @post Viene creato un nuovo oggetto Contatto con i dati della VCard.
      */
-    public Contatto importaVCard(VCard vCard){
-        return null;
+    public Contatto importaVCard(VCard vCard) {
+        String nome = vCard.getFormattedName().getValue().split(" ")[0];
+        String cognome = vCard.getFormattedName().getValue().split(" ")[1];
+
+        List<String> numTel = new ArrayList<>();
+        for (Telephone tel : vCard.getTelephoneNumbers()) {
+            numTel.add(tel.getText());
+        }
+
+        List<String> mails = new ArrayList<>();
+        for (Email mail : vCard.getEmails()) {
+            mails.add(mail.getValue());
+        }
+
+        Photo imm = vCard.getPhotos().get(0);
+
+        String dataCreazione = vCard.getExtendedProperty("X-DATA-CREAZIONE").getValue();
+
+        String note;
+        if(vCard.getNotes() != null)
+            note = vCard.getNotes().getFirst().getValue();
+        else
+            note = null;
+
+        boolean isPreferito = Boolean.parseBoolean(vCard.getExtendedProperty("X-IS-PREFERITO").getValue());
+
+
+        return new Contatto(nome, cognome, numTel, mails, imm, dataCreazione, note, isPreferito);
     }
 
     /**
@@ -218,8 +283,32 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      * @pre Il contatto deve avere almeno nome e/o cognome settati.
      * @post Viene restituita una VCard con i dati del contatto.
      */
-    public VCard esportaContatto(){
-        return null;
+    public VCard esportaContatto() {
+        VCard vCard = new VCard();
+        vCard.setFormattedName(this.nome + " " + this.cognome);
+
+        if(this.numeriTelefono != null) {
+            for (String numero : this.numeriTelefono) {
+                vCard.addTelephoneNumber(numero);
+            }
+        }
+
+        if(this.email != null) {
+            for (String mail : this.email) {
+                vCard.addEmail(mail);
+            }
+        }
+
+        vCard.addPhoto(this.immagine);
+
+        vCard.addExtendedProperty("X-DATA-CREAZIONE", this.dataCreazione);
+
+        vCard.addNote(this.nota);
+
+        vCard.addExtendedProperty("X-IS-PREFERITO", Boolean.toString(this.isPreferito));
+
+
+        return vCard;
     }
 
     /**
@@ -234,7 +323,10 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      */
     @Override
     public int compareTo(Contatto c) {
-        //prova
-        return 0;
+        String nomeCognome = this.nome + this.cognome;
+
+        String cNomeCognome = c.getNome() + c.getCognome();
+
+        return nomeCognome.compareTo(cNomeCognome);
     }
 }
