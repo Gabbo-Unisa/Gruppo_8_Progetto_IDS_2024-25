@@ -4,18 +4,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoPreferitiController">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../CSS/DarkMode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoPreferitiController">
     <items>
         <AnchorPane fx:id="panelup" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-                <Button fx:id="TastoPiù" layoutX="540.0" layoutY="286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="JUSTIFY" wrapText="true">
+                <Button fx:id="tastoPiù" disable="true" layoutX="539.0" layoutY="287.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="CENTER" wrapText="true">
                     <font>
                         <Font size="22.0" />
                     </font></Button>
                 <TextField fx:id="barraDiRicercaPreferiti" layoutX="14.0" layoutY="30.0" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
                 <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" prefHeight="248.0" prefWidth="513.0">
                     <columns>
-                        <TableColumn fx:id="nome" prefWidth="135.0" text="Nome" />
+                        <TableColumn fx:id="nome" prefWidth="511.1111157735189" text="Nome" />
                     </columns>
                 </TableView>
                 <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">

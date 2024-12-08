@@ -25,11 +25,9 @@ public class ElencoContattiController {
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
         try {
-            // Carica il file FXML della nuova scena
             Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
             Scene nuovaScena = new Scene(nuovaScenaRoot);
 
-            // Ottieni lo Stage corrente e cambia la scena
             Stage stage = (Stage) contatti.getScene().getWindow();
             stage.setScene(nuovaScena);
         } catch (Exception e) {
@@ -39,11 +37,9 @@ public class ElencoContattiController {
 
     public void onPreferitiClickButton(ActionEvent getActionEvent) {
         try {
-            // Carica il file FXML della nuova scena
             Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
             Scene nuovaScena = new Scene(nuovaScenaRoot);
 
-            // Ottieni lo Stage corrente e cambia la scena
             Stage stage = (Stage) preferiti.getScene().getWindow();
             stage.setScene(nuovaScena);
         } catch (Exception e) {
@@ -55,11 +51,9 @@ public class ElencoContattiController {
 
     public void onPlusClickButton(ActionEvent getActionEvent) {
         try {
-            // Carica il file FXML della nuova scena
             Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/CreaContattoView.fxml"));
             Scene nuovaScena = new Scene(nuovaScenaRoot);
 
-            // Ottieni lo Stage corrente e cambia la scena
             Stage stage = (Stage) tastoPiù.getScene().getWindow();
             stage.setScene(nuovaScena);
         } catch (Exception e) {
@@ -67,15 +61,12 @@ public class ElencoContattiController {
         }
     }
 
-
     public void onVisualizzaTyped(KeyEvent getKeyEvent) {
         if(barraDiRicercaContatti.getText().contains("Visualizza")){
             try {
-                // Carica il file FXML della nuova scena
                 Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/VisualizzazioneContattoView.fxml"));
                 Scene nuovaScena = new Scene(nuovaScenaRoot);
 
-                // Ottieni lo Stage corrente e cambia la scena
                 Stage stage = (Stage) barraDiRicercaContatti.getScene().getWindow();
                 stage.setScene(nuovaScena);
             } catch (Exception e) {
