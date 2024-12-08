@@ -30,14 +30,23 @@ public class Checker {
      */
     public boolean validaContatto(Contatto c) {
 
-        for (int i = 0; i < c.getNumeriTelefono().size(); ++i) {
-            if (!c.getNumeriTelefono().get(i).matches("^\\d{10}$"))
-                return false;
+        if(!c.getNome().matches("^[a-zA-Z]{1,15}$") && !c.getCognome().matches("^[a-zA-Z]{1,15}$"))
+            return false;
+
+        if(c.getNumeriTelefono() != null)
+        {
+            for(String numero : c.getNumeriTelefono()) {
+                if(!numero.matches("^\\d{10}$"))
+                    return false;
+            }
         }
 
-        for (int j = 0; j < c.getEmail().size(); ++j) {
-            if (!c.getEmail().get(j).matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"))
-                return false;
+        if(c.getEmail() != null)
+        {
+            for(String email : c.getEmail()) {
+                if(!email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"))
+                    return false;
+            }
         }
 
         return true;

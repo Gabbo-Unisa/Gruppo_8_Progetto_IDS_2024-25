@@ -46,8 +46,14 @@ public class Rubrica implements Serializable {
      *
      * @post Se i dati del contatto sono validi, il contatto viene aggiunto alla rubrica.
      */
-    public void aggiungiContatto(Contatto c){
+    public boolean aggiungiContatto(Contatto c){
 
+        if(checker.validaContatto(c)) {
+            contatti.add(c);
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -62,8 +68,16 @@ public class Rubrica implements Serializable {
      *
      * @post Se i dati del contatto 'update' sono validi, il contatto 'old' viene sostituito con 'update'.
      */
-    public void modificaContatto(Contatto old, Contatto update){
+    public boolean modificaContatto(Contatto old, Contatto update){
 
+        if(checker.validaContatto(update))
+        {
+            contatti.remove(old);
+            contatti.add(update);
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -78,6 +92,7 @@ public class Rubrica implements Serializable {
      */
     public void eliminaContatto(Contatto c){
 
+        contatti.remove(c);
     }
 
 
@@ -94,7 +109,16 @@ public class Rubrica implements Serializable {
      *       se nessun contatto soddisfa i criteri.
      */
     public Set<Contatto> ricercaContatti(String query){
-        return null;
+
+        Set<Contatto> cRicercati = new TreeSet<>();
+
+        for(Contatto c : contatti)
+        {
+            if(c.getNome().matches("^" + query + ".*") || c.getCognome().matches("^" + query + ".*"))
+                cRicercati.add(c);
+        }
+
+        return cRicercati;
     }
 
 
@@ -109,7 +133,15 @@ public class Rubrica implements Serializable {
      *       Se non ci sono contatti preferiti, restituisce una collezione vuota.
      */
     public Set<Contatto> getContattiPreferiti(){
-        return null;
-    }
 
+        Set<Contatto> cPreferiti = new TreeSet<>();
+
+        for(Contatto c: contatti)
+        {
+            if(c.getIsPreferito())
+                cPreferiti.add(c);
+        }
+
+        return cPreferiti;
+    }
 }

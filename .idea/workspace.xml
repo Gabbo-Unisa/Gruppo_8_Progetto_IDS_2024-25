@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="inizio implementazione codice">
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="completata l'implementazione della classe Checker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733597191307</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="completata l'implementazione della classe Checker">
+      <option name="closed" value="true" />
+      <created>1733674456543</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733674456543</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +303,8 @@
     <MESSAGE value="Fine creazione ossatura classe" />
     <MESSAGE value="Risolto errore di compilazione javafx" />
     <MESSAGE value="Caricamento documentazione Design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Caricamento documentazione Design" />
+    <MESSAGE value="completata l'implementazione della classe Checker" />
+    <option name="LAST_COMMIT_MESSAGE" value="completata l'implementazione della classe Checker" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
