@@ -12,6 +12,8 @@
 
 package rubrica.Models;
 
+import java.util.regex.*;
+
 public class Checker {
 
 
@@ -26,7 +28,18 @@ public class Checker {
      *
      * @return Ritorna un valore true se il contatto è valido, altrimenti false.
      */
-    public boolean validaContatto(Contatto c){
-        return false;
+    public boolean validaContatto(Contatto c) {
+
+        for (int i = 0; i < c.getNumeriTelefono().size(); ++i) {
+            if (!c.getNumeriTelefono().get(i).matches("^\\d{10}$"))
+                return false;
+        }
+
+        for (int j = 0; j < c.getEmail().size(); ++j) {
+            if (!c.getEmail().get(j).matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"))
+                return false;
+        }
+
+        return true;
     }
 }
