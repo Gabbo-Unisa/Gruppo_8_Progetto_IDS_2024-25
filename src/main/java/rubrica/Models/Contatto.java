@@ -234,6 +234,7 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      */
     @Override
     public int compareTo(Contatto c) {
+        //prova
         return 0;
     }
 }
