@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Caricamento documentazione Design">
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/FileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="implementazione_codice" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,8 +37,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/Gabbo-collab/Gruppo_8_Progetto_IDS_2024-25",
-    "accountId": "16ef31f6-a5a1-4f0c-a49a-cac0f56f77ca"
+    "url": "https://github.com/Gabbo-Unisa/Gruppo_8_Progetto_IDS_2024-25",
+    "accountId": "0052fda6-4d4f-40ca-b2e9-f5217f990821"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -68,7 +68,7 @@
     "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "implementazione__codice",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ferdy/OneDrive/Desktop/IDS/Gruppo_8_Progetto_IDS_2024-25",
     "node.js.detected.package.eslint": "true",
@@ -83,11 +83,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Cartella consegna relazione" />
       <recent name="C:\Users\ferdy\OneDrive\Desktop\IDS\Gruppo_8_Progetto_IDS_2024-25\Cartella consegna relazione" />
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\rubrica\Views" />
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example" />
-      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.rubricatelefonicaids_gruppo8.Models" />
@@ -127,8 +127,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -154,6 +154,7 @@
       <workItem from="1733494346280" duration="942000" />
       <workItem from="1733563061171" duration="2647000" />
       <workItem from="1733668826391" duration="1069000" />
+      <workItem from="1733752591113" duration="2780000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -235,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733597191307</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design">
+      <option name="closed" value="true" />
+      <created>1733752739904</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733752739904</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +303,8 @@
     <MESSAGE value="Fine creazione ossatura classe" />
     <MESSAGE value="Risolto errore di compilazione javafx" />
     <MESSAGE value="Caricamento documentazione Design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Caricamento documentazione Design" />
+    <MESSAGE value="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
