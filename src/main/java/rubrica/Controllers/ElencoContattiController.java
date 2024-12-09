@@ -2,13 +2,11 @@ package rubrica.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 
 public class ElencoContattiController {
     @FXML
@@ -24,54 +22,60 @@ public class ElencoContattiController {
     public Button preferiti;
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
-        try {
-            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoContattiView.fxml"));
-            Scene nuovaScena = new Scene(nuovaScenaRoot);
-
-            Stage stage = (Stage) contatti.getScene().getWindow();
-            stage.setScene(nuovaScena);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(SupportControllers.getDisplayMode() == true){
+            SupportControllers.cambioSchermataLight(contatti, "/rubrica/Views/ElencoContattiView.fxml");
+        }else{
+        SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
         }
     }
 
     public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        try {
-            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/ElencoPreferitiView.fxml"));
-            Scene nuovaScena = new Scene(nuovaScenaRoot);
-
-            Stage stage = (Stage) preferiti.getScene().getWindow();
-            stage.setScene(nuovaScena);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(SupportControllers.getDisplayMode() == true) {
+            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
+        }else{
+            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
         }
     }
 
 
-
     public void onPlusClickButton(ActionEvent getActionEvent) {
-        try {
-            Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/CreaContattoView.fxml"));
-            Scene nuovaScena = new Scene(nuovaScenaRoot);
-
-            Stage stage = (Stage) tastoPiù.getScene().getWindow();
-            stage.setScene(nuovaScena);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(SupportControllers.getDisplayMode() == true) {
+            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/CreaContattoView.fxml");
+        }else{
+            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/CreaContattoView.fxml");
         }
     }
 
     public void onVisualizzaTyped(KeyEvent getKeyEvent) {
         if(barraDiRicercaContatti.getText().contains("Visualizza")){
-            try {
-                Parent nuovaScenaRoot = FXMLLoader.load(getClass().getResource("/rubrica/Views/VisualizzazioneContattoView.fxml"));
-                Scene nuovaScena = new Scene(nuovaScenaRoot);
-
-                Stage stage = (Stage) barraDiRicercaContatti.getScene().getWindow();
-                stage.setScene(nuovaScena);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            SupportControllers.cambioSchermataLight(barraDiRicercaContatti, "/rubrica/Views/VisualizzazioneContattoView.fxml");
         }
+        System.out.println(SupportControllers.getDisplayMode());
+    }
+
+
+    /* DISPLAY MODE ZONE :') */
+    @FXML
+    public MenuItem lightMode;
+
+    @FXML
+    public MenuItem darkMode;
+
+    @FXML
+    public SplitPane rootSplitPane;
+
+
+    public void onLightClickMouse(ActionEvent getActionEvent) {
+        // Decido che false sia la modalità scura
+        //     mentre true la modalità luminosa
+        SupportControllers.setDisplayMode(true);
+        rootSplitPane.getStylesheets().clear();
+    }
+
+    public void onDarkClickMouse(ActionEvent getActionEvent) {
+        // Decido che false sia la modalità scura
+        //     mentre true la modalità luminosa
+        SupportControllers.setDisplayMode(false);
+        rootSplitPane.getStylesheets().add(getClass().getResource("/CSS/DarkMode.css").toExternalForm());
     }
 }

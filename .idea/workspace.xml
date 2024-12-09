@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Sviluppo light mode e dark mode:&#10;Creazione DarkMode.css">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/SupportControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/DarkMode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS/DarkMode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
@@ -86,7 +88,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -164,7 +166,12 @@
       <workItem from="1733563061171" duration="2647000" />
       <workItem from="1733668826391" duration="1069000" />
       <workItem from="1733670400953" duration="9586000" />
-      <workItem from="1733680922178" duration="992000" />
+      <workItem from="1733680922178" duration="2063000" />
+      <workItem from="1733732648058" duration="34000" />
+      <workItem from="1733732689876" duration="4531000" />
+      <workItem from="1733742675167" duration="2234000" />
+      <workItem from="1733758173984" duration="713000" />
+      <workItem from="1733758901105" duration="12474000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -246,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733597191307</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Sviluppo light mode e dark mode:&#10;Creazione DarkMode.css">
+      <option name="closed" value="true" />
+      <created>1733682225268</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733682225268</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../CSS/DarkMode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ModificaContattiController">
+<SplitPane fx:id="rootSplitPane" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../CSS/DarkMode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ModificaContattiController">
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -29,11 +29,17 @@
             <Label layoutX="454.0" layoutY="107.0" text="Note" />
             <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
             <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
+             <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
+                 <items>
+                     <MenuItem fx:id="lightMode" mnemonicParsing="false" onAction="#onLightClickMouse" text="Light mode" />
+                     <MenuItem fx:id="darkMode" mnemonicParsing="false" onAction="#onDarkClickMouse" text="Dark mode" />
+                 </items>
+             </MenuButton>
          </children></AnchorPane>
         <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
             <children>
-                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
-                <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
+                <Button fx:id="preferiti" disable="true" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
+                <Button fx:id="contatti" disable="true" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
             </children></AnchorPane>
     </items>
 </SplitPane>
