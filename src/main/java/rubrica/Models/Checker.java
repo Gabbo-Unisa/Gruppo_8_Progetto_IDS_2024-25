@@ -18,15 +18,14 @@ public class Checker {
 
 
     /**
-     * @brief Effettua il controllo sulla validità dei campi "telefono" ed "email" di un contatto
+     * @brief Effettua un controllo sui dati di un contatto.
      *
-     * @param[in] c Il contatto da validare
+     * @param[in] c Il contatto da validare.
+     *
+     * @return Ritorna un valore 'true' se il contatto è valido, altrimenti 'false'.
      *
      * @pre Il contatto deve avere almeno nome e/o cognome settati.
-     *
-     * @post Viene stabilito se i campi "telefono" ed "email" del contatto sono legittimi.
-     *
-     * @return Ritorna un valore true se il contatto è valido, altrimenti false.
+     * @post Viene stabilito se i campi del contatto sono legittimi.
      */
     public boolean validaContatto(Contatto c) {
 

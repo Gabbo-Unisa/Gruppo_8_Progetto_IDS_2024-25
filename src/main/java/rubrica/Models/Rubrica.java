@@ -41,9 +41,9 @@ public class Rubrica implements Serializable {
      * @brief Aggiunge un nuovo contatto alla rubrica.
      *
      * @param[in] c Il contatto da aggiungere alla rubrica.
+     * @return 'true' se il contatto è stato aggiunto con successo, 'false' altrimenti.
      *
      * @pre Il contatto deve avere almeno nome e/o cognome settati.
-     *
      * @post Se i dati del contatto sono validi, il contatto viene aggiunto alla rubrica.
      */
     public boolean aggiungiContatto(Contatto c){
@@ -62,6 +62,8 @@ public class Rubrica implements Serializable {
      *
      * @param[in] old Il contatto attualmente presente nella rubrica che deve essere modificato.
      * @param[in] update Il nuovo contatto contenente i dati aggiornati.
+     *
+     * @return 'true' se la modifica è stata effettuata con successo, 'false' altrimenti.
      *
      * @pre Il contatto 'old' deve esistere nella rubrica.
      *      Il contatto 'update' deve avere almeno nome e/o cognome settati.

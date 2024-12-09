@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Caricamento documentazione Design">
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="completata l'implementazione della classe Rubrica e correzione della classe Checker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Rubrica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +36,12 @@
     &quot;assignee&quot;: &quot;Gabbo-Unisa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Gabbo-collab/Gruppo_8_Progetto_IDS_2024-25",
-    "accountId": "16ef31f6-a5a1-4f0c-a49a-cac0f56f77ca"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Gabbo-collab/Gruppo_8_Progetto_IDS_2024-25&quot;,
+    &quot;accountId&quot;: &quot;16ef31f6-a5a1-4f0c-a49a-cac0f56f77ca&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -59,28 +60,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApplicazioneProgetto.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.MainModel.executor": "Run",
-    "Application.org.example.rubrica.Models.ApplicazioneProgetto.executor": "Run",
-    "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "implementazione__codice",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ferdy/OneDrive/Desktop/IDS/Gruppo_8_Progetto_IDS_2024-25",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.rubrica.Models.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;implementazione__codice&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ferdy/OneDrive/Desktop/IDS/Gruppo_8_Progetto_IDS_2024-25&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ferdy\OneDrive\Desktop\IDS\Gruppo_8_Progetto_IDS_2024-25\Cartella consegna relazione" />
@@ -153,7 +154,8 @@
       <workItem from="1733489587031" duration="4619000" />
       <workItem from="1733494346280" duration="942000" />
       <workItem from="1733563061171" duration="2647000" />
-      <workItem from="1733668826391" duration="1069000" />
+      <workItem from="1733737919785" duration="327000" />
+      <workItem from="1733738260750" duration="4017000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -227,15 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1733432247815</updated>
     </task>
-    <task id="LOCAL-00010" summary="Caricamento documentazione Design">
-      <option name="closed" value="true" />
-      <created>1733597191307</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1733597191307</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,8 +287,7 @@
     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
     <MESSAGE value="Fine creazione ossatura classe" />
     <MESSAGE value="Risolto errore di compilazione javafx" />
-    <MESSAGE value="Caricamento documentazione Design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Caricamento documentazione Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Risolto errore di compilazione javafx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
