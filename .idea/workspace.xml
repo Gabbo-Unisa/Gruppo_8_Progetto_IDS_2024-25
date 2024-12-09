@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design">
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/Contatto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implementazione_codice" />
+        <entry key="$PROJECT_DIR$" value="fix_javafx_error" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -59,35 +60,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApplicazioneProgetto.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.MainModel.executor": "Run",
-    "Application.org.example.rubrica.Models.ApplicazioneProgetto.executor": "Run",
-    "Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ferdy/OneDrive/Desktop/IDS/Gruppo_8_Progetto_IDS_2024-25",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainModel.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.rubrica.Models.ApplicazioneProgetto.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.RubricaTelefonicaIDS_Gruppo8 [clean...].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carmine/Desktop/PROGRAMMAZIONE AD OGGETTI/JAVAFX/Es_3-MyStudentListFXML&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Cartella consegna relazione" />
-      <recent name="C:\Users\ferdy\OneDrive\Desktop\IDS\Gruppo_8_Progetto_IDS_2024-25\Cartella consegna relazione" />
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\rubrica\Views" />
       <recent name="C:\Users\carmine\Desktop\INGEGNERIA DEL SOFTWARE\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
       <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example" />
+      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8" />
+      <recent name="C:\Users\gabbi\Desktop\Programmazione ad oggetti\ProjettiJava\Gruppo_8_Progetto_IDS_2024-25\src\main\resources\org\example\rubricatelefonicaids_gruppo8\viewElencoContatti" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.rubricatelefonicaids_gruppo8.Models" />
@@ -116,8 +117,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApplicazioneProgetto" />
-        <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
         <item itemvalue="Application.ApplicazioneProgetto" />
@@ -150,11 +149,8 @@
       <workItem from="1733390926697" duration="4681000" />
       <workItem from="1733395635086" duration="1013000" />
       <workItem from="1733425521246" duration="2816000" />
-      <workItem from="1733489587031" duration="4619000" />
-      <workItem from="1733494346280" duration="942000" />
-      <workItem from="1733563061171" duration="2647000" />
-      <workItem from="1733668826391" duration="1069000" />
-      <workItem from="1733752591113" duration="2780000" />
+      <workItem from="1733495981971" duration="373000" />
+      <workItem from="1733567762664" duration="413000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -228,23 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733432247815</updated>
     </task>
-    <task id="LOCAL-00010" summary="Caricamento documentazione Design">
+    <task id="LOCAL-00010" summary="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java">
       <option name="closed" value="true" />
-      <created>1733597191307</created>
+      <created>1733567655742</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1733597191307</updated>
+      <updated>1733567655742</updated>
     </task>
-    <task id="LOCAL-00011" summary="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design">
-      <option name="closed" value="true" />
-      <created>1733752739904</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1733752739904</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +278,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -302,9 +302,8 @@
     <MESSAGE value="Fine creazione ossatura classe + alcuni metodi" />
     <MESSAGE value="Fine creazione ossatura classe" />
     <MESSAGE value="Risolto errore di compilazione javafx" />
-    <MESSAGE value="Caricamento documentazione Design" />
-    <MESSAGE value="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifica dei diagrammi di attività e nuovo caricamento documentazione Design" />
+    <MESSAGE value="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eliminazione RicercaContattiView.fxml e aggiunta di CreaContattoController.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

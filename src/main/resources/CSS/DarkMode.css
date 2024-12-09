@@ -1,0 +1,183 @@
+/* Sfondo generale del layout */
+.root {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+}
+
+/* Sfondo e colori dei pulsanti */
+.button, .menu-button {
+    -fx-background-color: #444444;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 5;
+}
+
+.button:hover, .menu-button:hover {
+    -fx-background-color: #555555;
+}
+
+/* Colore dei pulsanti nel Menu */
+.menu-item {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item:hover {
+    -fx-background-color: #444444;
+}
+
+/* Testo e sfondo del TextField */
+.text-field {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #888888;
+    -fx-border-radius: 5;
+    -fx-border-color: #555555;
+}
+
+.text-field:focused {
+    -fx-border-color: #3a8dff;
+}
+
+/* Tabelle */
+.table-view {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #444444;
+}
+
+/* Colonna di intestazione della tabella (barra dei nomi delle colonne) */
+.table-view .column-header-background {
+    -fx-background-color: #444444;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Divider dello SplitPane */
+.split-pane {
+    -fx-background-color: #2b2b2b;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #444444;
+    -fx-background-radius: 5px;
+}
+
+/* Righe della tabella */
+.table-view .row-cell:odd {
+    -fx-background-color: #2f2f2f;
+}
+
+.table-view .row-cell:even {
+    -fx-background-color: #252525;
+}
+
+.table-view .row-cell:selected {
+    -fx-background-color: #444444;
+    -fx-text-fill: #ffffff;
+}
+
+/* Menu */
+.menu-bar {
+    -fx-background-color: #333333;
+}
+
+.menu {
+    -fx-text-fill: #ffffff;
+}
+
+/* Label */
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Barra di scorrimento */
+.scroll-bar {
+    -fx-background-color: #2b2b2b;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #555555;
+    -fx-background-radius: 5;
+}
+
+/* Placeholder quando la tabella è vuota */
+.table-view .placeholder {
+    -fx-text-fill: #888888;
+    -fx-background-color: transparent;
+}
+
+/* Tabelle */
+.table-view {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #444444;
+    -fx-border-width: 1px;
+}
+
+/* Intestazione delle colonne */
+.table-view .column-header {
+    -fx-background-color: #444444;
+    -fx-border-color: #444444;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Righe della tabella */
+.table-view .row-cell:odd {
+    -fx-background-color: #2f2f2f;
+}
+
+.table-view .row-cell:even {
+    -fx-background-color: #252525;
+}
+
+.table-view .row-cell:selected {
+    -fx-background-color: #444444;
+    -fx-text-fill: #ffffff;
+}
+
+/* Divider della tabella */
+.table-view .table-row-cell .divider {
+    -fx-background-color: #444444;
+}
+
+.text-area {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #444444;
+    -fx-border-width: 1px;
+    -fx-control-inner-background: #333333
+}
+
+.text-area .prompt-text {
+    -fx-fill: #393b40
+}
+
+/* Placeholder nella TextArea (prompt text) */
+.text-area .text {
+    -fx-fill: #aaaaaa;
+}
+
+.check-box {
+    -fx-text-fill: #ffffff;
+}
+
+.check-box .box {
+    -fx-border-color: #444444;
+    -fx-background-color: #333333;
+}
+
+/* Quando la CheckBox è selezionata */
+.check-box:selected .box {
+    -fx-border-color: #888888;
+    -fx-background-color: #444444;
+}
+
+/* Testo quando la CheckBox è selezionata */
+.check-box:selected {
+    -fx-text-fill: #ffffff;
+}
