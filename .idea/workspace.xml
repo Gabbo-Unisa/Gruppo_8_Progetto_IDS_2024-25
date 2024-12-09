@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Sviluppo light mode e dark mode:&#10;Creazione DarkMode.css">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/SupportControllers.java" afterDir="false" />
+    <list default="true" id="e6383222-83a3-4d80-a153-6cd64fb0455f" name="Changes" comment="Fine sviluppo light mode e dark mode ed aggiunta ed implementazione di una classe di supporto ad i Controllers.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/CreaContattoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoContattiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ElencoPreferitiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/ModificaContattiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/SupportControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/SupportControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Controllers/VisualizzazioneContattoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rubrica/Models/ApplicazioneProgetto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/CreaContattoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoContattiView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ElencoPreferitiView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/ModificaContattiView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rubrica/Views/VisualizzazioneContattoView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +163,9 @@
       <workItem from="1733732689876" duration="4531000" />
       <workItem from="1733742675167" duration="2234000" />
       <workItem from="1733758173984" duration="713000" />
-      <workItem from="1733758901105" duration="12474000" />
+      <workItem from="1733758901105" duration="12901000" />
+      <workItem from="1733774644659" duration="3000" />
+      <workItem from="1733774655567" duration="3124000" />
     </task>
     <task id="LOCAL-00001" summary="Passaggio a JavaFx">
       <option name="closed" value="true" />
@@ -261,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733682225268</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fine sviluppo light mode e dark mode ed aggiunta ed implementazione di una classe di supporto ad i Controllers.">
+      <option name="closed" value="true" />
+      <created>1733772237607</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733772237607</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +323,8 @@
     <MESSAGE value="Risolto errore di compilazione javafx" />
     <MESSAGE value="Caricamento documentazione Design" />
     <MESSAGE value="Sviluppo light mode e dark mode:&#10;Creazione DarkMode.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sviluppo light mode e dark mode:&#10;Creazione DarkMode.css" />
+    <MESSAGE value="Fine sviluppo light mode e dark mode ed aggiunta ed implementazione di una classe di supporto ad i Controllers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fine sviluppo light mode e dark mode ed aggiunta ed implementazione di una classe di supporto ad i Controllers." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

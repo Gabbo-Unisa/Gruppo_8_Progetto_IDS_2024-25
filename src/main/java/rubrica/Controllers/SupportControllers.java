@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class SupportControllers {
     private static boolean displayMode = false;
 
-    /*public SupportDisplayMode() {}*/
+    /* public SupportDisplayMode() {} */
 
     public static boolean getDisplayMode() {
         return SupportControllers.displayMode;

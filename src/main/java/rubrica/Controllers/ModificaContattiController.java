@@ -40,9 +40,9 @@ public class ModificaContattiController {
 
     public void onClickAnnulla(ActionEvent getActionEvent) {
         if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(annullaButton, "/rubrica/Views/ElencoContattiView.fxml");
+            SupportControllers.cambioSchermataLight(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
         }else{
-            SupportControllers.cambioSchermataDark(annullaButton, "/rubrica/Views/ElencoContattiView.fxml");
+            SupportControllers.cambioSchermataDark(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
         }
     }
 

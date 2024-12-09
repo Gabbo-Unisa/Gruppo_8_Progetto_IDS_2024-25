@@ -49,9 +49,9 @@ public class VisualizzazioneContattoController {
 
     public void onEliminaClickButton(ActionEvent getActionEvent) {
         if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(elimina, "/rubrica/Views/ElencaContattiView.fxml");
+            SupportControllers.cambioSchermataLight(elimina, "/rubrica/Views/ElencoContattiView.fxml");
         }else{
-            SupportControllers.cambioSchermataDark(elimina, "/rubrica/Views/ElencaContattiView.fxml");
+            SupportControllers.cambioSchermataDark(elimina, "/rubrica/Views/ElencoContattiView.fxml");
         }
     }
 

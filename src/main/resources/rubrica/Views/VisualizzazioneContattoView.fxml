@@ -37,7 +37,7 @@
             </children></AnchorPane>
         <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
             <children>
-                <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
+                <Button fx:id="preferiti" disable="true" layoutX="299.0" mnemonicParsing="false" onAction="#onPreferitiClickButton" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
                 <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />
             </children></AnchorPane>
     </items>

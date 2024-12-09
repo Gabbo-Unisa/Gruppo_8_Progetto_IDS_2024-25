@@ -48,9 +48,12 @@ public class ElencoContattiController {
 
     public void onVisualizzaTyped(KeyEvent getKeyEvent) {
         if(barraDiRicercaContatti.getText().contains("Visualizza")){
-            SupportControllers.cambioSchermataLight(barraDiRicercaContatti, "/rubrica/Views/VisualizzazioneContattoView.fxml");
+            if(SupportControllers.getDisplayMode() == true) {
+                SupportControllers.cambioSchermataLight(barraDiRicercaContatti, "/rubrica/Views/VisualizzazioneContattoView.fxml");
+            }else{
+                SupportControllers.cambioSchermataDark(barraDiRicercaContatti, "/rubrica/Views/VisualizzazioneContattoView.fxml");
+            }
         }
-        System.out.println(SupportControllers.getDisplayMode());
     }
 
 
