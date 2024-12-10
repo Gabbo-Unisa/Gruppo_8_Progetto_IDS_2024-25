@@ -3,8 +3,8 @@
  *
  * @brief Classe per la gestione dei contatti.
  *
- * Questa classe rappresenta un contatto all'interno della rubrica, con informazioni
- * come nome, cognome, numeri di telefono, email, immagine, data di creazione, note e preferenze.
+ * Questa classe rappresenta un contatto all'interno della rubrica, con le relative informazioni
+ * quali nome, cognome, numeri di telefono, email, data di creazione, note e preferenze.
  *
  * @author Carmine Terracciano
  * @date December 07, 2024
@@ -29,7 +29,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     private String cognome;
     private List<String> numeriTelefono;
     private List<String> email;
-    private Photo immagine;
     private final String dataCreazione;
     private String nota;
     private boolean isPreferito;
@@ -41,12 +40,11 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      * @param[in] cognome Il cognome del contatto.
      * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
      * @param[in] email La lista degli indirizzi email del contatto.
-     * @param[in] immagine La foto del contatto.
      * @param[in] nota La nota associate al contatto.
      * @param[in] isPreferito Indica se il contatto è contrassegnato come preferito.
      */
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
-                    List<String> email, Photo immagine,
+                    List<String> email,
                     String nota, boolean isPreferito) {
         nome = nome.trim();
         this.nome = nome;
@@ -54,12 +52,11 @@ public class Contatto implements Serializable, Comparable<Contatto>{
         cognome = cognome.trim();
         this.cognome = cognome;
 
-        this.numeriTelefono = numeriTelefono;
-        this.email = email;
-        this.immagine = immagine;
+        this.numeriTelefono = new ArrayList<>(numeriTelefono);
+        this.email = new ArrayList<>(email);
 
-        Date data = new Date();
-        SimpleDateFormat formatoData = new SimpleDateFormat("dd MMMM yyyy");
+        Date data = new Date();     // Catturo la Data attuale
+        SimpleDateFormat formatoData = new SimpleDateFormat("dd MMMM yyyy");    //Imposto il formato della data
         this.dataCreazione = formatoData.format(data);
 
         this.nota = nota;
@@ -73,13 +70,12 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      * @param[in] cognome Il cognome del contatto.
      * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
      * @param[in] email La lista degli indirizzi email del contatto.
-     * @param[in] immagine La foto del contatto.
      * @param[in] dataCreazione La data di creazione del contatto.
      * @param[in] nota La nota associate al contatto.
      * @param[in] isPreferito Indica se il contatto è contrassegnato come preferito.
      */
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
-                    List<String> email, Photo immagine, String dataCreazione,
+                    List<String> email, String dataCreazione,
                     String nota, boolean isPreferito) {
         nome = nome.trim();
         this.nome = nome;
@@ -87,9 +83,9 @@ public class Contatto implements Serializable, Comparable<Contatto>{
         cognome = cognome.trim();
         this.cognome = cognome;
 
-        this.numeriTelefono = numeriTelefono;
-        this.email = email;
-        this.immagine = immagine;
+        this.numeriTelefono = new ArrayList<>(numeriTelefono);
+        this.email = new ArrayList<>(email);
+
         this.dataCreazione = dataCreazione;
         this.nota = nota;
         this.isPreferito = isPreferito;
@@ -132,14 +128,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
         this.email = email;
     }
 
-    /**
-     * @brief Imposta l'immagine del contatto.
-     *
-     * @param[in] immagine L'immagine del contatto.
-     */
-    public void setImmagine(Photo immagine) {
-        this.immagine = immagine;
-    }
 
 
     /**
@@ -159,6 +147,9 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public void setPreferito(boolean preferito) {
         isPreferito = preferito;
     }
+
+
+
 
 
     /**
@@ -198,15 +189,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     }
 
     /**
-     * @brief Restituisce l'immagine del contatto.
-     *
-     * @return L'immagine del contatto.
-     */
-    public Photo getImmagine() {
-        return this.immagine;
-    }
-
-    /**
      * @brief Restituisce la data di creazione del contatto.
      *
      * @return La data di creazione del contatto.
@@ -236,82 +218,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
 
 
     /**
-     * @brief Importa un contatto da un oggetto VCard.
-     *
-     * @param[in] vCard L'oggetto VCard da cui importare i dati del contatto.
-     *
-     * @return Un nuovo oggetto Contatto con i dati importati dalla VCard.
-     *
-     * @pre L'oggetto VCard deve contenere dati validi per un contatto.
-     * @post Viene creato un nuovo oggetto Contatto con i dati della VCard.
-     */
-    public Contatto importaVCard(VCard vCard) {
-        String nome = vCard.getFormattedName().getValue().split(" ")[0];
-        String cognome = vCard.getFormattedName().getValue().split(" ")[1];
-
-        List<String> numTel = new ArrayList<>();
-        for (Telephone tel : vCard.getTelephoneNumbers()) {
-            numTel.add(tel.getText());
-        }
-
-        List<String> mails = new ArrayList<>();
-        for (Email mail : vCard.getEmails()) {
-            mails.add(mail.getValue());
-        }
-
-        Photo imm = vCard.getPhotos().get(0);
-
-        String dataCreazione = vCard.getExtendedProperty("X-DATA-CREAZIONE").getValue();
-
-        String note;
-        if(vCard.getNotes() != null)
-            note = vCard.getNotes().getFirst().getValue();
-        else
-            note = null;
-
-        boolean isPreferito = Boolean.parseBoolean(vCard.getExtendedProperty("X-IS-PREFERITO").getValue());
-
-
-        return new Contatto(nome, cognome, numTel, mails, imm, dataCreazione, note, isPreferito);
-    }
-
-    /**
-     * @brief Esporta un contatto in un oggetto VCard.
-     *
-     * @return L'oggetto VCard contenente i dati del contatto.
-     *
-     * @pre Il contatto deve avere almeno nome e/o cognome settati.
-     * @post Viene restituita una VCard con i dati del contatto.
-     */
-    public VCard esportaContatto() {
-        VCard vCard = new VCard();
-        vCard.setFormattedName(this.nome + " " + this.cognome);
-
-        if(this.numeriTelefono != null) {
-            for (String numero : this.numeriTelefono) {
-                vCard.addTelephoneNumber(numero);
-            }
-        }
-
-        if(this.email != null) {
-            for (String mail : this.email) {
-                vCard.addEmail(mail);
-            }
-        }
-
-        vCard.addPhoto(this.immagine);
-
-        vCard.addExtendedProperty("X-DATA-CREAZIONE", this.dataCreazione);
-
-        vCard.addNote(this.nota);
-
-        vCard.addExtendedProperty("X-IS-PREFERITO", Boolean.toString(this.isPreferito));
-
-
-        return vCard;
-    }
-
-    /**
      * @brief Confronta due contatti in ordine alfabetico.
      *
      * @param[in] c Il contatto con cui confrontare l'oggetto.
@@ -328,5 +234,23 @@ public class Contatto implements Serializable, Comparable<Contatto>{
         String cNomeCognome = c.getNome() + c.getCognome();
 
         return nomeCognome.compareTo(cNomeCognome);
+    }
+
+    /**
+     * @brief Restituisce una rappresentazione in formato stringa del contatto.
+     *
+     * @return Una stringa che rappresenta il contatto con tutte le sue proprietà.
+     */
+    @Override
+    public String toString() {
+        return "Contatto{" +
+                "nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", numeriTelefono=" + numeriTelefono +
+                ", email=" + email +
+                ", dataCreazione='" + dataCreazione + '\'' +
+                ", nota='" + nota + '\'' +
+                ", isPreferito=" + isPreferito +
+                '}';
     }
 }
