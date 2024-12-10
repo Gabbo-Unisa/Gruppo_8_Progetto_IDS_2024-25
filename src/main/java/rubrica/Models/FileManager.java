@@ -29,7 +29,9 @@ public class FileManager {
 
     /**
      * @brief Costruttore della classe FileManager.
+     *
      * @param[in] r Il riferimento alla rubrica.
+     *
      * @post crea un oggetto FileManager con un riferimento alla rubrica.
      */
     public FileManager(Rubrica r) {
@@ -38,11 +40,15 @@ public class FileManager {
 
     /**
      * @brief Importa una rubrica da file .vcf.
+     *
      * @param[in] path È il percorso verso il file .vcf che contiene la rubrica da importare.
+     *
+     * @return 'true' se la rubrica è stata importata con successo, 'false' altrimenti.
+     *
      * @pre Il path si riferisce ad un file .vcf.
      * @post La rubrica viene popolata a partire dal file.
      **/
-    public void importaRubrica(String path) {
+    public boolean importaRubrica(String path) {
         try {
             File file = new File(path);
             List<VCard> vCards = new ArrayList<>(Ezvcard.parse(file).all()); //Analizza il file .vcf per ottenere tutti gli oggetti VCard in una ArrayList.
@@ -53,14 +59,18 @@ public class FileManager {
             }
         } catch (Exception e) {
             System.err.println("Errore durante l'importa rubrica: " + e.getMessage());
+            return false;
         }
 
+        return true;
     }
 
     /**
-     * @return Un nuovo oggetto Contatto con i dati importati dalla VCard.
      * @brief Importa un contatto da un oggetto VCard.
+     *
      * @param[in] vCard L'oggetto VCard da cui importare i dati del contatto.
+     * @return Un nuovo oggetto Contatto con i dati importati dalla VCard.
+     *
      * @pre L'oggetto VCard deve contenere dati validi per un contatto.
      * @post Viene creato un nuovo oggetto Contatto con i dati della VCard.
      */
@@ -105,14 +115,17 @@ public class FileManager {
 
     /**
      * @brief Esporta la rubrica su file .vcf.
+     *
      * @param[in] path È il percorso verso la directory in cui scrivere il file .vcf.
-     * @param[in] nomeFile Nome del file che conterrà la rubrica.
+     *
+     * @return 'true' se la rubrica è stata esportata con successo, 'false' altrimenti.
+     *
      * @pre Il path si riferisce a una directory.
      * @post la rubrica viene salvata in un file .vcf nella directory selezionata.
      */
-    public void esportaRubrica(String path, String nomeFile) {
+    public boolean esportaRubrica(String path) {
 
-        File file = new File(path, nomeFile + ".vcf");
+        File file = new File(path,"output.vcf");
         List<VCard> vCards = new ArrayList<>();
 
         for (int i = 0; i < r.getContatti().size(); i++) {
@@ -125,13 +138,18 @@ public class FileManager {
             Ezvcard.write(vCards).go(file);     //Scrive la lista di VCard nel file specificato
         } catch (IOException e) {
             System.err.println("Errore durante l'esporta rubrica: " + e.getMessage());
+            return false;
         }
+
+        return true;
     }
 
 
     /**
-     * @return L'oggetto VCard contenente i dati del contatto.
      * @brief Esporta un contatto in un oggetto VCard.
+     *
+     * @return L'oggetto VCard contenente i dati del contatto.
+     *
      * @pre Il contatto si trova in rubrica
      * @post Viene restituita una VCard con i dati del contatto.
      */

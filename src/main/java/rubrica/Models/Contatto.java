@@ -128,8 +128,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
         this.email = email;
     }
 
-
-
     /**
      * @brief Imposta la nota associata al contatto.
      *
@@ -147,10 +145,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public void setPreferito(boolean preferito) {
         isPreferito = preferito;
     }
-
-
-
-
 
     /**
      * @brief Restituisce il nome del contatto.
@@ -216,7 +210,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     }
 
 
-
     /**
      * @brief Confronta due contatti in ordine alfabetico.
      *
@@ -235,6 +228,7 @@ public class Contatto implements Serializable, Comparable<Contatto>{
 
         return nomeCognome.compareTo(cNomeCognome);
     }
+
 
     /**
      * @brief Restituisce una rappresentazione in formato stringa del contatto.
