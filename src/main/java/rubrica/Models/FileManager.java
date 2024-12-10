@@ -128,8 +128,9 @@ public class FileManager {
         File file = new File(path,"output.vcf");
         List<VCard> vCards = new ArrayList<>();
 
-        for (int i = 0; i < r.getContatti().size(); i++) {
-            Contatto contatto = r.getContatti().get(i);
+        List<Contatto> contatti = r.getContatti();
+        for(int i = 0; i <contatti.size(); i++) {
+            Contatto contatto = contatti.get(i);
             VCard vCard = esportaContatto(contatto);
             vCards.add(vCard);
         }
