@@ -50,7 +50,7 @@ public class ElencoContattiController {
         showContacts();
     }
 
-    public void showContacts() {
+    private void showContacts() {
         //Inizializza la lista osservabile
         contattiList = FXCollections.observableArrayList(RubricaManager.getRubrica().getContatti());
 
@@ -73,7 +73,7 @@ public class ElencoContattiController {
         });
     }
 
-    public void showAlert(String contenuto) {
+    private void showAlert(String contenuto) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(contenuto);
         alert.showAndWait();
@@ -131,32 +131,6 @@ public class ElencoContattiController {
         }
     }
 
-    public void onContattiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true){
-            SupportControllers.cambioSchermataLight(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }else{
-        SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }
-    }
-
-    public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }
-    }
-
-
-    public void onPlusClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/CreaContattoView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/CreaContattoView.fxml");
-        }
-    }
-
-
     public void onRicercaTyped(KeyEvent getKeyEvent) {
         String query = barraDiRicercaContatti.getText();
         if(query.isEmpty()) {
@@ -166,15 +140,20 @@ public class ElencoContattiController {
             contattiList.addAll(RubricaManager.getRubrica().ricercaContatti(query));
         }
     }
+    public void onPreferitiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
+    }
+
+
+    public void onPlusClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/CreaContattoView.fxml");
+    }
+
 
     public void onContattoSelezionato(MouseEvent mouseEvent) {
         if (mouseEvent.getClickCount() == 2) {
             Contatto contattoSelezionato = tabella.getSelectionModel().getSelectedItem();
-            if(SupportControllers.getDisplayMode() == true) {
-                SupportControllers.cambioSchermataLight(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
-            }else{
-                SupportControllers.cambioSchermataDark(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
-            }
+            SupportControllers.cambioSchermata(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
         }
     }
 

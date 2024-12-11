@@ -22,6 +22,15 @@ public class SupportControllers {
         SupportControllers.displayMode = displayMode;
     }
 
+
+    public static void cambioSchermata(Parent elementoFxml, String pathSchermata){
+        if(SupportControllers.getDisplayMode() == true){
+            SupportControllers.cambioSchermataLight(elementoFxml, pathSchermata);
+        }else{
+            SupportControllers.cambioSchermataDark(elementoFxml, pathSchermata);
+        }
+    }
+
     public static void cambioSchermataLight(Parent elementoFxml, String pathSchermata){
         try {
             Parent nuovaScenaRoot = FXMLLoader.load(SupportControllers.class.getResource(pathSchermata));

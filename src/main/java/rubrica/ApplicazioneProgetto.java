@@ -23,19 +23,17 @@ public class ApplicazioneProgetto extends Application {
         Checker checker = new Checker();
         Rubrica rubrica = new Rubrica(checker);
 
-        /*File backupFile = new File("Backup/rubrica.vcf");
-        if(backupFile.exists()) {
-            FileManager fileManager = new FileManager(rubrica);
-            fileManager.importaRubrica(backupFile.getPath());   //Importa la rubrica da file "Backup/rubrica.vcf".
-        }*/
+//        File backupFile = new File("Backup/rubrica.vcf");
+//        if(backupFile.exists()) {
+//            FileManager fileManager = new FileManager(rubrica);
+//            fileManager.importaRubrica(backupFile.getPath());   //Importa la rubrica da file "Backup/rubrica.vcf".
+//        }
 
         rubrica.aggiungiContatto(new Contatto("Mario", "", new ArrayList<>(), new ArrayList<>(), "Nota1", true));
         rubrica.aggiungiContatto(new Contatto("", "Verdi", new ArrayList<>(), new ArrayList<>(), "Nota2", false));
         rubrica.aggiungiContatto(new Contatto("Andrea", "Bianchi", new ArrayList<>(), new ArrayList<>(), "Nota3", true));
 
         RubricaManager.inizializza(rubrica);
-
-
 
         SupportControllers.inizializzaDisplayMode(false);
     }

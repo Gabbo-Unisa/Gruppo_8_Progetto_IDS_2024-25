@@ -124,9 +124,14 @@ public class Rubrica implements Serializable {
      */
     public List<Contatto> ricercaContatti(String query) {
         List<Contatto> cRicercati = new ArrayList<>();
+        String nomeRicercato;
+        String cognomeRicercato;
 
+        query = query.toLowerCase();
         for(Contatto c : this.contatti) {
-            if(c.getNome().matches("^" + query + ".*") || c.getCognome().matches("^" + query + ".*"))
+            nomeRicercato = c.getNome().toLowerCase();
+            cognomeRicercato = c.getCognome().toLowerCase();
+            if(nomeRicercato.matches("^" + query + ".*") || cognomeRicercato.matches("^" + query + ".*"))
                 cRicercati.add(c);
         }
 

@@ -18,20 +18,9 @@ public class ElencoPreferitiController {
     public Button preferiti;
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true){
-            SupportControllers.cambioSchermataLight(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }
+        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
     }
 
-    public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }
-    }
 
     //Metodo per passare dalla vis.Preferiti alla vis.Contatti
     // cliccando sulla barra di ricerca di vis.Preferiti
