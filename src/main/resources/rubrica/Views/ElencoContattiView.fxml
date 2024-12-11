@@ -15,7 +15,7 @@
             <TextField fx:id="barraDiRicercaContatti" layoutX="14.0" layoutY="30.0" onKeyReleased="#onRicercaTyped" prefHeight="38.0" prefWidth="513.0" promptText="Inserisci per cercare" />
             <TableView fx:id="tabella" layoutX="14.0" layoutY="84.0" onMouseClicked="#onContattoSelezionato" prefHeight="248.0" prefWidth="513.0">
               <columns>
-                <TableColumn fx:id="nome" prefWidth="512.4444516499838" text="Nome" />
+                <TableColumn fx:id="nomeContatto" prefWidth="512.4444516499838" text="Contatto" />
               </columns>
             </TableView>
             <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">

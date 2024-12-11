@@ -34,7 +34,7 @@ public class ElencoContattiController {
     public TableView<Contatto> tabella;
 
     @FXML
-    public TableColumn<Contatto, String> nome;
+    public TableColumn<Contatto, String> nomeContatto;
 
     @FXML
     public MenuItem importaRubrica;
@@ -58,7 +58,7 @@ public class ElencoContattiController {
         tabella.setItems(contattiList);
 
         //Mostra sulla colonna della tabella il nome e/o cognome del contatto
-        nome.setCellValueFactory(cellData -> {
+        nomeContatto.setCellValueFactory(cellData -> {
             Contatto contatto = cellData.getValue();
             String nome = contatto.getNome();
             String cognome = contatto.getCognome();
@@ -140,6 +140,8 @@ public class ElencoContattiController {
             contattiList.addAll(RubricaManager.getRubrica().ricercaContatti(query));
         }
     }
+
+
     public void onPreferitiClickButton(ActionEvent getActionEvent) {
         SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
     }

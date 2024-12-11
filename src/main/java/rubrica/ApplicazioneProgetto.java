@@ -29,8 +29,8 @@ public class ApplicazioneProgetto extends Application {
 //            fileManager.importaRubrica(backupFile.getPath());   //Importa la rubrica da file "Backup/rubrica.vcf".
 //        }
 
-        rubrica.aggiungiContatto(new Contatto("Mario", "", new ArrayList<>(), new ArrayList<>(), "Nota1", true));
-        rubrica.aggiungiContatto(new Contatto("", "Verdi", new ArrayList<>(), new ArrayList<>(), "Nota2", false));
+        rubrica.aggiungiContatto(new Contatto("Mario", "", new ArrayList<>(), new ArrayList<>(), "Nota1", false));
+        rubrica.aggiungiContatto(new Contatto("", "Verdi", new ArrayList<>(), new ArrayList<>(), "Nota2", true));
         rubrica.aggiungiContatto(new Contatto("Andrea", "Bianchi", new ArrayList<>(), new ArrayList<>(), "Nota3", true));
 
         RubricaManager.inizializza(rubrica);
