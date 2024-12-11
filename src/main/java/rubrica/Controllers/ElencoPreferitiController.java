@@ -2,15 +2,11 @@ package rubrica.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
+import rubrica.Utils.SupportControllers;
 
 public class ElencoPreferitiController {
     @FXML
@@ -76,6 +72,6 @@ public class ElencoPreferitiController {
         // Decido che false sia la modalità scura
         //     mentre true la modalità luminosa
         SupportControllers.setDisplayMode(false);
-        rootSplitPane.getStylesheets().add(getClass().getResource("/CSS/DarkMode.css").toExternalForm());
+        rootSplitPane.getStylesheets().add(getClass().getResource("/rubrica/CSS/DarkMode.css").toExternalForm());
     }
 }

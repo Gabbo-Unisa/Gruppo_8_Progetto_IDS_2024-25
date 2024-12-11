@@ -1,10 +1,9 @@
-package rubrica.Controllers;
+package rubrica.Utils;
 
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class SupportControllers {
@@ -36,7 +35,7 @@ public class SupportControllers {
     public static void cambioSchermataDark(Parent elementoFxml, String pathSchermata) {
         try {
             Parent nuovaScenaRoot = FXMLLoader.load(SupportControllers.class.getResource(pathSchermata));
-            nuovaScenaRoot.getStylesheets().add(SupportControllers.class.getResource("/CSS/DarkMode.css").toExternalForm());
+            nuovaScenaRoot.getStylesheets().add(SupportControllers.class.getResource("/rubrica/CSS/DarkMode.css").toExternalForm());
             Scene nuovaScena = new Scene(nuovaScenaRoot);
 
             Stage stage = (Stage) elementoFxml.getScene().getWindow();

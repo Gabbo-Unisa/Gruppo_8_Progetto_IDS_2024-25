@@ -10,4 +10,7 @@ module org.example.rubrica {
     exports rubrica.Models;
     opens rubrica.Models to javafx.fxml;
     opens rubrica.Controllers to javafx.fxml;
+    exports rubrica;
+    opens rubrica to javafx.fxml;
+    opens rubrica.Utils to javafx.fxml;
 }
