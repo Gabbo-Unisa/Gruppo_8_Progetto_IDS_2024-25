@@ -25,7 +25,7 @@ public class ElencoContattiController {
         if(SupportControllers.getDisplayMode() == true){
             SupportControllers.cambioSchermataLight(contatti, "/rubrica/Views/ElencoContattiView.fxml");
         }else{
-        SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
+            SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
         }
     }
 

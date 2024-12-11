@@ -30,7 +30,7 @@
                         </Menu>
                     </items>
                 </MenuButton>
-            <Label layoutX="231.0" prefHeight="25.0" prefWidth="80.0" text="Elenco preferiti" />
+                <Label layoutX="231.0" prefHeight="25.0" prefWidth="80.0" text="Elenco preferiti" />
             </children></AnchorPane>
         <AnchorPane fx:id="panelDown" maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
             <children>
