@@ -3,8 +3,8 @@
  *
  * @brief Classe per la gestione dei contatti.
  *
- * Questa classe rappresenta un contatto all'interno della rubrica, con informazioni
- * come nome, cognome, numeri di telefono, email, immagine, data di creazione, note e preferenze.
+ * Questa classe rappresenta un contatto all'interno della rubrica, con le relative informazioni
+ * quali nome, cognome, numeri di telefono, email, data di creazione, note e preferenze.
  *
  * @author Carmine Terracciano
  * @date December 07, 2024
@@ -15,9 +15,11 @@
 package rubrica.Models;
 
 import ezvcard.VCard;
-import ezvcard.property.Photo;
+import ezvcard.property.*;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,31 +29,64 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     private String cognome;
     private List<String> numeriTelefono;
     private List<String> email;
-    private Photo immagine;
-    private final Date dataCreazione;
+    private final String dataCreazione;
     private String nota;
     private boolean isPreferito;
 
     /**
-     * @brief Costruttore della classe Contatto.
+     * @brief Costruttore della classe Contatto - genera la data di creazione automaticamente.
      *
      * @param[in] nome Il nome del contatto.
      * @param[in] cognome Il cognome del contatto.
      * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
      * @param[in] email La lista degli indirizzi email del contatto.
-     * @param[in] immagine La foto del contatto.
      * @param[in] nota La nota associate al contatto.
      * @param[in] isPreferito Indica se il contatto è contrassegnato come preferito.
      */
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
-                    List<String> email, Photo immagine,
+                    List<String> email,
                     String nota, boolean isPreferito) {
+        nome = nome.trim();
         this.nome = nome;
+
+        cognome = cognome.trim();
         this.cognome = cognome;
-        this.numeriTelefono = numeriTelefono;
-        this.email = email;
-        this.immagine = immagine;
-        this.dataCreazione = new Date();
+
+        this.numeriTelefono = new ArrayList<>(numeriTelefono);
+        this.email = new ArrayList<>(email);
+
+        Date data = new Date();     // Catturo la Data attuale
+        SimpleDateFormat formatoData = new SimpleDateFormat("dd MMMM yyyy");    //Imposto il formato della data
+        this.dataCreazione = formatoData.format(data);
+
+        this.nota = nota;
+        this.isPreferito = isPreferito;
+    }
+
+    /**
+     * @brief Costruttore della classe Contatto - la data di creazione è passata come parametro.
+     *
+     * @param[in] nome Il nome del contatto.
+     * @param[in] cognome Il cognome del contatto.
+     * @param[in] numeriTelefono La lista dei numeri di telefono del contatto.
+     * @param[in] email La lista degli indirizzi email del contatto.
+     * @param[in] dataCreazione La data di creazione del contatto.
+     * @param[in] nota La nota associate al contatto.
+     * @param[in] isPreferito Indica se il contatto è contrassegnato come preferito.
+     */
+    public Contatto(String nome, String cognome, List<String> numeriTelefono,
+                    List<String> email, String dataCreazione,
+                    String nota, boolean isPreferito) {
+        nome = nome.trim();
+        this.nome = nome;
+
+        cognome = cognome.trim();
+        this.cognome = cognome;
+
+        this.numeriTelefono = new ArrayList<>(numeriTelefono);
+        this.email = new ArrayList<>(email);
+
+        this.dataCreazione = dataCreazione;
         this.nota = nota;
         this.isPreferito = isPreferito;
     }
@@ -94,16 +129,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     }
 
     /**
-     * @brief Imposta l'immagine del contatto.
-     *
-     * @param[in] immagine L'immagine del contatto.
-     */
-    public void setImmagine(Photo immagine) {
-        this.immagine = immagine;
-    }
-
-
-    /**
      * @brief Imposta la nota associata al contatto.
      *
      * @param[in] nota La nota associata al contatto.
@@ -120,7 +145,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public void setPreferito(boolean preferito) {
         isPreferito = preferito;
     }
-
 
     /**
      * @brief Restituisce il nome del contatto.
@@ -159,20 +183,11 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     }
 
     /**
-     * @brief Restituisce l'immagine del contatto.
-     *
-     * @return L'immagine del contatto.
-     */
-    public Photo getImmagine() {
-        return this.immagine;
-    }
-
-    /**
      * @brief Restituisce la data di creazione del contatto.
      *
      * @return La data di creazione del contatto.
      */
-    public Date getDataCreazione() {
+    public String getDataCreazione() {
         return this.dataCreazione;
     }
 
@@ -195,33 +210,6 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     }
 
 
-
-    /**
-     * @brief Importa un contatto da un oggetto VCard.
-     *
-     * @param[in] vCard L'oggetto VCard da cui importare i dati del contatto.
-     *
-     * @return Un nuovo oggetto Contatto con i dati importati dalla VCard.
-     *
-     * @pre L'oggetto VCard deve contenere dati validi per un contatto.
-     * @post Viene creato un nuovo oggetto Contatto con i dati della VCard.
-     */
-    public Contatto importaVCard(VCard vCard){
-        return null;
-    }
-
-    /**
-     * @brief Esporta un contatto in un oggetto VCard.
-     *
-     * @return L'oggetto VCard contenente i dati del contatto.
-     *
-     * @pre Il contatto deve avere almeno nome e/o cognome settati.
-     * @post Viene restituita una VCard con i dati del contatto.
-     */
-    public VCard esportaContatto(){
-        return null;
-    }
-
     /**
      * @brief Confronta due contatti in ordine alfabetico.
      *
@@ -234,6 +222,29 @@ public class Contatto implements Serializable, Comparable<Contatto>{
      */
     @Override
     public int compareTo(Contatto c) {
-        return 0;
+        String nomeCognome = this.nome + this.cognome;
+
+        String cNomeCognome = c.getNome() + c.getCognome();
+
+        return nomeCognome.compareTo(cNomeCognome);
+    }
+
+
+    /**
+     * @brief Restituisce una rappresentazione in formato stringa del contatto.
+     *
+     * @return Una stringa che rappresenta il contatto con tutte le sue proprietà.
+     */
+    @Override
+    public String toString() {
+        return "Contatto{" +
+                "nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", numeriTelefono=" + numeriTelefono +
+                ", email=" + email +
+                ", dataCreazione='" + dataCreazione + '\'' +
+                ", nota='" + nota + '\'' +
+                ", isPreferito=" + isPreferito +
+                '}';
     }
 }

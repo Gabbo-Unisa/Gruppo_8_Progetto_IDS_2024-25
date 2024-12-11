@@ -18,6 +18,8 @@ package rubrica.Models;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -37,17 +39,36 @@ public class Rubrica implements Serializable {
         this.checker = checker;
     }
 
+
+    /**
+     * @brief Restituisce l'insieme dei contatti presenti nella rubrica.
+     *
+     * @return Una collezione iterabile contenente tutti i contatti della rubrica.
+     *
+     * @pre La rubrica deve essere stata inizializzata.
+     *
+     * @post Viene restituito l'insieme dei contatti presenti nella rubrica.
+     */
+    public List<Contatto> getContatti() {
+        return new ArrayList<>(this.contatti);
+    }
+
     /**
      * @brief Aggiunge un nuovo contatto alla rubrica.
      *
      * @param[in] c Il contatto da aggiungere alla rubrica.
+     * @return 'true' se il contatto è stato aggiunto con successo, 'false' altrimenti.
      *
      * @pre Il contatto deve avere almeno nome e/o cognome settati.
-     *
      * @post Se i dati del contatto sono validi, il contatto viene aggiunto alla rubrica.
      */
-    public void aggiungiContatto(Contatto c){
+    public boolean aggiungiContatto(Contatto c) {
+        if(checker.validaContatto(c)) {
+            contatti.add(c);
+            return true;
+        }
 
+        return false;
     }
 
 
@@ -57,13 +78,21 @@ public class Rubrica implements Serializable {
      * @param[in] old Il contatto attualmente presente nella rubrica che deve essere modificato.
      * @param[in] update Il nuovo contatto contenente i dati aggiornati.
      *
+     * @return 'true' se la modifica è stata effettuata con successo, 'false' altrimenti.
+     *
      * @pre Il contatto 'old' deve esistere nella rubrica.
      *      Il contatto 'update' deve avere almeno nome e/o cognome settati.
      *
      * @post Se i dati del contatto 'update' sono validi, il contatto 'old' viene sostituito con 'update'.
      */
-    public void modificaContatto(Contatto old, Contatto update){
+    public boolean modificaContatto(Contatto old, Contatto update) {
+        if(checker.validaContatto(update)) {
+            contatti.remove(old);
+            contatti.add(update);
+            return true;
+        }
 
+        return false;
     }
 
 
@@ -77,7 +106,7 @@ public class Rubrica implements Serializable {
      * @post Il contatto specificato viene rimosso dalla rubrica.
      */
     public void eliminaContatto(Contatto c){
-
+        contatti.remove(c);
     }
 
 
@@ -93,8 +122,15 @@ public class Rubrica implements Serializable {
      * @post Viene restituita una collezione di contatti, o una collezione vuota
      *       se nessun contatto soddisfa i criteri.
      */
-    public Set<Contatto> ricercaContatti(String query){
-        return null;
+    public List<Contatto> ricercaContatti(String query) {
+        List<Contatto> cRicercati = new ArrayList<>();
+
+        for(Contatto c : this.contatti) {
+            if(c.getNome().matches("^" + query + ".*") || c.getCognome().matches("^" + query + ".*"))
+                cRicercati.add(c);
+        }
+
+        return cRicercati;
     }
 
 
@@ -108,8 +144,14 @@ public class Rubrica implements Serializable {
      * @post Restituisce una collezione con i contatti preferiti.
      *       Se non ci sono contatti preferiti, restituisce una collezione vuota.
      */
-    public Set<Contatto> getContattiPreferiti(){
-        return null;
-    }
+    public List<Contatto> getContattiPreferiti(){
+        List<Contatto> cPreferiti = new ArrayList<>();
 
+        for(Contatto c : this.contatti) {
+            if(c.getIsPreferito())
+                cPreferiti.add(c);
+        }
+
+        return cPreferiti;
+    }
 }
