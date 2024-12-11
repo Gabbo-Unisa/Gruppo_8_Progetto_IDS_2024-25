@@ -1,16 +1,25 @@
 package rubrica.Controllers;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+import rubrica.Models.Contatto;
+import rubrica.Models.FileManager;
+import rubrica.Utils.RubricaManager;
+
+import java.io.File;
 
 public class ElencoContattiController {
+
     @FXML
-    public Button tastoPiù;
+    public Button tastoPiu;
 
     @FXML
     public TextField barraDiRicercaContatti;
@@ -20,6 +29,107 @@ public class ElencoContattiController {
 
     @FXML
     public Button preferiti;
+
+    @FXML
+    public TableView<Contatto> tabella;
+
+    @FXML
+    public TableColumn<Contatto, String> nome;
+
+    @FXML
+    public MenuItem importaRubrica;
+
+    @FXML
+    public MenuItem esportaRubrica;
+
+
+    private ObservableList<Contatto> contattiList;
+
+    @FXML
+    public void initialize() {
+        showContacts();
+    }
+
+    public void showContacts() {
+        //Inizializza la lista osservabile
+        contattiList = FXCollections.observableArrayList(RubricaManager.getRubrica().getContatti());
+
+        //Collega la lista alla tabella
+        tabella.setItems(contattiList);
+
+        //Mostra sulla colonna della tabella il nome e/o cognome del contatto
+        nome.setCellValueFactory(cellData -> {
+            Contatto contatto = cellData.getValue();
+            String nome = contatto.getNome();
+            String cognome = contatto.getCognome();
+
+            if (!nome.isEmpty() && !cognome.isEmpty()) {
+                return new SimpleStringProperty(nome + " " + cognome);
+            } else if (!nome.isEmpty()) {
+                return new SimpleStringProperty(nome);
+            } else {
+                return new SimpleStringProperty(cognome);
+            }
+        });
+    }
+
+    public void showAlert(String contenuto) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(contenuto);
+        alert.showAndWait();
+    }
+
+
+    public void onImportaRubricaClickMouse(ActionEvent getActionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Seleziona rubrica da importare");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VCF files (*.vcf)", "*.vcf"));
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.dir") + "/Backup"));
+
+        File selectedFile = fileChooser.showOpenDialog(null);
+        if (selectedFile != null) {         //Se l'utente ha selezionato un file
+            //Importa la rubrica dal file selezionato
+            FileManager fileManager = new FileManager(RubricaManager.getRubrica());
+            if(fileManager.importaRubrica(selectedFile.getPath())) {    //Se l'importaRubrica va a buon fine
+                //Aggiorna la tabella dei contatti
+                showContacts();
+
+                //Mostra un messaggio di conferma
+                showAlert("Rubrica importata con successo.");
+            }
+            else {      //Se l'importaRubrica non va a buon fine
+                //Mostra un messaggio di errore
+                showAlert("Eccezione durante l'esecuzione della importaRubrica.");
+            }
+        }
+        else {          //Se l'utente non ha selezionato un file
+            //Mostra un messaggio di errore
+            showAlert("Nessun file selezionato.");
+        }
+    }
+
+    public void onEsportaRubricaClickMouse(ActionEvent getActionEvent) {
+        DirectoryChooser dirChooser = new DirectoryChooser();
+        dirChooser.setTitle("Seleziona directory in cui esportare la rubrica");
+        dirChooser.setInitialDirectory(new File(System.getProperty("user.dir")));
+
+        File selectedDirectory = dirChooser.showDialog(null);
+        if (selectedDirectory != null) {         //Se l'utente ha selezionato una directory
+            // Esporta la rubrica nella directory selezionata
+            FileManager fileManager = new FileManager(RubricaManager.getRubrica());
+            if (fileManager.esportaRubrica(selectedDirectory.getPath())) {       //Se l'esportaRubrica va a buon fine
+                //Mostra un messaggio di conferma
+                showAlert("Rubrica esportata con successo.");
+            } else {      //Se l'esportaRubrica non va a buon fine
+                // Mostra un messaggio di errore
+                showAlert("Eccezione durante l'esecuzione della esportaRubrica.");
+            }
+        }
+        else {      //Se l'utente non ha selezionato una directory
+            //Mostra un messaggio di errore
+            showAlert("Nessuna directory selezionata.");
+        }
+    }
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
         if(SupportControllers.getDisplayMode() == true){
@@ -46,15 +156,29 @@ public class ElencoContattiController {
         }
     }
 
-    public void onVisualizzaTyped(KeyEvent getKeyEvent) {
-        if(barraDiRicercaContatti.getText().contains("Visualizza")){
+
+    public void onRicercaTyped(KeyEvent getKeyEvent) {
+        String query = barraDiRicercaContatti.getText();
+        if(query.isEmpty()) {
+            showContacts();
+        } else {
+            contattiList.clear();
+            contattiList.addAll(RubricaManager.getRubrica().ricercaContatti(query));
+        }
+    }
+
+    public void onContattoSelezionato(MouseEvent mouseEvent) {
+        if (mouseEvent.getClickCount() == 2) {
+            Contatto contattoSelezionato = tabella.getSelectionModel().getSelectedItem();
             if(SupportControllers.getDisplayMode() == true) {
-                SupportControllers.cambioSchermataLight(barraDiRicercaContatti, "/rubrica/Views/VisualizzazioneContattoView.fxml");
+                SupportControllers.cambioSchermataLight(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
             }else{
-                SupportControllers.cambioSchermataDark(barraDiRicercaContatti, "/rubrica/Views/VisualizzazioneContattoView.fxml");
+                SupportControllers.cambioSchermataDark(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
             }
         }
     }
+
+
 
 
     /* DISPLAY MODE ZONE :') */
@@ -81,4 +205,6 @@ public class ElencoContattiController {
         SupportControllers.setDisplayMode(false);
         rootSplitPane.getStylesheets().add(getClass().getResource("/rubrica/CSS/DarkMode.css").toExternalForm());
     }
+
+
 }

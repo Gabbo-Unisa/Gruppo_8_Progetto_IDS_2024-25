@@ -154,4 +154,20 @@ public class Rubrica implements Serializable {
 
         return cPreferiti;
     }
+
+    /**
+     * @brief Restituisce una rappresentazione in formato stringa della rubrica.
+     *
+     * @return Una stringa che rappresenta la rubrica con tutti i suoi contatti.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        for(Contatto c : this.contatti) {
+            sb.append(c.toString()).append("\n");
+        }
+
+        return sb.toString();
+    }
 }

@@ -7,9 +7,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class SupportControllers {
-    private static boolean displayMode = false;
+    private static boolean displayMode;
 
-    /* public SupportDisplayMode() {} */
+
+    public static void inizializzaDisplayMode(boolean displayMode) {
+        SupportControllers.displayMode = displayMode;
+    }
 
     public static boolean getDisplayMode() {
         return SupportControllers.displayMode;
