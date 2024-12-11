@@ -7,7 +7,6 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import rubrica.Utils.SupportControllers;
 
 public class ElencoContattiController {
     @FXML

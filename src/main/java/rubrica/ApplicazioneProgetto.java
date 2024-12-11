@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import rubrica.Utils.SupportControllers;
+import rubrica.Controllers.SupportControllers;
 
 import java.io.IOException;
 

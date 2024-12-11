@@ -1,4 +1,4 @@
-package rubrica.Utils;
+package rubrica.Controllers;
 
 
 import javafx.fxml.FXMLLoader;

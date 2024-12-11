@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitPane;
-import rubrica.Utils.SupportControllers;
 
 public class ModificaContattiController {
     @FXML
