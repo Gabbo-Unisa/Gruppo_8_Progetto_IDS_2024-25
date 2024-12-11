@@ -17,17 +17,17 @@
                 <Label layoutX="454.0" layoutY="107.0" text="Note" />
                 <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
                 <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
-            <Label fx:id="lblNome" layoutX="97.0" layoutY="135.0" text="Label" />
-            <Label fx:id="lblCognome" layoutX="111.0" layoutY="164.0" text="Label" />
-            <Label fx:id="lblTelefono1" layoutX="111.0" layoutY="193.0" text="Label" />
-            <Label fx:id="lblTelefono2" layoutX="111.0" layoutY="210.0" text="Label" />
-            <Label fx:id="lblTelefono3" layoutX="111.0" layoutY="227.0" text="Label" />
-            <Label fx:id="lblEmail1" layoutX="111.0" layoutY="270.0" text="Label" />
-            <Label fx:id="lblEmail2" layoutX="111.0" layoutY="287.0" text="Label" />
-            <Label fx:id="lblEmail3" layoutX="111.0" layoutY="304.0" text="Label" />
-            <ImageView fx:id="immagine" fitHeight="73.0" fitWidth="97.0" layoutX="63.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="modificaButton" layoutX="393.0" layoutY="34.0" mnemonicParsing="false" onAction="#onModificaClickButton" text="Modifica" />
-            <Button fx:id="elimina" layoutX="397.0" layoutY="64.0" mnemonicParsing="false" onAction="#onEliminaClickButton" text="Elimina" textAlignment="CENTER" textFill="RED" />
+                <Label fx:id="lblNome" layoutX="97.0" layoutY="135.0" text="Label" />
+                <Label fx:id="lblCognome" layoutX="111.0" layoutY="164.0" text="Label" />
+                <Label fx:id="lblTelefono1" layoutX="111.0" layoutY="193.0" text="Label" />
+                <Label fx:id="lblTelefono2" layoutX="111.0" layoutY="210.0" text="Label" />
+                <Label fx:id="lblTelefono3" layoutX="111.0" layoutY="227.0" text="Label" />
+                <Label fx:id="lblEmail1" layoutX="111.0" layoutY="270.0" text="Label" />
+                <Label fx:id="lblEmail2" layoutX="111.0" layoutY="287.0" text="Label" />
+                <Label fx:id="lblEmail3" layoutX="111.0" layoutY="304.0" text="Label" />
+                <ImageView fx:id="immagine" fitHeight="73.0" fitWidth="97.0" layoutX="63.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="modificaButton" layoutX="393.0" layoutY="34.0" mnemonicParsing="false" onAction="#onModificaClickButton" text="Modifica" />
+                <Button fx:id="elimina" layoutX="397.0" layoutY="64.0" mnemonicParsing="false" onAction="#onEliminaClickButton" text="Elimina" textAlignment="CENTER" textFill="RED" />
                 <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
                     <items>
                         <MenuItem fx:id="lightMode" mnemonicParsing="false" onAction="#onLightClickMouse" text="Light mode" />

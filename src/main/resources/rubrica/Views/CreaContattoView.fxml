@@ -27,10 +27,10 @@
                 <TextField fx:id="txfEmail2" layoutX="86.0" layoutY="291.0" />
                 <TextField fx:id="txfEmail3" layoutX="86.0" layoutY="313.0" />
                 <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
-                            <items>
-                                <MenuItem fx:id="lightMode" mnemonicParsing="false" onAction="#onLightClickMouse" text="Light mode" />
-                                <MenuItem fx:id="darkMode" mnemonicParsing="false" onAction="#onDarkClickMouse" text="Dark mode" />
-                            </items>
+                    <items>
+                        <MenuItem fx:id="lightMode" mnemonicParsing="false" onAction="#onLightClickMouse" text="Light mode" />
+                        <MenuItem fx:id="darkMode" mnemonicParsing="false" onAction="#onDarkClickMouse" text="Dark mode" />
+                    </items>
                 </MenuButton>
             </children></AnchorPane>
         <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
