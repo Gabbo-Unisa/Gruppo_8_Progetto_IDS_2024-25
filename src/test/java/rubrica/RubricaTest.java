@@ -31,7 +31,7 @@ class RubricaTest {
     @Test
     void testGetContatti() {
         assertTrue(rubrica.getContatti().isEmpty(), "La lista dei contatti dovrebbe essere vuota all'inizio.");
-        Contatto contatto = new Contatto("Mario","Rossi", new ArrayList<>(), new ArrayList<>(), "2024-12-11", "Nota1", false);
+        Contatto contatto = new Contatto("Mario","Rossi", new ArrayList<>(), new ArrayList<>(), "1 dicembre 2024", "Nota1", false);
         rubrica.aggiungiContatto(contatto);
 
         List<Contatto> contatti = rubrica.getContatti();
@@ -41,8 +41,8 @@ class RubricaTest {
 
     @Test
     void testAggiungiContatto() {
-        Contatto contatto1 = new Contatto("Mario", "Rossi", new ArrayList<>(List.of("1234567898")), new ArrayList<>(List.of("mario.rossi@outlook.it")), "11 Dicembre 2024","Nota1",false);
-        Contatto contatto2 = new Contatto("Mario", "Rossi", new ArrayList<>(List.of("1234567898")), new ArrayList<>(List.of("mario.rossi@outlook.it")), "11 Dicembre 2024","Nota2",false);
+        Contatto contatto1 = new Contatto("Mario", "Rossi", new ArrayList<>(List.of("1234567898")), new ArrayList<>(List.of("mario.rossi@outlook.it")), "11 dicembre 2024","Nota1",false);
+        Contatto contatto2 = new Contatto("Mario", "Rossi", new ArrayList<>(List.of("1234567898")), new ArrayList<>(List.of("mario.rossi@outlook.it")), "11 dicembre 2024","Nota2",false);
 
         //Tentativo aggiunta di un contatto
         assertTrue(rubrica.aggiungiContatto(contatto1), "Il contatto valido dovrebbe essere aggiunto con successo.");
@@ -50,23 +50,23 @@ class RubricaTest {
         assertFalse(rubrica.aggiungiContatto(contatto2),"Il contatto duplicato non dovrebbe essere aggiunto.");
 
         //Tentativo aggiunta contatto con email non valida
-        Contatto contatto3 = new Contatto("Luigi","Bianchi",new ArrayList<>(List.of("9876543212")), new ArrayList<>(List.of("email_non_valida")),"4 Dicembre 2024", "Nota3",false);
+        Contatto contatto3 = new Contatto("Luigi","Bianchi",new ArrayList<>(List.of("9876543212")), new ArrayList<>(List.of("email_non_valida")),"4 dicembre 2024", "Nota3",false);
         assertFalse(rubrica.aggiungiContatto(contatto3),"Il contatto con email non valida non dovrebbe essere aggiunto.");
 
         //Tentativo aggiunta contatto con numero di telefono non valido
-        Contatto contatto4 = new Contatto("Anna", "Verdi", new ArrayList<>(List.of("numero_non_valido")), new ArrayList<>(List.of("anna.verdi@gmail.com")), "8 Dicembre 2024", "Nota4", false);
+        Contatto contatto4 = new Contatto("Anna", "Verdi", new ArrayList<>(List.of("numero_non_valido")), new ArrayList<>(List.of("anna.verdi@gmail.com")), "8 dicembre 2024", "Nota4", false);
         assertFalse(rubrica.aggiungiContatto(contatto4),"Il contatto con numero di telefono non valido non dovrebbe essere aggiunto.");
 
         //Tentativo di aggiunta contatto senza nome e cognome
-        Contatto contatto5 = new Contatto("", "", new ArrayList<>(List.of("1234567894")), new ArrayList<>(List.of("noname@libero.it")), "9 Dicembre 2024", "Nota5", false );
+        Contatto contatto5 = new Contatto("", "", new ArrayList<>(List.of("1234567894")), new ArrayList<>(List.of("noname@libero.it")), "9 dicembre 2024", "Nota5", false );
         assertFalse(rubrica.aggiungiContatto(contatto5), "Il contatto senza nome e cognome non dovrebbe essere aggiunto.");
 
         //Tentativo di aggiunta contatto con solo nome
-        Contatto contatto6 = new Contatto("Francesco", "", new ArrayList<>(List.of("1274849306")), new ArrayList<>(List.of("onlyname@example.com")),"1 Dicembre 2024","Nota6",true);
+        Contatto contatto6 = new Contatto("Francesco", "", new ArrayList<>(List.of("1274849306")), new ArrayList<>(List.of("onlyname@example.com")),"1 dicembre 2024","Nota6",true);
         assertTrue(rubrica.aggiungiContatto(contatto6),"Il contatto con solo nome dovrebbe essere aggiunto con successo.");
 
         //Tentativo di aggiunta contatto con solo cognome
-        Contatto contatto7 = new Contatto("", "Esposito", new ArrayList<>(List.of("1239876546")), new ArrayList<>(List.of("onlysurname@example.it")),"15 Novembre 2024","Nota7",true);
+        Contatto contatto7 = new Contatto("", "Esposito", new ArrayList<>(List.of("1239876546")), new ArrayList<>(List.of("onlysurname@example.it")),"15 novembre 2024","Nota7",true);
         assertTrue(rubrica.aggiungiContatto(contatto7), "Il contatto con solo cognome dovrebbe essere aggiunto con successo.");
 
         //Tentativo di aggiunta di un contatto senza passaggio della data di creazione
@@ -77,8 +77,8 @@ class RubricaTest {
 
     @Test
     void testModificaContatto() {
-        Contatto oldContatto = new Contatto("Luigi", "Bianchi", new ArrayList<>(), new ArrayList<>(), "11 Dicembre 2024", "Note",false);
-        Contatto updateContatto = new Contatto("Luigi", "Bianchi", new ArrayList<>(List.of("3367228745")), new ArrayList<>(), "11 Dicembre 2024", "Note",true);
+        Contatto oldContatto = new Contatto("Luigi", "Bianchi", new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Note",false);
+        Contatto updateContatto = new Contatto("Luigi", "Bianchi", new ArrayList<>(List.of("3367228745")), new ArrayList<>(), "11 dicembre 2024", "Note",true);
 
         rubrica.aggiungiContatto(oldContatto);
 
@@ -93,7 +93,7 @@ class RubricaTest {
 
     @Test
     void testEliminaContatto() {
-        Contatto contatto = new Contatto("Andrea", "Iannone", new ArrayList<>(List.of("3445589222")), new ArrayList<>(), "7 Novembre 2024","Nota", false);
+        Contatto contatto = new Contatto("Andrea", "Iannone", new ArrayList<>(List.of("3445589222")), new ArrayList<>(), "7 novembre 2024","Nota", false);
         rubrica.aggiungiContatto(contatto);
 
         //Elimina contatto esistente
@@ -103,7 +103,7 @@ class RubricaTest {
 
     @Test
     void testRicercaContatti() {
-        Contatto contatto = new Contatto("Ferdinando", "Paparo", new ArrayList<>(List.of("3927896543")), new ArrayList<>(),"3 Ottobre 2024", "Nota",false);
+        Contatto contatto = new Contatto("Ferdinando", "Paparo", new ArrayList<>(List.of("3927896543")), new ArrayList<>(),"3 ottobre 2024", "Nota",false);
         rubrica.aggiungiContatto(contatto);
 
         //Ricerca nella rubrica
@@ -118,8 +118,8 @@ class RubricaTest {
 
     @Test
     void testGetContattiPreferiti() {
-        Contatto preferito = new Contatto("Mario", "Rossi", new ArrayList<>(), new ArrayList<>(), "11 Dicembre 2024", "Nota1", true);
-        Contatto nonPreferito = new Contatto("Luigi", "Verdi", new ArrayList<>(), new ArrayList<>(), "7 Dicembre 2024", "Nota2", false);
+        Contatto preferito = new Contatto("Mario", "Rossi", new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Nota1", true);
+        Contatto nonPreferito = new Contatto("Luigi", "Verdi", new ArrayList<>(), new ArrayList<>(), "7 dicembre 2024", "Nota2", false);
 
         rubrica.aggiungiContatto(preferito);
         rubrica.aggiungiContatto(nonPreferito);
