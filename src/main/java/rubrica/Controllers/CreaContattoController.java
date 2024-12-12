@@ -105,8 +105,6 @@ public class CreaContattoController {
     Contatto c;
 
         public boolean onSalvaClickButton(ActionEvent getActionEvent) {
-            /*List<String> listaTelefoni = listaTelefoni();
-            List<String> listaEmail = listaEmail();*/
             try {
                 c = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(), listaEmail(),
                         txaNote.getText(), ckbPreferiti.isSelected()/*, immagine*/);
