@@ -1,3 +1,10 @@
+/*
+ * Questa classe permette di mantenere un riferimento alla rubrica in memoria statica
+ * così da consentirne l'accesso in qualsiasi punto dell'applicazione.
+ * Risolve il problema della comunicazione tra i vari controller
+ * nel momento in cui si apportano modifiche alla rubrica.
+ */
+
 package rubrica.Utils;
 
 import rubrica.Models.Rubrica;

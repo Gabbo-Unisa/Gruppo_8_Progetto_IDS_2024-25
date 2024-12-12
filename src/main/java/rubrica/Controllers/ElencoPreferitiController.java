@@ -12,6 +12,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import rubrica.Models.Contatto;
 import rubrica.Models.FileManager;
+import rubrica.Utils.ContattoManager;
 import rubrica.Utils.RubricaManager;
 
 import java.io.File;
@@ -159,6 +160,7 @@ public class ElencoPreferitiController {
     public void onContattoSelezionato(MouseEvent mouseEvent) {
         if (mouseEvent.getClickCount() == 2) {
             Contatto contattoSelezionato = tabella.getSelectionModel().getSelectedItem();
+            ContattoManager.setContatto(contattoSelezionato);
             SupportControllers.cambioSchermata(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
         }
     }
