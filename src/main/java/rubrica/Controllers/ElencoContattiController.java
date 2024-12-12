@@ -73,11 +73,11 @@ public class ElencoContattiController {
         });
     }
 
-    private void showAlert(String contenuto) {
+    /*private void showAlert(String contenuto) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(contenuto);
         alert.showAndWait();
-    }
+    }*/
 
 
     public void onImportaRubricaClickMouse(ActionEvent getActionEvent) {
@@ -95,16 +95,16 @@ public class ElencoContattiController {
                 showContacts();
 
                 //Mostra un messaggio di conferma
-                showAlert("Rubrica importata con successo.");
+                SupportControllers.showAlert("Rubrica importata con successo.");
             }
             else {      //Se l'importaRubrica non va a buon fine
                 //Mostra un messaggio di errore
-                showAlert("Eccezione durante l'esecuzione della importaRubrica.");
+                SupportControllers.showAlert("Eccezione durante l'esecuzione della importaRubrica.");
             }
         }
         else {          //Se l'utente non ha selezionato un file
             //Mostra un messaggio di errore
-            showAlert("Nessun file selezionato.");
+            SupportControllers.showAlert("Nessun file selezionato.");
         }
     }
 
@@ -119,15 +119,15 @@ public class ElencoContattiController {
             FileManager fileManager = new FileManager(RubricaManager.getRubrica());
             if (fileManager.esportaRubrica(selectedDirectory.getPath())) {       //Se l'esportaRubrica va a buon fine
                 //Mostra un messaggio di conferma
-                showAlert("Rubrica esportata con successo.");
+                SupportControllers.showAlert("Rubrica esportata con successo.");
             } else {      //Se l'esportaRubrica non va a buon fine
                 // Mostra un messaggio di errore
-                showAlert("Eccezione durante l'esecuzione della esportaRubrica.");
+                SupportControllers.showAlert("Eccezione durante l'esecuzione della esportaRubrica.");
             }
         }
         else {      //Se l'utente non ha selezionato una directory
             //Mostra un messaggio di errore
-            showAlert("Nessuna directory selezionata.");
+            SupportControllers.showAlert("Nessuna directory selezionata.");
         }
     }
 
@@ -148,7 +148,7 @@ public class ElencoContattiController {
 
 
     public void onPlusClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/CreaContattoView.fxml");
+        SupportControllers.cambioSchermata(tastoPiu, "/rubrica/Views/CreaContattoView.fxml");
     }
 
 

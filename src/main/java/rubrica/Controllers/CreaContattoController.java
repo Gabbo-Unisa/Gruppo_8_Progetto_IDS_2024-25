@@ -2,11 +2,22 @@ package rubrica.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SplitPane;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
+import rubrica.Models.Contatto;
+import rubrica.Utils.RubricaManager;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CreaContattoController {
+    // Navigazione
+    @FXML
+    public Button salvaButton;
+
     @FXML
     public Button annulla;
 
@@ -17,28 +28,124 @@ public class CreaContattoController {
     public Button preferiti;
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true){
-            SupportControllers.cambioSchermataLight(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }
+        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
     }
 
     public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
     }
 
     public void onAnnullaClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(annulla, "/rubrica/Views/ElencoContattiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(annulla, "/rubrica/Views/ElencoContattiView.fxml");
-        }
+        SupportControllers.cambioSchermata(annulla, "/rubrica/Views/ElencoContattiView.fxml");
     }
+
+    // trattamento dati
+    @FXML
+    public TextField txfNome;
+
+    @FXML
+    public TextField txfCognome;
+
+    @FXML
+    public TextField txfTelefono1;
+
+    @FXML
+    public TextField txfTelefono2;
+
+    @FXML
+    public TextField txfTelefono3;
+
+    @FXML
+    public TextField txfEmail1;
+
+    @FXML
+    public TextField txfEmail2;
+
+    @FXML
+    public TextField txfEmail3;
+
+    @FXML
+    public TextArea txaNote;
+
+    @FXML
+    public CheckBox ckbPreferiti;
+
+    /*@FXML
+    public ImageView immagine;*/
+
+    List<String> listaTelefoni;
+        private List<String> listaTelefoni() {
+            listaTelefoni = new ArrayList<>();
+
+            if(!txfTelefono1.getText().isEmpty())
+                listaTelefoni.add(txfTelefono1.getText());
+            if(!txfTelefono2.getText().isEmpty())
+                listaTelefoni.add(txfTelefono2.getText());
+            if(!txfTelefono3.getText().isEmpty())
+                listaTelefoni.add(txfTelefono3.getText());
+
+            return listaTelefoni;
+        }
+
+
+    List<String> listaEmail;
+        private List<String> listaEmail() {
+            listaEmail = new ArrayList<>();
+
+            if(!txfEmail1.getText().isEmpty())
+                listaEmail.add(txfEmail1.getText());
+            if(!txfEmail2.getText().isEmpty())
+                listaEmail.add(txfEmail2.getText());
+            if(!txfEmail3.getText().isEmpty())
+                listaEmail.add(txfEmail3.getText());
+
+            return listaEmail;
+        }
+
+    Contatto c;
+
+        public boolean onSalvaClickButton(ActionEvent getActionEvent) {
+            /*List<String> listaTelefoni = listaTelefoni();
+            List<String> listaEmail = listaEmail();*/
+            try {
+                c = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(), listaEmail(),
+                        txaNote.getText(), ckbPreferiti.isSelected()/*, immagine*/);
+
+                return RubricaManager.getRubrica().aggiungiContatto(c);
+            } catch (Exception getE) {
+                throw new RuntimeException(getE);
+            } finally {
+                SupportControllers.cambioSchermata(salvaButton, "/rubrica/Views/ElencoContattiView.fxml");
+            }
+
+        }
+
+
+
+
+
+    /*L'invio non viene inserito nei TextField, quindi vanno sostituiti con dei TextArea, alias se avanza tempo lo faccio 😂*/
+
+    /*public void onInvioTyped(KeyEvent KeyEvent) {
+        txfNome.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue.length() > oldValue.length()) {
+                // L'ultimo carattere digitato
+                char lastChar = newValue.charAt(newValue.length() - 1);
+
+                System.out.println("Ultimo carattere digitato: " + lastChar);
+
+                // Controlla se è '\n' o qualsiasi altra condizione
+                if (lastChar == '\n') {
+                    System.out.println("Hai premuto Invio!");
+                    onSalvaClickButton(new ActionEvent());
+                }
+            }
+        });
+
+    }*/
+
+
+
 
     /* DISPLAY MODE ZONE :') */
     @FXML

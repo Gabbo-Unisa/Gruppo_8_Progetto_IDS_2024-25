@@ -4,6 +4,7 @@ package rubrica.Controllers;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 public class SupportControllers {
@@ -55,5 +56,12 @@ public class SupportControllers {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //Metodo per lnciare gli alert
+    public static void showAlert(String contenuto) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(contenuto);
+        alert.showAndWait();
     }
 }
