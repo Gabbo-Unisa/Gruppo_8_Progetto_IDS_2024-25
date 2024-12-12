@@ -48,15 +48,23 @@ class CheckerTest {
         assertFalse(checker.validaContatto(emailNonValideContatto), "Il contatto con email non valide non dovrebbe essere valido.");
 
         //Caso 5: Contatto senza numeri di telefono ed email ma con nome/cognome validi
-        Contatto senzaTelefonoEmail = new Contatto("Giulia", "Neri", null, null,"11 dicembre 2024", "Nota5", false);
+        Contatto senzaTelefonoEmail = new Contatto("Giulia", "Neri", new ArrayList<>(), new ArrayList<>(),"11 dicembre 2024", "Nota5", false);
         assertTrue(checker.validaContatto(senzaTelefonoEmail), "Il contatto senza numeri di telefono ed email dovrebbe essere valido poichè nome/cognome sono validi.");
 
         //Caso 6: Contatto senza numeri di telefono ed email ma con nome/cognome non validi
-        Contatto senzaTelefonoEmail2 = new Contatto("1", ".", null, null,"8 dicembre 2024", "Nota6",false);
+        Contatto senzaTelefonoEmail2 = new Contatto("1", ".", new ArrayList<>(), new ArrayList<>(),"8 dicembre 2024", "Nota6",false);
         assertFalse(checker.validaContatto(senzaTelefonoEmail2),"Il contatto senza numero di telefono ed email non dovrebbe essere valido poichè nome/cognome non sono validi");
 
-        //Contatto 7: Nome e cognome null
-        Contatto nomeCognomeNull = new Contatto(null, null, new ArrayList<>(), new ArrayList<>(),"3 novembre 2024", "Nota6", false);
+        //Contatto 7: Nome e cognome nulli
+        Contatto nomeCognomeNull = new Contatto(null, null, new ArrayList<>(), new ArrayList<>(),"3 novembre 2024", "Nota7", false);
         assertFalse(checker.validaContatto(nomeCognomeNull), "Il contatto con nome e cognome nulli non dovrebbe essere valido.");
+
+        // Caso 8: Contatto con solo il nome, cognome nullo
+        Contatto soloNome = new Contatto("Luca", null, new ArrayList<>(), new ArrayList<>(), "16 dicembre 2024", "Nota8", false);
+        assertTrue(checker.validaContatto(soloNome), "Il contatto con solo il nome e cognome nullo dovrebbe essere valido.");
+
+        // Caso 9: Contatto con solo il cognome, nome nullo
+        Contatto soloCognome = new Contatto(null, "Verdi", new ArrayList<>(), new ArrayList<>(), "17 dicembre 2024", "Nota9", false);
+        assertTrue(checker.validaContatto(soloCognome), "Il contatto con solo il cognome e nome nullo dovrebbe essere valido.");
     }
 }

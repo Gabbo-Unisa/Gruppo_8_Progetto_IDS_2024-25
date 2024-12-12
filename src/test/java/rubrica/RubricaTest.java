@@ -78,16 +78,26 @@ class RubricaTest {
     @Test
     void testModificaContatto() {
         Contatto oldContatto = new Contatto("Luigi", "Bianchi", new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Note",false);
-        Contatto updateContatto = new Contatto("Luigi", "Bianchi", new ArrayList<>(List.of("3367228745")), new ArrayList<>(), "11 dicembre 2024", "Note",true);
+        Contatto updateContatto = new Contatto("Mario", "Verdi", new ArrayList<>(List.of("3367228745")), new ArrayList<>(), "11 dicembre 2024", "Note",true);
 
         rubrica.aggiungiContatto(oldContatto);
 
-        //Modifica il contatto
+        //Caso 1: Modifica del contatto andata a buon fine
         assertTrue(rubrica.modificaContatto(oldContatto,updateContatto));
-
-        //Verifica che l'operazione di modifica sia avvenuta con successo
         assertTrue(rubrica.getContatti().contains(updateContatto));
         assertFalse(rubrica.getContatti().contains(oldContatto));
+
+        //Caso 2: Contatto non valido
+        Contatto invalidContatto = new Contatto(null, null, new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Note",false); // Non valido
+        assertFalse(rubrica.modificaContatto(oldContatto, invalidContatto));
+        assertFalse(rubrica.getContatti().contains(invalidContatto));
+
+        // Caso 3: Contatto aggiornato già esistente
+        Contatto existingContatto = new Contatto("Mario", "Verdi", new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Note",false);
+        rubrica.aggiungiContatto(existingContatto);
+        assertFalse(rubrica.modificaContatto(oldContatto, updateContatto));
+        assertTrue(rubrica.getContatti().contains(existingContatto));
+        assertFalse(rubrica.getContatti().contains(updateContatto));
 
     }
 
