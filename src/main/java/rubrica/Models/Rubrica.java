@@ -60,11 +60,10 @@ public class Rubrica implements Serializable {
      * @return 'true' se il contatto è stato aggiunto con successo, 'false' altrimenti.
      *
      * @pre Il contatto deve avere almeno nome e/o cognome settati.
-     * @post Se i dati del contatto sono validi, il contatto viene aggiunto alla rubrica.
+     * @post Se i dati del contatto sono validi e il contatto non era già presente, il contatto viene aggiunto alla rubrica.
      */
     public boolean aggiungiContatto(Contatto c) {
-        if(checker.validaContatto(c)) {
-            contatti.add(c);
+        if(this.checker.validaContatto(c) && this.contatti.add(c)) {
             return true;
         }
 
@@ -83,13 +82,17 @@ public class Rubrica implements Serializable {
      * @pre Il contatto 'old' deve esistere nella rubrica.
      *      Il contatto 'update' deve avere almeno nome e/o cognome settati.
      *
-     * @post Se i dati del contatto 'update' sono validi, il contatto 'old' viene sostituito con 'update'.
+     @post Se i dati del contatto 'update' sono validi e non duplicano altri contatti,
+     *     il contatto 'old' viene sostituito con 'update' nella rubrica.
      */
     public boolean modificaContatto(Contatto old, Contatto update) {
-        if(checker.validaContatto(update)) {
-            contatti.remove(old);
-            contatti.add(update);
-            return true;
+        if(this.checker.validaContatto(update)) {
+            this.eliminaContatto(old);
+
+            if(this.contatti.add(update))
+                return true;
+            else
+                this.contatti.add(old);
         }
 
         return false;
@@ -101,12 +104,13 @@ public class Rubrica implements Serializable {
      *
      * @param[in] c Il contatto da rimuovere.
      *
-     * @pre Il contatto deve esistere nella rubrica.
+     * @return 'true' se il contatto è stato rimosso con successo, 'false' altrimenti.
      *
+     * @pre Il contatto deve esistere nella rubrica.
      * @post Il contatto specificato viene rimosso dalla rubrica.
      */
-    public void eliminaContatto(Contatto c){
-        contatti.remove(c);
+    public boolean eliminaContatto(Contatto c){
+        return this.contatti.remove(c);
     }
 
 

@@ -46,14 +46,12 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
                     List<String> email,
                     String nota, boolean isPreferito) {
-        nome = nome.trim();
-        this.nome = nome;
 
-        cognome = cognome.trim();
-        this.cognome = cognome;
+        this.nome = (nome == null) ? "" : nome.trim();
+        this.cognome = (cognome == null) ? "" : cognome.trim();
 
-        this.numeriTelefono = new ArrayList<>(numeriTelefono);
-        this.email = new ArrayList<>(email);
+        this.numeriTelefono = (numeriTelefono == null) ? new ArrayList<>() : numeriTelefono;
+        this.email = (email == null) ? new ArrayList<>() : email;
 
         Date data = new Date();     // Catturo la Data attuale
         SimpleDateFormat formatoData = new SimpleDateFormat("dd MMMM yyyy");    //Imposto il formato della data
@@ -77,14 +75,12 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
                     List<String> email, String dataCreazione,
                     String nota, boolean isPreferito) {
-        nome = nome.trim();
-        this.nome = nome;
 
-        cognome = cognome.trim();
-        this.cognome = cognome;
+        this.nome = (nome == null) ? "" : nome.trim();
+        this.cognome = (cognome == null) ? "" : cognome.trim();
 
-        this.numeriTelefono = new ArrayList<>(numeriTelefono);
-        this.email = new ArrayList<>(email);
+        this.numeriTelefono = (numeriTelefono == null) ? new ArrayList<>() : numeriTelefono;
+        this.email = (email == null) ? new ArrayList<>() : email;
 
         this.dataCreazione = dataCreazione;
         this.nota = nota;
