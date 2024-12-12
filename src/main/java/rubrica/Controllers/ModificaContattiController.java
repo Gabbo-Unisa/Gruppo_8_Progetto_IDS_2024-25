@@ -17,29 +17,20 @@ public class ModificaContattiController {
     public Button preferiti;
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true){
-            SupportControllers.cambioSchermataLight(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-        }
+        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
+
     }
 
     public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-        }
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
+
     }
 
 
 
     public void onClickAnnulla(ActionEvent getActionEvent) {
-        if(SupportControllers.getDisplayMode() == true) {
-            SupportControllers.cambioSchermataLight(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
-        }else{
-            SupportControllers.cambioSchermataDark(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
-        }
+        SupportControllers.cambioSchermata(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
+
     }
 
     /* DISPLAY MODE ZONE :') */

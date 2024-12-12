@@ -116,6 +116,7 @@ public class CreaContattoController {
                 throw new RuntimeException(getE);
             } finally {
                 SupportControllers.cambioSchermata(salvaButton, "/rubrica/Views/ElencoContattiView.fxml");
+                SupportControllers.showAlert("Contatto salvato con successo.");
             }
 
         }
