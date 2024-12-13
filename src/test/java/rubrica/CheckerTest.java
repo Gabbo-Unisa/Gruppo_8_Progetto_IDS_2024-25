@@ -26,12 +26,12 @@ class CheckerTest {
     }
 
     @Test
-    void testvalidaContatto() {
+    void testValidaContatto() {
         //Caso 1: contatto valido
         List<String> numeriValidi = List.of("3404657894","3319875463");
         List<String> emailValide = List.of("caso1@example.it","user1@libero.it");
         Contatto contattoValido = new Contatto("Mario","Rossi", numeriValidi, emailValide,"7 dicembre 2024","Nota1",false);
-        assertTrue(checker.validaContatto(contattoValido),"Il contatto dovrebbe essere passare la validazione.");
+        assertTrue(checker.validaContatto(contattoValido),"Il contatto dovrebbe essere valido.");
 
         //Caso 2: Nome e Cognome non validi
         Contatto nomeCognomeNonValidi = new Contatto("123", "@@@", new ArrayList<>(), new ArrayList<>(), "10 novembre 2024","Nota2", false);

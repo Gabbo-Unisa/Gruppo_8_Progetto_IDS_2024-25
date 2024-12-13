@@ -42,7 +42,14 @@ class FileManagerTest {
         filetemporaneo.deleteOnExit();
 
         try (FileWriter fw = new FileWriter(filetemporaneo)) {
-            fw.write("BEGIN:VCARD\nVERSION:4.0\nN:Pannuto;Gabriele;;;\nTEL:3402235674\nEND:VCARD\n");
+            fw.write("BEGIN:VCARD\n");
+            fw.write("VERSION:3.0\n");
+            fw.write("PRODID:ez-vcard 0.11.0\n");
+            fw.write("N:Pannuto;Gabriele\n");
+            fw.write("X-DATA-CREAZIONE:11 dicembre 2024\n");
+            fw.write("X-IS-PREFERITO:true\n");
+            fw.write("NOTE:Nota3\n");
+            fw.write("END:VCARD\n");
         }
 
         boolean risultativalidi = fileManager.importaRubrica(filetemporaneo.getAbsolutePath());
@@ -60,13 +67,13 @@ class FileManagerTest {
         Contatto contattoimportato = contatti.get(0);
         assertEquals("Gabriele",contattoimportato.getNome());
         assertEquals("Pannuto",contattoimportato.getCognome());
-        assertTrue(contattoimportato.getNumeriTelefono().contains("3402235674"));
+        assertTrue(contattoimportato.getIsPreferito());
 
         //Caso 2: Importa da file non esistente
         boolean risultatiNonValidi = fileManager.importaRubrica("nonesiste.vcf");
 
         //Verifico che l'importazione sia fallita
-        assertFalse(risultatiNonValidi,"Il file non esiste quindi non dovrebbe avere success l'importazione.");
+        assertFalse(risultatiNonValidi,"Il file non esiste quindi l'importazione non dovrebbe avere successo.");
     }
 
     @Test
@@ -78,34 +85,32 @@ class FileManagerTest {
         rubrica.aggiungiContatto(contatto);
 
         //Crea una directory temporanea per l'esportazione
-        File dirtemporanea = new File(System.getProperty("Users/pasqualepiccolo/Scrivania/INGEGNERIA DEL SOFTWARE"));
+        File dirtemporanea = new File(System.getProperty("java.io.tmpdir"));
         boolean risultati = fileManager.esportaRubrica(dirtemporanea.getAbsolutePath());
 
         //Verifica che l'esportazione sia riuscita e che il file esportato esista
         assertTrue(risultati, "L'esportazione della rubrica con contatti dovrebbe riuscire.");
         File fileoutput = new File(dirtemporanea, "output.vcf");
         assertTrue(fileoutput.exists(), "Il file esportato non esiste.");
-        fileoutput.deleteOnExit();
 
         //Verifica il contenuto del file esportato per vedere se contiene il contatto
         List<VCard> contattiEsportati = Ezvcard.parse(fileoutput).all();
-        assertEquals(1, contattiEsportati.size(), "Il numero di contatti esportati ");
+        assertEquals(1, contattiEsportati.size(), "Il numero di contatti esportati non è corretto.");
         VCard contattoesportato = contattiEsportati.get(0);
-        assertEquals("John", contattoesportato.getStructuredName().getGiven(), "Il nome del contatto esportato non corrisponde.");
-        assertEquals("Doe", contattoesportato.getStructuredName().getFamily(), "Il cognome del contatto esportato non corrisponde.");
+        assertEquals("Mario", contattoesportato.getStructuredName().getGiven(), "Il nome del contatto esportato non corrisponde.");
+        assertEquals("Bianchi", contattoesportato.getStructuredName().getFamily(), "Il cognome del contatto esportato non corrisponde.");
         assertTrue(contattoesportato.getTelephoneNumbers().stream()
-                        .anyMatch(tel -> tel.getText().equals("1234567890")),
+                        .anyMatch(tel -> tel.getText().equals("3923546722")),
                 "Il numero di telefono del contatto esportato non corrisponde.");
 
         // Verifica che la data di creazione del contatto esportato sia corretta
-        assertTrue(contattoesportato.getExtendedProperties().stream()
-                        .anyMatch(prop -> "X-DATA-CREAZIONE".equals(prop.getValue()) && "11 dicembre 2024".equals(prop.getValue())),
+        assertTrue(contattoesportato.getExtendedProperties("X-DATA-CREAZIONE").stream()
+                        .anyMatch(prop -> "11 dicembre 2024".equals(prop.getValue())),
                 "La data di creazione del contatto esportato non corrisponde.");
 
         // Verifica che il contatto esportato sia marcato come preferito
-        assertTrue(contattoesportato.getExtendedProperties().stream()
-                        .anyMatch(prop -> "X-IS-PREFERITO".equals(prop.getValue()) && "true".equals(prop.getValue())),
-                "Il contatto esportato non è marcato come preferito.");
+        assertTrue(contattoesportato.getExtendedProperties("X-IS-PREFERITO").stream()
+                        .anyMatch(prop -> "true".equals(prop.getValue())), "Il contatto esportato non è marcato come preferito.");
 
         //Caso 2: Esporta rubrica
         rubrica.eliminaContatto(contatto);
