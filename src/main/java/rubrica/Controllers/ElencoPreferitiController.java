@@ -21,7 +21,7 @@ import java.util.List;
 
 public class ElencoPreferitiController {
     @FXML
-    public Button tastoPiu;
+    public Button plusButton;
 
     @FXML
     public TextField barraDiRicercaPreferiti;
@@ -146,15 +146,15 @@ public class ElencoPreferitiController {
     }
 
 
+
+    /* NAVIGABILITÀ */
     public void onContattiClickButton(ActionEvent getActionEvent) {
         SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
     }
 
-
     public void onPlusClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/CreaContattoView.fxml");
+        SupportControllers.cambioSchermata(plusButton, "/rubrica/Views/CreaContattoView.fxml");
     }
-
 
     public void onContattoSelezionato(MouseEvent mouseEvent) {
         if (mouseEvent.getClickCount() == 2) {

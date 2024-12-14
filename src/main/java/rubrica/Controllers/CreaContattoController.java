@@ -1,17 +1,14 @@
 package rubrica.Controllers;
 
 import javafx.application.Platform;
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
 import rubrica.Models.Contatto;
 import rubrica.Utils.RubricaManager;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CreaContattoController {
@@ -32,19 +29,13 @@ public class CreaContattoController {
         //  Mette il focus sulla barra di ricerca
         //  dopo che fxmlLoader ha finito di renderizzare la schermata
         Platform.runLater(txfNome::requestFocus);
+
+        //  Disabilita il bottone di salvataggio se i campi nome e cognome sono vuoti
+        salvaButton.disableProperty().bind(Bindings.and(
+                txfNome.textProperty().isEmpty(), txfCognome.textProperty().isEmpty()
+        ));
     }
 
-    public void onContattiClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-    }
-
-    public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-    }
-
-    public void onAnnullaClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(annulla, "/rubrica/Views/ElencoContattiView.fxml");
-    }
 
     // trattamento dati
     @FXML
@@ -77,8 +68,6 @@ public class CreaContattoController {
     @FXML
     public CheckBox ckbPreferiti;
 
-    /*@FXML
-    public ImageView immagine;*/
 
     List<String> listaTelefoni;
     private List<String> listaTelefoni() {
@@ -109,56 +98,34 @@ public class CreaContattoController {
         return listaEmail;
     }
 
-    Contatto c;
 
-    public boolean onSalvaClickButton(ActionEvent getActionEvent) {
-        try {
-            c = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(), listaEmail(),
-                    txaNote.getText(), ckbPreferiti.isSelected()/*, immagine*/);
+    public void onSalvaClickButton(ActionEvent getActionEvent) {
+        Contatto c = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(), listaEmail(),
+                    txaNote.getText(), ckbPreferiti.isSelected());
 
-            return RubricaManager.getRubrica().aggiungiContatto(c);
+            boolean aggiunto = RubricaManager.getRubrica().aggiungiContatto(c);
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-
-        } finally {
             SupportControllers.cambioSchermata(salvaButton, "/rubrica/Views/ElencoContattiView.fxml");
-            if(RubricaManager.getRubrica().getContatti().contains(c))
+            if(aggiunto)
                 // SE VA TUTTO BENE SI GENERA UN ALERT DI SUCCESSO
                 SupportControllers.showAlert("Contatto salvato con successo.");
             else
                 // SE IL CONTATTO PER QUALCHE MOTIVO NON VIENE SALVATO SI GENERA UN ALERT DI INSUCCESSO
                 SupportControllers.showAlert("Errore durante il salvataggio del contatto.");
-        }
-
     }
 
+    /* NAVIGABILITÀ */
+    public void onContattiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
+    }
 
+    public void onPreferitiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
+    }
 
-
-
-    /*L'invio non viene inserito nei TextField, quindi vanno sostituiti con dei TextArea,
-    alias se avanza tempo lo faccio 😂*/
-
-    /*public void onInvioTyped(KeyEvent KeyEvent) {
-        txfNome.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue.length() > oldValue.length()) {
-                // L'ultimo carattere digitato
-                char lastChar = newValue.charAt(newValue.length() - 1);
-
-                System.out.println("Ultimo carattere digitato: " + lastChar);
-
-                // Controlla se è '\n' o qualsiasi altra condizione
-                if (lastChar == '\n') {
-                    System.out.println("Hai premuto Invio!");
-                    onSalvaClickButton(new ActionEvent());
-                }
-            }
-        });
-
-    }*/
-
-
+    public void onAnnullaClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(annulla, "/rubrica/Views/ElencoContattiView.fxml");
+    }
 
 
     /* DISPLAY MODE ZONE :') */

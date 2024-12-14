@@ -7,7 +7,6 @@
  *
  * @author Gabriele Pannuto
  * @date December 07, 2024
- * @version 2.0
  */
 
 
