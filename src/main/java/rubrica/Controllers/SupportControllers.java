@@ -4,12 +4,16 @@ package rubrica.Controllers;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 public class SupportControllers {
-    private static boolean displayMode = false;
+    private static boolean displayMode;
 
-    /* public SupportDisplayMode() {} */
+
+    public static void inizializzaDisplayMode(boolean displayMode) {
+        SupportControllers.displayMode = displayMode;
+    }
 
     public static boolean getDisplayMode() {
         return SupportControllers.displayMode;
@@ -17,6 +21,15 @@ public class SupportControllers {
 
     public static void setDisplayMode(boolean displayMode) {
         SupportControllers.displayMode = displayMode;
+    }
+
+
+    public static void cambioSchermata(Parent elementoFxml, String pathSchermata){
+        if(SupportControllers.getDisplayMode() == true){
+            SupportControllers.cambioSchermataLight(elementoFxml, pathSchermata);
+        }else{
+            SupportControllers.cambioSchermataDark(elementoFxml, pathSchermata);
+        }
     }
 
     public static void cambioSchermataLight(Parent elementoFxml, String pathSchermata){
@@ -43,5 +56,12 @@ public class SupportControllers {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //Metodo per lnciare gli alert
+    public static void showAlert(String contenuto) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(contenuto);
+        alert.showAndWait();
     }
 }

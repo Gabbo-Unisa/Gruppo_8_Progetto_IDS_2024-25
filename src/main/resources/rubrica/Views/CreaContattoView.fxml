@@ -8,7 +8,7 @@
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-                <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" />
+                <Button fx:id="salvaButton" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" onAction="#onSalvaClickButton" text="Salva" />
                 <CheckBox fx:id="ckbPreferiti" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" text="Preferiti" />
                 <Label layoutX="39.0" layoutY="135.0" text="Nome" />
                 <Label layoutX="29.0" layoutY="163.0" text="Cognome" />

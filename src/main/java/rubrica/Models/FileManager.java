@@ -55,7 +55,7 @@ public class FileManager {
 
             for (VCard vCard : vCards) {
                 Contatto c = importaVCard(vCard);
-                r.aggiungiContatto(c);
+                this.r.aggiungiContatto(c);
             }
         } catch (Exception e) {
             System.err.println("Errore durante l'importa rubrica: " + e.getMessage());
@@ -125,10 +125,10 @@ public class FileManager {
      */
     public boolean esportaRubrica(String path) {
 
-        File file = new File(path,"output.vcf");
+        File file = new File(path,"rubrica.vcf");
         List<VCard> vCards = new ArrayList<>();
 
-        List<Contatto> contatti = r.getContatti();
+        List<Contatto> contatti = this.r.getContatti();
         for(int i = 0; i <contatti.size(); i++) {
             Contatto contatto = contatti.get(i);
             VCard vCard = esportaContatto(contatto);

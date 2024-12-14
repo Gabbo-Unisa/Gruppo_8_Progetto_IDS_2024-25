@@ -54,6 +54,20 @@
     -fx-text-fill: #ffffff;
 }
 
+/* Righe della tabella */
+.table-view .row-cell:odd {
+    -fx-background-color: #2f2f2f;
+}
+
+.table-view .row-cell:even {
+     -fx-background-color: #252525;
+ }
+
+.table-view .row-cell:selected {
+    -fx-background-color: #444444;
+    -fx-text-fill: #ffffff;
+}
+
 /* Divider dello SplitPane */
 .split-pane {
     -fx-background-color: #2b2b2b;
@@ -62,20 +76,6 @@
 .split-pane .split-pane-divider {
     -fx-background-color: #444444;
     -fx-background-radius: 5px;
-}
-
-/* Righe della tabella */
-.table-view .row-cell:odd {
-    -fx-background-color: #2f2f2f;
-}
-
-.table-view .row-cell:even {
-    -fx-background-color: #252525;
-}
-
-.table-view .row-cell:selected {
-    -fx-background-color: #444444;
-    -fx-text-fill: #ffffff;
 }
 
 /* Menu */
@@ -138,6 +138,17 @@
 .table-view .row-cell:selected {
     -fx-background-color: #444444;
     -fx-text-fill: #ffffff;
+}
+
+/* Seleziona la colonna contatti e cambia il colore di sfondo delle righe */
+.table-view .table-column#nomeContatto:odd {
+    -fx-background-color: #2d2d2d; /* grigio chiaro */
+    -fx-text-fill: #ffffff; /* Colore del testo bianco */
+}
+
+.table-view .table-column#nomeContatto:even {
+    -fx-background-color: #252525; /* grigio scuro */
+    -fx-text-fill: #ffffff; /* Colore del testo bianco */
 }
 
 /* Divider della tabella */

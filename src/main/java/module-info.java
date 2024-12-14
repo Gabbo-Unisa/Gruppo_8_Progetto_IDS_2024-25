@@ -6,6 +6,7 @@ module org.example.rubrica {
     requires java.desktop;
     requires ez.vcard;
     requires jdk.compiler;
+    requires java.sql;
 
     exports rubrica.Models;
     opens rubrica.Models to javafx.fxml;

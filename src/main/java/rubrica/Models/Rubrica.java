@@ -124,9 +124,14 @@ public class Rubrica implements Serializable {
      */
     public List<Contatto> ricercaContatti(String query) {
         List<Contatto> cRicercati = new ArrayList<>();
+        String nomeRicercato;
+        String cognomeRicercato;
 
+        query = query.toLowerCase();
         for(Contatto c : this.contatti) {
-            if(c.getNome().matches("^" + query + ".*") || c.getCognome().matches("^" + query + ".*"))
+            nomeRicercato = c.getNome().toLowerCase();
+            cognomeRicercato = c.getCognome().toLowerCase();
+            if(nomeRicercato.matches("^" + query + ".*") || cognomeRicercato.matches("^" + query + ".*"))
                 cRicercati.add(c);
         }
 
@@ -153,5 +158,21 @@ public class Rubrica implements Serializable {
         }
 
         return cPreferiti;
+    }
+
+    /**
+     * @brief Restituisce una rappresentazione in formato stringa della rubrica.
+     *
+     * @return Una stringa che rappresenta la rubrica con tutti i suoi contatti.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        for(Contatto c : this.contatti) {
+            sb.append(c.toString()).append("\n");
+        }
+
+        return sb.toString();
     }
 }
