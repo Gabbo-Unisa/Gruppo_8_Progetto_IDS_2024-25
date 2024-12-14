@@ -14,6 +14,7 @@ import rubrica.Utils.RubricaManager;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ApplicazioneProgetto extends Application {
 
@@ -23,15 +24,20 @@ public class ApplicazioneProgetto extends Application {
         Checker checker = new Checker();
         Rubrica rubrica = new Rubrica(checker);
 
-//        File backupFile = new File("Backup/rubrica.vcf");
-//        if(backupFile.exists()) {
-//            FileManager fileManager = new FileManager(rubrica);
-//            fileManager.importaRubrica(backupFile.getPath());   //Importa la rubrica da file "Backup/rubrica.vcf".
-//        }
+        File backupFile = new File("Backup/rubrica.vcf");
+        if(backupFile.exists()) {
+            FileManager fileManager = new FileManager(rubrica);
+            fileManager.importaRubrica(backupFile.getPath());   //Importa la rubrica da file "Backup/rubrica.vcf".
+        }
 
-        rubrica.aggiungiContatto(new Contatto("Mario", "", new ArrayList<>(), new ArrayList<>(), "Nota1", false));
-        rubrica.aggiungiContatto(new Contatto("", "Verdi", new ArrayList<>(), new ArrayList<>(), "Nota2", true));
-        rubrica.aggiungiContatto(new Contatto("Andrea", "Bianchi", new ArrayList<>(), new ArrayList<>(), "Nota3", true));
+//        List<String> telefoni = new ArrayList<>();
+//        telefoni.add("3409968953");
+//        List<String> email = new ArrayList<>();
+//        email.add("gabbi97@live.it");
+
+//        rubrica.aggiungiContatto(new Contatto("Gabriele", "Pannuto", telefoni, email, "Nota1", true));
+//        rubrica.aggiungiContatto(new Contatto("", "Verdi", new ArrayList<>(), new ArrayList<>(), "Nota2", false));
+//        rubrica.aggiungiContatto(new Contatto("Andrea", "Bianchi", new ArrayList<>(), new ArrayList<>(), "Nota3", true));
 
         RubricaManager.inizializza(rubrica);
 

@@ -8,7 +8,7 @@
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
-            <Button fx:id="buttonSalva" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" text="Salva" textAlignment="CENTER" />
+            <Button fx:id="salvaButton" layoutX="424.0" layoutY="31.0" mnemonicParsing="false" onAction="#onSalvaClickButton" text="Salva" textAlignment="CENTER" />
             <CheckBox fx:id="ckbPreferiti" layoutX="201.0" layoutY="59.0" mnemonicParsing="false" text="Preferiti" />
             <Label fx:id="lblNome" layoutX="39.0" layoutY="135.0" text="Nome" />
             <Label fx:id="lblCognome" layoutX="29.0" layoutY="163.0" text="Cognome" />
@@ -28,7 +28,7 @@
             <TextField fx:id="txfEmail3" layoutX="86.0" layoutY="313.0" />
             <Label layoutX="454.0" layoutY="107.0" text="Note" />
             <Label layoutX="379.0" layoutY="5.0" text="Data creazione" />
-            <Label fx:id="txfData" layoutX="493.0" layoutY="5.0" />
+            <Label fx:id="lblData" layoutX="493.0" layoutY="5.0" />
              <MenuButton layoutX="544.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0">
                  <items>
                      <MenuItem fx:id="lightMode" mnemonicParsing="false" onAction="#onLightClickMouse" text="Light mode" />

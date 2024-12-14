@@ -1,5 +1,6 @@
 package rubrica.Controllers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -26,6 +27,12 @@ public class CreaContattoController {
 
     @FXML
     public Button preferiti;
+
+    public void initialize() {
+        //  Mette il focus sulla barra di ricerca
+        //  dopo che fxmlLoader ha finito di renderizzare la schermata
+        Platform.runLater(txfNome::requestFocus);
+    }
 
     public void onContattiClickButton(ActionEvent getActionEvent) {
         SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
@@ -74,56 +81,64 @@ public class CreaContattoController {
     public ImageView immagine;*/
 
     List<String> listaTelefoni;
-        private List<String> listaTelefoni() {
-            listaTelefoni = new ArrayList<>();
+    private List<String> listaTelefoni() {
+        listaTelefoni = new ArrayList<>();
 
-            if(!txfTelefono1.getText().isEmpty())
-                listaTelefoni.add(txfTelefono1.getText());
-            if(!txfTelefono2.getText().isEmpty())
-                listaTelefoni.add(txfTelefono2.getText());
-            if(!txfTelefono3.getText().isEmpty())
-                listaTelefoni.add(txfTelefono3.getText());
+        if(!txfTelefono1.getText().isEmpty())
+            listaTelefoni.add(txfTelefono1.getText());
+        if(!txfTelefono2.getText().isEmpty())
+            listaTelefoni.add(txfTelefono2.getText());
+        if(!txfTelefono3.getText().isEmpty())
+            listaTelefoni.add(txfTelefono3.getText());
 
-            return listaTelefoni;
-        }
+        return listaTelefoni;
+    }
 
 
     List<String> listaEmail;
-        private List<String> listaEmail() {
-            listaEmail = new ArrayList<>();
+    private List<String> listaEmail() {
+        listaEmail = new ArrayList<>();
 
-            if(!txfEmail1.getText().isEmpty())
-                listaEmail.add(txfEmail1.getText());
-            if(!txfEmail2.getText().isEmpty())
-                listaEmail.add(txfEmail2.getText());
-            if(!txfEmail3.getText().isEmpty())
-                listaEmail.add(txfEmail3.getText());
+        if(!txfEmail1.getText().isEmpty())
+            listaEmail.add(txfEmail1.getText());
+        if(!txfEmail2.getText().isEmpty())
+            listaEmail.add(txfEmail2.getText());
+        if(!txfEmail3.getText().isEmpty())
+            listaEmail.add(txfEmail3.getText());
 
-            return listaEmail;
-        }
+        return listaEmail;
+    }
 
     Contatto c;
 
-        public boolean onSalvaClickButton(ActionEvent getActionEvent) {
-            try {
-                c = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(), listaEmail(),
-                        txaNote.getText(), ckbPreferiti.isSelected()/*, immagine*/);
+    public boolean onSalvaClickButton(ActionEvent getActionEvent) {
+        try {
+            c = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(), listaEmail(),
+                    txaNote.getText(), ckbPreferiti.isSelected()/*, immagine*/);
 
-                return RubricaManager.getRubrica().aggiungiContatto(c);
-            } catch (Exception getE) {
-                throw new RuntimeException(getE);
-            } finally {
-                SupportControllers.cambioSchermata(salvaButton, "/rubrica/Views/ElencoContattiView.fxml");
+            return RubricaManager.getRubrica().aggiungiContatto(c);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+
+        } finally {
+            SupportControllers.cambioSchermata(salvaButton, "/rubrica/Views/ElencoContattiView.fxml");
+            if(RubricaManager.getRubrica().getContatti().contains(c))
+                // SE VA TUTTO BENE SI GENERA UN ALERT DI SUCCESSO
                 SupportControllers.showAlert("Contatto salvato con successo.");
-            }
-
+            else
+                // SE IL CONTATTO PER QUALCHE MOTIVO NON VIENE SALVATO SI GENERA UN ALERT DI INSUCCESSO
+                SupportControllers.showAlert("Errore durante il salvataggio del contatto.");
         }
 
+    }
 
 
 
 
-    /*L'invio non viene inserito nei TextField, quindi vanno sostituiti con dei TextArea, alias se avanza tempo lo faccio 😂*/
+
+    /*L'invio non viene inserito nei TextField, quindi vanno sostituiti con dei TextArea,
+    alias se avanza tempo lo faccio 😂*/
 
     /*public void onInvioTyped(KeyEvent KeyEvent) {
         txfNome.textProperty().addListener((observable, oldValue, newValue) -> {

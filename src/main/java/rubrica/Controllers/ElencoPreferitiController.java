@@ -1,5 +1,6 @@
 package rubrica.Controllers;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -49,6 +50,10 @@ public class ElencoPreferitiController {
     @FXML
     public void initialize() {
         showContacts();
+
+        //  Mette il focus sulla barra di ricerca
+        //  dopo che fxmlLoader ha finito di renderizzare la schermata
+        Platform.runLater(barraDiRicercaPreferiti::requestFocus);
     }
 
     private void showContacts() {

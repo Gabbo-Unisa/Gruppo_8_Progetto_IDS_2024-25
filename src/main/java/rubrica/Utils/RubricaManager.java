@@ -19,4 +19,9 @@ public class RubricaManager {
     public static Rubrica getRubrica() {
         return RubricaManager.rubrica;
     }
+
+    public static void eliminaContatto() {
+        RubricaManager.getRubrica().eliminaContatto(ContattoManager.getContatto());
+
+    }
 }

@@ -1,5 +1,6 @@
 package rubrica.Controllers;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -49,6 +50,10 @@ public class ElencoContattiController {
     @FXML
     public void initialize() {
         showContacts();
+
+        //  Mette il focus sulla barra di ricerca
+        //  dopo che fxmlLoader ha finito di renderizzare la schermata
+        Platform.runLater(barraDiRicercaContatti::requestFocus);
     }
 
     private void showContacts() {
@@ -73,13 +78,6 @@ public class ElencoContattiController {
             }
         });
     }
-
-    /*private void showAlert(String contenuto) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(contenuto);
-        alert.showAndWait();
-    }*/
-
 
     public void onImportaRubricaClickMouse(ActionEvent getActionEvent) {
         FileChooser fileChooser = new FileChooser();
@@ -157,6 +155,7 @@ public class ElencoContattiController {
         if (mouseEvent.getClickCount() == 2) {
             Contatto contattoSelezionato = tabella.getSelectionModel().getSelectedItem();
             ContattoManager.setContatto(contattoSelezionato);
+            //Chiamare quì il metodo per caricare gli attributi nelle label di visualizzazione contatto view.
             SupportControllers.cambioSchermata(tabella, "/rubrica/Views/VisualizzazioneContattoView.fxml");
         }
     }
