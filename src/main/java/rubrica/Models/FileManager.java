@@ -65,14 +65,14 @@ public class FileManager {
         return true;
     }
 
-    /**
-     * @brief Importa un contatto da un oggetto VCard.
+    /*
+     * Importa un contatto da un oggetto VCard.
      *
-     * @param[in] vCard L'oggetto VCard da cui importare i dati del contatto.
-     * @return Un nuovo oggetto Contatto con i dati importati dalla VCard.
+     * vCard L'oggetto VCard da cui importare i dati del contatto.
+     * Un nuovo oggetto Contatto con i dati importati dalla VCard.
      *
-     * @pre L'oggetto VCard deve contenere dati validi per un contatto.
-     * @post Viene creato un nuovo oggetto Contatto con i dati della VCard.
+     * L'oggetto VCard deve contenere dati validi per un contatto.
+     * Viene creato un nuovo oggetto Contatto con i dati della VCard.
      */
     private Contatto importaVCard(VCard vCard) {
         String nome;
@@ -146,13 +146,13 @@ public class FileManager {
     }
 
 
-    /**
-     * @brief Esporta un contatto in un oggetto VCard.
+    /*
+     *  Esporta un contatto in un oggetto VCard.
      *
-     * @return L'oggetto VCard contenente i dati del contatto.
+     *  L'oggetto VCard contenente i dati del contatto.
      *
-     * @pre Il contatto si trova in rubrica
-     * @post Viene restituita una VCard con i dati del contatto.
+     *  Il contatto si trova in rubrica
+     *  Viene restituita una VCard con i dati del contatto.
      */
     private VCard esportaContatto(Contatto c) {
         VCard vCard = new VCard();
