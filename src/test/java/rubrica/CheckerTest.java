@@ -17,54 +17,68 @@ class CheckerTest {
 
     @BeforeEach
     void setUp() {
+        // Inizializza un oggetto Checker prima di ogni test
         checker = new Checker();
     }
 
     @AfterEach
     void tearDown() {
+        // Pulizia dopo ogni test
         checker = null;
     }
 
     @Test
     void testValidaContatto() {
-        //Caso 1: contatto valido
-        List<String> numeriValidi = List.of("3404657894","3319875463");
-        List<String> emailValide = List.of("caso1@example.it","user1@libero.it");
-        Contatto contattoValido = new Contatto("Mario","Rossi", numeriValidi, emailValide,"7 dicembre 2024","Nota1",false);
-        assertTrue(checker.validaContatto(contattoValido),"Il contatto dovrebbe essere valido.");
 
-        //Caso 2: Nome e Cognome non validi
-        Contatto nomeCognomeNonValidi = new Contatto("123", "@@@", new ArrayList<>(), new ArrayList<>(), "10 novembre 2024","Nota2", false);
-        assertFalse(checker.validaContatto(nomeCognomeNonValidi),"Il contatto con nome e cognome non validi non dovrebbe esssere valido.");
+        // Test per verificare il metodo validaContatto
 
-        //Caso 3: Numeri di telefono non validi
-        List<String> numeriNonValidi = List.of("456","abc");
-        Contatto telefonoNonValido = new Contatto("Luigi","Bianchi", numeriNonValidi, new ArrayList<>(), "11 dicembre 2024", "Nota3", false);
-        assertFalse(checker.validaContatto(telefonoNonValido),"Il contatto con numeri di telefono non validi non dovrebbe essere valido.");
+        List<String> numeriValidi = List.of("3404657894","3319875463"); // Lista di numeri validi
+        List<String> emailValide = List.of("mrossi@libero.it","bianchi13@hotmail.com"); // Lista di email valide
+        List<String> numeriNonValidi = List.of("4ab","3347865498", "3319456"); // Lista di numeri non validi
+        List<String> emailNonValide = List.of("marcoverdi@libero.it","@io","carlo@gmail.com"); // Lista di email non valide
 
-        //Caso 4: Email non valide
-        List<String> emailNonValide = List.of("io@","@example.it","no.it");
-        Contatto emailNonValideContatto = new Contatto("Marco", "Verdi", new ArrayList<>(), emailNonValide, "4 dicembre 2024","Nota4",false);
-        assertFalse(checker.validaContatto(emailNonValideContatto), "Il contatto con email non valide non dovrebbe essere valido.");
+        // Caso 1: Contatto con -> nome: valido; cognome: valido; numeri: validi; email: valide -> Valido
+        Contatto contattoValido = new Contatto("Mario","Rossi", numeriValidi, emailValide,"7 dicembre 2024","Nota1",true);
+        assertTrue(checker.validaContatto(contattoValido));
 
-        //Caso 5: Contatto senza numeri di telefono ed email ma con nome/cognome validi
-        Contatto senzaTelefonoEmail = new Contatto("Giulia", "Neri", new ArrayList<>(), new ArrayList<>(),"11 dicembre 2024", "Nota5", false);
-        assertTrue(checker.validaContatto(senzaTelefonoEmail), "Il contatto senza numeri di telefono ed email dovrebbe essere valido poichè nome/cognome sono validi.");
+        // Caso 2: Contatto con -> nome: valido; cognome: valido; numeri: validi; email: non valide -> Non Valido
+        Contatto emailNonValideContatto = new Contatto("Marco", "Verdi", numeriValidi, emailNonValide, "4 dicembre 2024","Nota2",false);
+        assertFalse(checker.validaContatto(emailNonValideContatto));
 
-        //Caso 6: Contatto senza numeri di telefono ed email ma con nome/cognome non validi
-        Contatto senzaTelefonoEmail2 = new Contatto("1", ".", new ArrayList<>(), new ArrayList<>(),"8 dicembre 2024", "Nota6",false);
-        assertFalse(checker.validaContatto(senzaTelefonoEmail2),"Il contatto senza numero di telefono ed email non dovrebbe essere valido poichè nome/cognome non sono validi");
+        //Caso 3: Contatto con -> nome: valido; cognome: valido; numeri: non validi; email: valide -> Non Valido
+        Contatto numeriNonValidiContatto = new Contatto("Luigi","Bianchi", numeriNonValidi, emailValide, "11 dicembre 2024", "Nota3", true);
+        assertFalse(checker.validaContatto(numeriNonValidiContatto));
 
-        //Contatto 7: Nome e cognome nulli
-        Contatto nomeCognomeNull = new Contatto(null, null, new ArrayList<>(), new ArrayList<>(),"3 novembre 2024", "Nota7", false);
-        assertFalse(checker.validaContatto(nomeCognomeNull), "Il contatto con nome e cognome nulli non dovrebbe essere valido.");
+        // Caso 4: Contatto con -> nome: valido; cognome: non valido; numeri: validi; email: valide -> Non Valido
+        Contatto cognomeNonValido = new Contatto("Carlo", "Ner1", numeriValidi, emailValide, "10 novembre 2024","Nota4", false);
+        assertFalse(checker.validaContatto(cognomeNonValido));
 
-        // Caso 8: Contatto con solo il nome, cognome nullo
-        Contatto soloNome = new Contatto("Luca", null, new ArrayList<>(), new ArrayList<>(), "16 dicembre 2024", "Nota8", false);
-        assertTrue(checker.validaContatto(soloNome), "Il contatto con solo il nome e cognome nullo dovrebbe essere valido.");
+        // Caso 5: Contatto con -> nome: non valido; cognome: valido; numeri: validi; email: valide -> Non Valido
+        Contatto nomeNonValido = new Contatto("Ma@@0", "Rossi", numeriValidi, emailValide, "25 Febbraio 2024","Nota5", true);
+        assertFalse(checker.validaContatto(nomeNonValido));
 
-        // Caso 9: Contatto con solo il cognome, nome nullo
-        Contatto soloCognome = new Contatto(null, "Verdi", new ArrayList<>(), new ArrayList<>(), "17 dicembre 2024", "Nota9", false);
-        assertTrue(checker.validaContatto(soloCognome), "Il contatto con solo il cognome e nome nullo dovrebbe essere valido.");
+        // Caso 6: Contatto con -> nome: valido; cognome: valido; numeri: assenti; email: assenti -> Valido
+        Contatto emailNumeriAssenti = new Contatto("Marco", "Verdi", new ArrayList<>(), new ArrayList<>(),"12 Maggio 2024", "Nota6",false);
+        assertTrue(checker.validaContatto(emailNumeriAssenti));
+
+        // Caso 7: Contatto con -> nome: nullo; cognome: valido; numeri: validi; email: assenti -> Valido
+        Contatto nomeNulloCognomeValido = new Contatto(null, "Bianchi", numeriValidi, new ArrayList<>(),"4 Luglio 2024", "Nota7",false);
+        assertTrue(checker.validaContatto(nomeNulloCognomeValido));
+
+        // Caso 8: Contatto con -> nome: nullo; cognome: non valido; numeri: validi; email: validi -> Non Valido
+        Contatto nomeNulloCognomeNonValido = new Contatto(null, "N3r.", numeriValidi, emailValide,"18 Luglio 2024", "Nota8",true);
+        assertFalse(checker.validaContatto(nomeNulloCognomeNonValido));
+
+        // Caso 9: Contatto con -> nome: valido; cognome: nullo; numeri: assenti; email: valide -> Valido
+        Contatto nomeValidoCognomeNullo = new Contatto("Mario", null, new ArrayList<>(), emailValide,"28 Agosto 2024", "Nota9",true);
+        assertTrue(checker.validaContatto(nomeValidoCognomeNullo));
+
+        // Caso 10: Contatto con -> nome: non valido; cognome: nullo; numeri: validi; email: validi -> Non Valido
+        Contatto nomeNonValidoCognomeNullo = new Contatto("M4r/o", null, numeriValidi, emailValide,"14 Aprile 2024", "Nota10",false);
+        assertFalse(checker.validaContatto(nomeNonValidoCognomeNullo));
+
+        // Caso 11: Contatto con -> nome: nullo; cognome: nullo; numeri: validi; email: validi -> Non Valido
+        Contatto nomeCognomeNulli = new Contatto(null, null, numeriValidi, emailValide,"2 Giugno 2024", "Nota11",true);
+        assertFalse(checker.validaContatto(nomeCognomeNulli));
     }
 }
