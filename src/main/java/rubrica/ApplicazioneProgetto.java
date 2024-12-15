@@ -30,24 +30,14 @@ public class ApplicazioneProgetto extends Application {
             fileManager.importaRubrica(backupFile.getPath());   //Importa la rubrica da file "Backup/rubrica.vcf".
         }
 
-//        List<String> telefoni = new ArrayList<>();
-//        telefoni.add("3409968953");
-//        List<String> email = new ArrayList<>();
-//        email.add("gabbi97@live.it");
-
-//        rubrica.aggiungiContatto(new Contatto("Gabriele", "Pannuto", telefoni, email, "Nota1", true));
-//        rubrica.aggiungiContatto(new Contatto("", "Verdi", new ArrayList<>(), new ArrayList<>(), "Nota2", false));
-//        rubrica.aggiungiContatto(new Contatto("Andrea", "Bianchi", new ArrayList<>(), new ArrayList<>(), "Nota3", true));
-
         RubricaManager.inizializza(rubrica);
-
-        SupportControllers.inizializzaDisplayMode(false);
     }
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ApplicazioneProgetto.class.getResource("/rubrica/Views/ElencoContattiView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+
         stage.setTitle("Rubrica Telefonica");
         stage.setScene(scene);
         stage.show();

@@ -22,6 +22,5 @@ public class RubricaManager {
 
     public static void eliminaContatto() {
         RubricaManager.getRubrica().eliminaContatto(ContattoManager.getContatto());
-
     }
 }

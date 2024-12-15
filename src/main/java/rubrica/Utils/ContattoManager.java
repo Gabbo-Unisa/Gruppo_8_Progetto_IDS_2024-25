@@ -1,8 +1,8 @@
 /*
- * Questa classe permette di mantenere un riferimento ad un contatto in memoria statica
+ * Questa classe permette di mantenere un riferimento a un contatto in memoria statica
  * così da consentirne l'accesso in qualsiasi punto dell'applicazione.
  * Risolve il problema della comunicazione tra i vari controller
- *  nel momento in cui si crea/visualizza/modifica/elimina un contatto.
+ * nel momento in cui si crea/visualizza/modifica/elimina un contatto.
 */
 
 
@@ -20,9 +20,4 @@ public class ContattoManager {
     public static Contatto getContatto() {
         return ContattoManager.contatto;
     }
-
-    public static void resetContatto() {
-        ContattoManager.contatto = null;
-    }
-
 }

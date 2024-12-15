@@ -15,69 +15,13 @@ public class VisualizzazioneContattoController {
     public Button modificaButton;
 
     @FXML
+    public Button eliminaButton;
+
+    @FXML
     public Button contatti;
 
     @FXML
     public Button preferiti;
-
-    public void onContattiClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-
-    }
-
-    public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-
-    }
-
-    public void onModificaClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(modificaButton, "/rubrica/Views/ModificaContattiView.fxml");
-
-    }
-
-        // METODO PER ELIMINARE UN CONTATTO
-    @FXML
-    public Button elimina;
-
-    public void onEliminaClickButton(ActionEvent getActionEvent) {
-        RubricaManager.eliminaContatto();
-        SupportControllers.cambioSchermata(elimina, "/rubrica/Views/ElencoContattiView.fxml");
-        SupportControllers.showAlert("Contatto eliminato con successo.");
-    }
-
-
-    @FXML
-    public Label lblNome;
-
-    @FXML
-    public Label lblCognome;
-
-    @FXML
-    public Label lblTelefono1;
-
-    @FXML
-    public Label lblTelefono2;
-
-    @FXML
-    public Label lblTelefono3;
-
-    @FXML
-    public Label lblEmail1;
-
-    @FXML
-    public Label lblEmail2;
-
-    @FXML
-    public Label lblEmail3;
-
-    @FXML
-    public CheckBox ckbPreferiti;
-
-    @FXML
-    public TextArea txaNote;
-
-    @FXML
-    public Label lxlData;
 
     List<String> telefoni;
     List<String> email;
@@ -89,7 +33,6 @@ public class VisualizzazioneContattoController {
 
         lblNome.setText(c.getNome());
         lblCognome.setText(c.getCognome());
-
 
         if(telefoni.size() == 0) {              //Caso in cui la lista è vuota
             lblTelefono1.setText("Nessun numero di telefono inserito.");
@@ -130,10 +73,80 @@ public class VisualizzazioneContattoController {
         ckbPreferiti.setSelected(c.getIsPreferito());
         txaNote.setText(c.getNota());
         lxlData.setText(c.getDataCreazione());
+    }
 
+    /* Alert personalizzato per la conferma dell'eliminazione */
+    public void onEliminaClickButton(ActionEvent getActionEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Conferma eliminazione");
+        alert.setHeaderText("Sei sicuro di voler eliminare questo contatto?");
+
+        ButtonType buttonTypeYes = new ButtonType("Sì");
+        ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+
+        // Se l'utente conferma l'eliminazione
+        alert.showAndWait().ifPresent(type -> {
+            if (type == buttonTypeYes) {
+                RubricaManager.eliminaContatto();
+                SupportControllers.cambioSchermata(eliminaButton, "/rubrica/Views/ElencoContattiView.fxml");
+                SupportControllers.showAlert("Contatto eliminato con successo.");
+            } else {
+                // Se l'utente annulla l'operazione chiudi l'alert
+                alert.close();
+            }
+        });
     }
 
 
+    @FXML
+    public Label lblNome;
+
+    @FXML
+    public Label lblCognome;
+
+    @FXML
+    public Label lblTelefono1;
+
+    @FXML
+    public Label lblTelefono2;
+
+    @FXML
+    public Label lblTelefono3;
+
+    @FXML
+    public Label lblEmail1;
+
+    @FXML
+    public Label lblEmail2;
+
+    @FXML
+    public Label lblEmail3;
+
+    @FXML
+    public CheckBox ckbPreferiti;
+
+    @FXML
+    public TextArea txaNote;
+
+    @FXML
+    public Label lxlData;
+
+
+
+/*  NAVIGABILITÀ */
+    public void onContattiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
+    }
+
+    public void onPreferitiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
+    }
+
+    public void onModificaClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(modificaButton, "/rubrica/Views/ModificaContattiView.fxml");
+    }
 
 
     /* DISPLAY MODE ZONE :') */

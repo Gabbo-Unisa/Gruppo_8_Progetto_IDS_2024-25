@@ -8,12 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 public class SupportControllers {
-    private static boolean displayMode;
-
-
-    public static void inizializzaDisplayMode(boolean displayMode) {
-        SupportControllers.displayMode = displayMode;
-    }
+    private static boolean displayMode = false;  //L'applicazione parte di default in dark mode
 
     public static boolean getDisplayMode() {
         return SupportControllers.displayMode;
@@ -58,7 +53,7 @@ public class SupportControllers {
         }
     }
 
-    //Metodo per lnciare gli alert
+    //Metodo per lanciare gli alert
     public static void showAlert(String contenuto) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(contenuto);

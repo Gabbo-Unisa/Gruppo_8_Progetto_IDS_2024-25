@@ -10,7 +10,6 @@
  *
  * @author Ferdinando Paparo
  * @date December 06, 2024
- * @version 2.0
  */
 
 
@@ -126,12 +125,14 @@ public class Rubrica implements Serializable {
         List<Contatto> cRicercati = new ArrayList<>();
         String nomeRicercato;
         String cognomeRicercato;
+        String contattoRicercato;
 
         query = query.toLowerCase();
         for(Contatto c : this.contatti) {
             nomeRicercato = c.getNome().toLowerCase();
             cognomeRicercato = c.getCognome().toLowerCase();
-            if(nomeRicercato.matches("^" + query + ".*") || cognomeRicercato.matches("^" + query + ".*"))
+            contattoRicercato = (nomeRicercato + " " + cognomeRicercato).trim();
+            if(contattoRicercato.startsWith(query) || nomeRicercato.startsWith(query) || cognomeRicercato.startsWith(query))
                 cRicercati.add(c);
         }
 

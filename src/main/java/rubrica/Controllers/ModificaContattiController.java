@@ -21,25 +21,6 @@ public class ModificaContattiController {
     @FXML
     public Button preferiti;
 
-    public void onContattiClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
-
-    }
-
-    public void onPreferitiClickButton(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
-
-    }
-
-
-
-    public void onClickAnnulla(ActionEvent getActionEvent) {
-        SupportControllers.cambioSchermata(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
-
-    }
-
-    // Modifica contatto
-
     @FXML
     public TextField txfNome;
 
@@ -89,7 +70,6 @@ public class ModificaContattiController {
 
         txfNome.setText(contattoOld.getNome());
         txfCognome.setText(contattoOld.getCognome());
-
 
         if(telefoni.size() == 0) {              //Caso in cui la lista è vuota
             txfTelefono1.setText("");
@@ -167,19 +147,13 @@ public class ModificaContattiController {
         return listaEmail;
     }
 
-    Contatto contattoNew;
 
-    public boolean onSalvaClickButton(ActionEvent getActionEvent) {
-        try {
-            contattoNew = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(),
+    public void onSalvaClickButton(ActionEvent getActionEvent) {
+        Contatto contattoNew = new Contatto(txfNome.getText(), txfCognome.getText(), listaTelefoni(),
                     listaEmail(), contattoOld.getDataCreazione(), txaNote.getText(), ckbPreferiti.isSelected());
 
-            return RubricaManager.getRubrica().modificaContatto(contattoOld, contattoNew);
+            RubricaManager.getRubrica().modificaContatto(contattoOld, contattoNew);
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-
-        } finally {
             SupportControllers.cambioSchermata(salvaButton, "/rubrica/Views/ElencoContattiView.fxml");
             if(RubricaManager.getRubrica().getContatti().contains(contattoNew))
                 // SE VA TUTTO BENE SI GENERA UN ALERT DI SUCCESSO
@@ -187,8 +161,19 @@ public class ModificaContattiController {
             else
                 // SE IL CONTATTO PER QUALCHE MOTIVO NON VIENE SALVATO SI GENERA UN ALERT DI INSUCCESSO
                 SupportControllers.showAlert("Errore durante la modifica del contatto.");
-        }
+    }
 
+    /* NAVIGABILITÀ */
+    public void onContattiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(contatti, "/rubrica/Views/ElencoContattiView.fxml");
+    }
+
+    public void onPreferitiClickButton(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(preferiti, "/rubrica/Views/ElencoPreferitiView.fxml");
+    }
+
+    public void onClickAnnulla(ActionEvent getActionEvent) {
+        SupportControllers.cambioSchermata(annullaButton, "/rubrica/Views/VisualizzazioneContattoView.fxml");
     }
 
 

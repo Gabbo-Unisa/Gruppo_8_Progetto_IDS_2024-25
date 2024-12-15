@@ -7,18 +7,19 @@
  *
  * @author Gabriele Pannuto
  * @date December 07, 2024
- * @version 2.0
  */
 
 package rubrica.Models;
 
-import java.util.regex.*;
+
 
 public class Checker {
 
 
     /**
-     * @brief Effettua un controllo sui dati di un contatto.
+     * @brief Effettua un controllo sui dati di un contatto. Per essere valido, il contatto deve avere nome e/o cognome
+     * composti da sole lettere e spazi, con una lunghezza massima di 15 caratteri. I numeri di telefono devono essere
+     * composti da 10 cifre, mentre gli indirizzi email devono seguire il formato standard (esempio@dominio.com).
      *
      * @param[in] c Il contatto da validare.
      *
@@ -29,19 +30,34 @@ public class Checker {
      */
     public boolean validaContatto(Contatto c) {
 
-        if(!c.getNome().matches("^[a-zA-Z]{1,15}$") && !c.getCognome().matches("^[a-zA-Z]{1,15}$"))
-            return false;
+        String nome = c.getNome();
+        String cognome = c.getCognome();
 
-        if(c.getNumeriTelefono() != null)
-        {
+        if(nome.isEmpty() && cognome.isEmpty())
+            return false;
+        /*Da qui in poi nome e cognome non possono essere entrambi vuoti: controllo i vari casi*/
+        if(nome.isEmpty()) {    //Nome vuoto
+            if (!cognome.matches("^[\\p{L} ]{1,15}$"))  //Cognome non valido
+                return false;
+        }
+        else {  //Nome non vuoto
+            if(cognome.isEmpty()) { //Cognome vuoto
+                if (!nome.matches("^[\\p{L} ]{1,15}$")) //Nome non valido
+                    return false;
+            }
+            else    //Nome e Cognome non vuoti
+                if(!nome.matches("^[\\p{L} ]{1,15}$") || !cognome.matches("^[\\p{L} ]{1,15}$"))
+                    return false;
+        }
+
+        if(c.getNumeriTelefono() != null) {
             for(String numero : c.getNumeriTelefono()) {
                 if(!numero.matches("^\\d{10}$"))
                     return false;
             }
         }
 
-        if(c.getEmail() != null)
-        {
+        if(c.getEmail() != null) {
             for(String email : c.getEmail()) {
                 if(!email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"))
                     return false;

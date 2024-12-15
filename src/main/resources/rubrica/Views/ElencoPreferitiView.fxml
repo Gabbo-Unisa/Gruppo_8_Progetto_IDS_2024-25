@@ -6,9 +6,9 @@
 
 <SplitPane fx:id="rootSplitPane" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../CSS/DarkMode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rubrica.Controllers.ElencoPreferitiController">
     <items>
-        <AnchorPane fx:id="panelup" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-                <Button fx:id="tastoPiù" layoutX="539.0" layoutY="287.0" mnemonicParsing="false" onAction="#onPlusClickButton" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="CENTER" wrapText="true">
+                <Button fx:id="plusButton" layoutX="539.0" layoutY="287.0" mnemonicParsing="false" onAction="#onPlusClickButton" prefHeight="30.0" prefWidth="44.0" text="+" textAlignment="CENTER" wrapText="true">
                     <font>
                         <Font size="22.0" />
                     </font></Button>
@@ -32,7 +32,7 @@
                 </MenuButton>
                 <Label layoutX="231.0" prefHeight="25.0" prefWidth="80.0" text="Elenco preferiti" />
             </children></AnchorPane>
-        <AnchorPane fx:id="panelDown" maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
+        <AnchorPane maxHeight="45.0" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="600.0">
             <children>
                 <Button fx:id="preferiti" layoutX="299.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" text="Preferiti" />
                 <Button fx:id="contatti" mnemonicParsing="false" onAction="#onContattiClickButton" prefHeight="45.0" prefWidth="300.0" text="Contatti" />

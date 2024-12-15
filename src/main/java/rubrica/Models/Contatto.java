@@ -8,7 +8,6 @@
  *
  * @author Carmine Terracciano
  * @date December 07, 2024
- * @version 2.0
  */
 
 
@@ -23,8 +22,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Contatto implements Serializable, Comparable<Contatto>{
-
+public class Contatto implements Comparable<Contatto>{
     private String nome;
     private String cognome;
     private List<String> numeriTelefono;
@@ -46,11 +44,9 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
                     List<String> email,
                     String nota, boolean isPreferito) {
-        nome = nome.trim();
-        this.nome = nome;
 
-        cognome = cognome.trim();
-        this.cognome = cognome;
+        this.nome = (nome == null) ? "" : nome.trim();
+        this.cognome = (cognome == null) ? "" : cognome.trim();
 
         this.numeriTelefono = new ArrayList<>(numeriTelefono);
         this.email = new ArrayList<>(email);
@@ -77,11 +73,9 @@ public class Contatto implements Serializable, Comparable<Contatto>{
     public Contatto(String nome, String cognome, List<String> numeriTelefono,
                     List<String> email, String dataCreazione,
                     String nota, boolean isPreferito) {
-        nome = nome.trim();
-        this.nome = nome;
 
-        cognome = cognome.trim();
-        this.cognome = cognome;
+        this.nome = (nome == null) ? "" : nome.trim();
+        this.cognome = (cognome == null) ? "" : cognome.trim();
 
         this.numeriTelefono = new ArrayList<>(numeriTelefono);
         this.email = new ArrayList<>(email);
