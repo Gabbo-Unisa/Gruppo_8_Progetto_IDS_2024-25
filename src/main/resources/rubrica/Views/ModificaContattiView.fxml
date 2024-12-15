@@ -15,8 +15,8 @@
             <Label layoutX="34.0" layoutY="270.0" text="E-mail" />
             <Button fx:id="annullaButton" layoutX="418.0" layoutY="62.0" mnemonicParsing="false" onAction="#onClickAnnulla" text="Annulla" textAlignment="CENTER" textFill="RED" />
             <TextArea fx:id="txaNote" layoutX="374.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" promptText="Scrivi le tue note quì" />
-            <TextField fx:id="txfNome" layoutX="89.0" layoutY="131.0" prefHeight="23.0" prefWidth="121.0" />
-            <TextField fx:id="txfCognome" layoutX="89.0" layoutY="159.0" />
+             <TextField fx:id="txfNome" layoutX="89.0" layoutY="131.0" prefHeight="27.0" prefWidth="151.0" />
+             <TextField fx:id="txfCognome" layoutX="89.0" layoutY="159.0" />
             <TextField fx:id="txfTelefono1" layoutX="89.0" layoutY="189.0" />
             <TextField fx:id="txfTelefono2" layoutX="89.0" layoutY="211.0" />
             <TextField fx:id="txfTelefono3" layoutX="89.0" layoutY="234.0" />
