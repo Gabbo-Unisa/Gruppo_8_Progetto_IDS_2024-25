@@ -103,13 +103,11 @@ public class Rubrica implements Serializable {
      *
      * @param[in] c Il contatto da rimuovere.
      *
-     * @return 'true' se il contatto è stato rimosso con successo, 'false' altrimenti.
-     *
      * @pre Il contatto deve esistere nella rubrica.
      * @post Il contatto specificato viene rimosso dalla rubrica.
      */
-    public boolean eliminaContatto(Contatto c){
-        return this.contatti.remove(c);
+    public void eliminaContatto(Contatto c){
+        this.contatti.remove(c);
     }
 
 
