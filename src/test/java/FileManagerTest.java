@@ -1,5 +1,3 @@
-package rubrica;
-
 import ezvcard.Ezvcard;
 import ezvcard.VCard;
 import org.junit.jupiter.api.AfterEach;
