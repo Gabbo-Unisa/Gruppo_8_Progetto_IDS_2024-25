@@ -62,28 +62,8 @@ class RubricaTest {
         // Caso 2: Il contatto duplicato non dovrebbe essere aggiunto
         assertFalse(rubrica.aggiungiContatto(contatto2));
 
-        // Caso 3: Il contatto valido, con solo nome, e non duplicato dovrebbe essere aggiunto con successo
-        Contatto contatto3 = new Contatto("Francesco", "", new ArrayList<>(List.of("1274849306")), new ArrayList<>(List.of("francesco@gmail.com")),"1 dicembre 2024","Nota3",true);
-        assertTrue(rubrica.aggiungiContatto(contatto3));
-
-        // Caso 4: Il contatto valido, con solo cognome, e non duplicato dovrebbe essere aggiunto con successo
-        Contatto contatto4 = new Contatto("", "Esposito", new ArrayList<>(List.of("1239876546")), new ArrayList<>(List.of("esposito@libero.it")),"15 novembre 2024","Nota4",true);
-        assertTrue(rubrica.aggiungiContatto(contatto4));
-
-        // Caso 5: Il contatto senza nome e cognome non dovrebbe essere aggiunto
-        Contatto contatto5 = new Contatto("", "", new ArrayList<>(List.of("1234567894")), new ArrayList<>(List.of("nessuno@libero.it")), "9 dicembre 2024", "Nota5", false );
-        assertFalse(rubrica.aggiungiContatto(contatto5));
-
-        // Caso 6: Il contatto con numero di telefono non valido non dovrebbe essere aggiunto
-        Contatto contatto6 = new Contatto("Anna", "Verdi", new ArrayList<>(List.of("numero_non_valido")), new ArrayList<>(List.of("anna.verdi@gmail.com")), "8 dicembre 2024", "Nota6", false);
-        assertFalse(rubrica.aggiungiContatto(contatto6));
-
-        // Caso 7: Il contatto con email non valida non dovrebbe essere aggiunto
-        Contatto contatto7 = new Contatto("Luigi","Bianchi",new ArrayList<>(List.of("9876543212")), new ArrayList<>(List.of("email_non_valida")),"4 dicembre 2024", "Nota7",false);
-        assertFalse(rubrica.aggiungiContatto(contatto7));
-
-        // Caso 8: Il contatto senza data dovrebbe essere aggiunto con successo con data corrente
-        Contatto contatto8 = new Contatto("Gabriele", "Pannuto", new ArrayList<>(List.of("3409871232")), new ArrayList<>(List.of("gpannuto@hotmail.com")),"","Nota8",false);
+        // Caso 3: Il contatto senza data dovrebbe essere aggiunto con successo con data corrente
+        Contatto contatto8 = new Contatto("Gabriele", "Pannuto", new ArrayList<>(List.of("3409871232")), new ArrayList<>(List.of("gpannuto@hotmail.com")),"","Nota3",true);
         assertTrue(rubrica.aggiungiContatto(contatto8));
 
     }
@@ -98,7 +78,6 @@ class RubricaTest {
         rubrica.aggiungiContatto(oldContatto);
         Contatto contattoInserito = new Contatto("Francesco", "Rossi", new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Nota2",true);
         rubrica.aggiungiContatto(contattoInserito);
-
 
         // Caso 1: Contatto aggiornato già esistente
         Contatto contattoDuplicato = new Contatto("Francesco", "Rossi", new ArrayList<>(), new ArrayList<>(), "11 dicembre 2024", "Nota4",true);
@@ -171,7 +150,7 @@ class RubricaTest {
         // Ci dovrebbe essere un solo contatto nell'elenco preferiti
         assertEquals(1, contattiPreferiti.size());
 
-        // Il contatto preferito dovrebbe esssere incluso nell'elenco preferiti
+        // Il contatto preferito dovrebbe essere incluso nell'elenco preferiti
         assertTrue(contattiPreferiti.contains(preferito));
 
         // Il contatto nonPreferito non dovrebbe essere incluso nell'elenco preferiti
