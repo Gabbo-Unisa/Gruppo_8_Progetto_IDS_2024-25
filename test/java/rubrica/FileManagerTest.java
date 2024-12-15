@@ -216,7 +216,7 @@ class FileManagerTest {
         assertTrue(risultati);
 
         // Creazione del file di output
-        File fileOutput = new File(dirTemporanea, "output.vcf");
+        File fileOutput = new File(dirTemporanea, "rubrica.vcf");
 
         // Verifico che il file 'output.vcf' esista
         assertTrue(fileOutput.exists());
@@ -303,7 +303,7 @@ class FileManagerTest {
         assertTrue(risultatiVuoti);
 
         // Verifico che il file esportato esista anche per una rubrica vuota
-        File fileOutputVuoto = new File(dirTemporanea, "output.vcf");
+        File fileOutputVuoto = new File(dirTemporanea, "rubrica.vcf");
         assertTrue(fileOutputVuoto.exists());
 
         // Garantisce che il file temporaneo venga rimosso alla fine del test
